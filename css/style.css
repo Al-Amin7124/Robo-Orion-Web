@@ -659,3 +659,18 @@ input:focus, textarea:focus, select:focus {
 .progress-bar {
     transition: width 1s linear;
 }
+
+/***products***/
+
+.rounded-top-custom {
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+} 
+
+.btn-rounded-custom{
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+  
