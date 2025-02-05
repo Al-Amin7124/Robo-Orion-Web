@@ -68,16 +68,15 @@
                         
                         <a href="service.html" class="nav-item nav-link">Service</a>
                         <a href="#" class="nav-item nav-link">Product</a>
-                        <a href="tutorial.html" class="nav-item nav-link">Tutorial</a>
+                        <a href="tutorial.html" class="nav-item nav-link active">Tutorial</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other</a>
                             <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">Our Projects</a>
-                                
+                                <a href="#" class="dropdown-item">Our Projects</a>   
                             </div>
                         </div>
                         <a href="#" class="nav-item nav-link">About</a>
-                        <a href="contact.html" class="nav-item nav-link nav-link active">Contact</a>
+                        <a href="contact.html" class="nav-item nav-link nav-link">Contact</a>
                     </div>
                     <a href="#" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
                 </div>
@@ -91,57 +90,84 @@
         <!-- Navbar & Hero End -->
 
 
-        <!-- Contact Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Contact Us<span></span></p>
-                    <h1 class="text-center mb-5">Contact For Any Query</h1>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-7">
-                        <div class="wow fadeInUp" data-wow-delay="0.3s">
-                            
-                            <form id="contactForm" onsubmit="openGmailCompose(event)">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                                            <label for="name" class="form-label">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                                            <label for="email" class="form-label">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                                            <label for="subject" class="form-label">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px" required></textarea>
-                                            <label for="message" class="form-label">Message</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3 submit-btn" type="submit">
-                                            <i class="fas fa-paper-plane me-2"></i>Send MessageSend Message
-                                        </button>
-                                    </div>
-                                    
-                                </div>
-                            </form>
+        <!-- Tutorials -->
+        <div class="container-fluid py-5">
+            <div class="container py-2 px-lg-5">
+                <div class="row g-4">
+                    <div class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="text-center mb-5">Tutorials</h1>
+                    </div>
+                    <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="col-12 text-center">
+                            <ul class="list-inline mb-5" id="portfolio-flters">
+                                <li class="mx-2 active" data-filter="*">All</li>
+                                <li class="mx-2" data-filter=".electronics">Electronics</li>
+                                <li class="mx-2" data-filter=".iot">IoT</li>
+                            </ul>
                         </div>
                     </div>
+                </div>  
+                
+                <div class="row g-4 portfolio-container" >
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 portfolio-item electronics  wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="diy-12v-pwm-motor-controller.html">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/blog/img1.png" alt="">
+                                <h5 class="mb-3 mt-3">12V PWM Motor Speed Controller</h5>
+                                <p class="m-0 text-black">DIY 12V PWM Motor Speed Controller | Step-by-Step Guide & Circuit Diagram</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 portfolio-item electronics  wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="#">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                                <h5 class="mb-2 mt-3">Tutorials</h5>
+                                <p class="m-0 text-black">Coming Soon...!</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 portfolio-item electronics  wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="#">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                                <h5 class="mb-2 mt-3">Tutorials</h5>
+                                <p class="m-0 text-black">Coming Soon...!</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 portfolio-item iot  wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="#">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                                <h5 class="mb-2 mt-3">Tutorials</h5>
+                                <p class="m-0 text-black">Coming Soon...!</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 portfolio-item electronics  wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="#">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                                <h5 class="mb-2 mt-3">Tutorials</h5>
+                                <p class="m-0 text-black">Coming Soon...!</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 portfolio-item electronics  wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="#">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                                <h5 class="mb-2 mt-3">Tutorials</h5>
+                                <p class="m-0 text-black">Coming Soon...!</p>
+                            </div>
+                        </a>                           
+                    </div>
+  
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+        <!-- Tutorials End -->
         
 
         <!-- Footer Start -->
@@ -224,108 +250,13 @@
         </div>
         <!-- Footer End -->
 
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     
-    <!-- contact form script 
-    <script>
-        function openGmailCompose(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Construct Gmail compose URL
-            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=roboorion.services@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-            )}`;
-
-            // Open Gmail compose in new tab
-            window.open(gmailUrl, '_blank');
-            
-            // Reset form after submission
-            document.getElementById('contactForm').reset();
-        }
-    </script>-->
-
-    <!-- Redirecting Html -- Thank You Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <!-- Modal Header with Close Button -->
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                
-                <!-- Modal Body -->
-                <div class="modal-body text-center p-5 pt-0">
-                    <div class="text-success mb-3" style="font-size: 3rem;">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3 class="mb-3">Thank You!</h3>
-                    <p>Your message has been sent successfully.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     
     
-    
-
-    <!--Redirecting Script--> <!--
-    <script>
-    function openGmailCompose(event) {
-        event.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Validate required fields
-        if (!name || !email || !subject || !message) {
-            alert('Please fill in all required fields');
-            return;
-        }
-    
-        try {
-            // Construct Gmail URL
-            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=roboorion@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-            )}`;
-    
-            // Open Gmail in new tab
-            const newWindow = window.open(gmailUrl, '_blank');
-            
-            // Show modal only if window opened successfully
-            if (newWindow) {
-                // Reset form
-                event.target.reset();
-                
-                // Show Bootstrap modal
-                const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
-                modal.show();
-                
-                // Redirect after 5 seconds
-                setTimeout(() => {
-                    window.location.href = 'index.html'; // Update this path
-                }, 5000);
-            } else {
-                alert('Please allow pop-ups for this site');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
-        }
-    }
-    </script>-->
 
     <!-- jQuery (Needed before Bootstrap JS) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

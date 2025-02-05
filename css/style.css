@@ -437,9 +437,11 @@ h6,
     transition: .5s;
 }
 
+/*
 .portfolio-item:hover img {
     transform: scale(1.1);
 }
+    */
 
 .portfolio-item .portfolio-overlay {
     position: absolute;
@@ -673,4 +675,6 @@ input:focus, textarea:focus, select:focus {
     border-bottom-left-radius: 5px !important;
     border-bottom-right-radius: 5px !important;
 }
-  
+
+/***tutoriAL***/
+
