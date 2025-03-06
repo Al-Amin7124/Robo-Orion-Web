@@ -240,9 +240,26 @@ h6,
 
     overflow: hidden;
 
+}
+
+.hero-header-index {
+    margin-bottom: -1rem;
+    padding: 0; /* Remove fixed padding */
+    background: url(../img/banner-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     
+    display: flex;
+    align-items: center;
+    
+    overflow: hidden;
+    height: auto; /* Allow height to be determined by content */
+    min-height: 100vh;
 
 }
+
+
 
 @media (max-width: 991.98px) {
     .hero-header {
