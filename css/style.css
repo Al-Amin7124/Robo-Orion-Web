@@ -209,55 +209,30 @@ h6,
 
 
 /*** Hero Header ***/
-.hero-header {
-    margin-bottom: -1rem;
-    padding: 16rem 0;
-    background:
-        url(../img/blob-top-left.png),
-        url(../img/blob-top-right.png),
-        url(../img/blob-bottom-left.png),
-        url(../img/blob-bottom-right.png),
-        url(../img/blob-center.png),
-        url(../img/bg-bottom.png);
-    background-position:
-        left 0px top 0px,
-        right 0px top 0px,
-        left 0px bottom 0px,
-        right 0px bottom 0px,
-        center center,
-        center bottom;
-    background-repeat: no-repeat;
-    background-size: 
-        auto,  /* blob-top-left */
-        auto,  /* blob-top-right */
-        auto,  /* blob-bottom-left */
-        auto,  /* blob-bottom-right */
-        auto,  /* blob-center */
-        100% 100px;  /* bg-bottom */
-
-    display: flex;
-    align-items: center;
-
-    overflow: hidden;
-
-}
-
 .hero-header-index {
     margin-bottom: -1rem;
     padding: 0; /* Remove fixed padding */
-    background: url(../img/banner-3.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
     
+    background: url(../img/banner-3.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures full coverage */
+    background-position: center; /* Center by default */
+  
     display: flex;
     align-items: center;
-    
+  
     overflow: hidden;
     height: auto; /* Allow height to be determined by content */
     min-height: 100vh;
-
-}
+  }
+  
+  /* On smaller screens, focus the image on the left */
+  @media (max-width: 1024px) {
+    .hero-header-index {
+      background-position: left center; /* Focus on the left half */
+    }
+  }
+  
 
 
 
@@ -546,17 +521,16 @@ h6,
 /*** Footer ***/
 .footer {
     margin-top: 6rem;
-    padding-top: 9rem;
+    padding-top: 5rem;
     
-    background:
-        url(../img/bg-top.png),
-        url(../img/map.png);
-    background-position:
-        center top,
-        center center;
+    background: url(../img/blank-color.png);
+    
+    background-position: center center;
     background-repeat: no-repeat;
-
-    background-size: 100% 100px;
+    background-size: cover; /* Ensures the image covers the entire footer */
+    
+    width: 100%;  /* Ensures it spans the full width */
+    min-height: 200px; /* Set a minimum height (adjust as needed) */
     
 }
 
