@@ -1,0 +1,298 @@
+
+/*** Hero Header ***/
+.hero-header-product {
+  margin-bottom: -1rem;
+  padding: 0; /* Remove fixed padding */
+  
+  background: url(../img/banner-3.png);
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures full coverage */
+  background-position: center; /* Center by default */
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  height: auto; /* Allow height to be determined by content */
+  min-height: 100vh;
+}
+
+/* On smaller screens, focus the image on the left */
+@media (max-width: 1024px) {
+  .hero-header-product {
+    background-position: left center; /* Focus on the left half */
+  }
+}
+
+
+/*** Product Filter ***/
+
+.filter-tope-group button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  margin-right: 32px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #262626;
+  transition: color 0.3s ease;
+}
+
+/* Underline setup */
+.filter-tope-group button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.filter-tope-group button:not(.how-active1):hover::after {
+  width: 100%;
+}
+
+.filter-tope-group button.how-active1::after {
+  width: 100% !important;
+}
+
+.filter-tope-group button.how-active1::after {
+  transition: none;
+}
+
+.filter-tope-group button:active {
+  transform: translateY(1px);
+}
+
+
+/* Layout adjustments */
+.flex-w.flex-sb-m.p-b-52 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-tope-group {
+  order: 1;
+  flex-grow: 1;
+}
+
+.flex-w.flex-c-m.m-tb-10 {
+  order: 2;
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+
+
+/*** Product Items ***/
+
+.product-item {
+  transition: .5s;
+}
+
+.product-action {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  pointer-events: none;  /* Prevents it from blocking the image link */
+}
+
+.product-action a.btn {
+  position: relative;
+  margin: 0 3px;
+  margin-top: 100px;
+  opacity: 0;
+}
+
+.product-item:hover {
+  box-shadow: 0 0 30px #DDDDDD;
+}
+
+.product-item:hover .product-action {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.product-img:hover .product-action {
+  opacity: 1;
+  pointer-events: auto; /* Enables clicks only when visible */
+}
+.product-img a {
+  position: relative;
+  z-index: 2;  /* Ensures the image link stays clickable */
+  display: block;
+}
+
+.product-item:hover .product-action a.btn:first-child {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s 0s;
+}
+
+.product-item:hover .product-action a.btn:nth-child(2) {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s .05s;
+}
+
+.product-item:hover .product-action a.btn:nth-child(3) {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s .1s;
+}
+
+.product-item:hover .product-action a.btn:nth-child(4) {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s .15s;
+}
+
+.product-item .product-img img {
+  transition: .5s;
+}
+
+.product-item:hover .product-img img {
+  transform: scale(1.2);
+}
+
+.product-item .btn:hover {
+  color: #FFD333 !important;
+}
+
+.product-item {
+  position: relative; /* Ensures .button-area stays inside */
+  
+}
+
+.button-area {
+  display: block !important; /* Ensure it is always visible */
+  position: relative; /* Changed from absolute to relative */
+  text-align: center;
+  background: #F3F1F6 !important;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.button-area .quantity {
+  padding: 0.5rem;
+}
+
+
+.button-area .btn-cart {
+  text-wrap: nowrap;
+
+  width: 100%;
+}
+
+.btn-cart {
+  font-size: clamp(12px, 3vw, 14px) !important; /* Adjusts font size dynamically */
+  padding: 8px 10px !important; /* Ensures proper padding */
+  white-space: nowrap !important; /* Prevents text wrapping */
+  width: 100% !important; /* Makes sure it fits within the container */
+}
+
+
+.button-area .btn-cart:focus {
+  outline: none !important;  /* Removes the blue outline */
+  box-shadow: none !important;  /* Removes the Bootstrap glow effect */
+  border-color: inherit !important;  /* Keeps the default border */
+}
+
+.form-control {
+  overflow: visible !important;
+}
+
+
+.quantity-input:focus {
+  outline: none !important;  /* Removes the blue outline */
+  
+}
+
+
+/* Ensure the quantity input and buttons are always visible */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    opacity: 1 !important; /* Always show the buttons */
+    display: inline-block !important; /* Ensure they stay visible */
+}
+
+/* For Firefox */
+.quantity-input {
+    -moz-appearance: textfield !important; /* Ensures visibility */
+}
+
+@media (max-width: 576px) {
+  .quantity-input {
+      display: none !important;  /* Completely hides quantity input */
+  }
+
+  .col-3 {
+      display: none !important;  /* Hides the quantity column */
+  }
+
+  .col-7 {
+      width: 100% !important; /* Makes "Add to Cart" button take full row */
+  }
+
+  .btn-cart {
+      width: 100% !important; /* Ensures button takes full width */
+      text-align: center !important; /* Centers text inside button */
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .quantity-input {
+      visibility: hidden !important;  /* Makes it disappear but doesn't take space */
+      position: absolute !important; /* Removes it from layout */
+  }
+
+  .col-3 {
+      width: 0 !important;  /* Removes its space */
+      padding: 0 !important;
+      margin: 0 !important;
+  }
+
+  .col-7 {
+      width: 100% !important; /* Makes "Add to Cart" button take full width */
+  }
+
+  .button-area .row {
+      justify-content: center !important; /* Ensures proper centering */
+  }
+}
+
+.product-action .btn:hover{
+  
+  background-color: rgba(0, 0, 0, 0.405) !important;
+}
+
+.product-action .btn{
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#product-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#product-grid .product-item {
+  position: relative !important; /* Ensure it follows Bootstrap's grid */
+  width: 100%; /* Force column widths based on Bootstrap classes */
+}
