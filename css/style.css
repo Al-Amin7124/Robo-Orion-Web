@@ -224,14 +224,27 @@ h6,
     overflow: hidden;
     height: auto; /* Allow height to be determined by content */
     min-height: 100vh;
-  }
-  
-  /* On smaller screens, focus the image on the left */
-  @media (max-width: 1024px) {
+}
+
+.hero-header {
+    height: auto; /* Adjust height based on navbar */
+    padding-top: 0.1rem; /* Equivalent to Bootstrap's pt-2 */
+    
+    background-color: #65717C; /* Remove the background if not needed */
+}
+
+.hero-header .container {
+    margin: 0;
+    padding: 0;
+}
+
+/* On smaller screens, focus the image on the left */
+@media (max-width: 768px) {
     .hero-header-index {
       background-position: left center; /* Focus on the left half */
+      min-height: 70vh;
     }
-  }
+}
   
 
 
