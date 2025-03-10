@@ -20,7 +20,7 @@
 /* On smaller screens, focus the image on the left */
 @media (max-width: 1024px) {
   .hero-header-product {
-    background-position: left center; /* Focus on the left half */
+    background-position: center center; /* Focus on the left half */
   }
 }
 
