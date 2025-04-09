@@ -88,6 +88,8 @@ h6,
 
 
 /*** Navbar ***/
+
+
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f067";
@@ -616,6 +618,11 @@ h6,
     color: var(--secondary);
 }
 
+.large-icon {
+    transform: scale(1.3);
+    display: inline-block; /* Required for transform */
+  }
+
 /*** contact ***/
 
 input:focus, textarea:focus, select:focus {
@@ -665,6 +672,70 @@ input:focus, textarea:focus, select:focus {
 
 .progress-bar {
     transition: width 1s linear;
+}
+
+/* Messenger Floating Button */
+.messenger-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 38px;
+    background-color: #0084FF;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}
+
+.messenger-btn:hover {
+    background-color: #0069D9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.messenger-btn i {
+    font-size: 28px;
+}
+
+/* Optional Contact Section */
+.contact-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.messenger-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background-color: #0084FF;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.messenger-link:hover {
+    background-color: #0069D9;
+    transform: translateY(-2px);
 }
 
 /***products***/
