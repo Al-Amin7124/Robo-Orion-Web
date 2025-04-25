@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
     <title>Robo Orion | Expert Robotics, IoT & Electronics Solutions</title>
+    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Robo Orion offers top-tier robotics, IoT, and electronics solutions. Discover step-by-step tutorials, DIY home automation kits, microcontroller programming, VR innovations, and custom PCB design services. Shop affordable electronics or start building today!">
+    <meta name="description" content="Robo Orion delivers expert solutions in VR, Gaming, Apps, IoT, SEO, Web, and PCB design—driving innovation across digital and electronic domains.">
     <meta name="keywords" content="robotics solutions, IoT kits, microcontroller programming, DIY electronics, home automation, VR projects, PCB design services, electronics tutorials, robotics kits, custom electronics solutions">
     
-
     <!-- Social & Structured Data -->
     <meta property="og:title" content="Robo Orion | Expert Robotics, IoT & Electronics Solutions">
     <meta property="og:description" content="Robo Orion provides cutting-edge robotics kits, IoT tutorials, and home automation products. Learn, build, and innovate with expert support for PCB design, VR projects, and more.">
@@ -38,6 +37,15 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet"> 
     <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
@@ -46,6 +54,13 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/product.css" rel="stylesheet">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+            <symbol xmlns="http://www.w3.org/2000/svg" id="star-full" viewBox="0 0 24 24"><path fill="currentColor" d="m3.1 11.3l3.6 3.3l-1 4.6c-.1.6.1 1.2.6 1.5c.2.2.5.3.8.3c.2 0 .4 0 .6-.1c0 0 .1 0 .1-.1l4.1-2.3l4.1 2.3s.1 0 .1.1c.5.2 1.1.2 1.5-.1c.5-.3.7-.9.6-1.5l-1-4.6c.4-.3 1-.9 1.6-1.5l1.9-1.7l.1-.1c.4-.4.5-1 .3-1.5s-.6-.9-1.2-1h-.1l-4.7-.5l-1.9-4.3s0-.1-.1-.1c-.1-.7-.6-1-1.1-1c-.5 0-1 .3-1.3.8c0 0 0 .1-.1.1L8.7 8.2L4 8.7h-.1c-.5.1-1 .5-1.2 1c-.1.6 0 1.2.4 1.6"/></symbol>
+            <symbol xmlns="http://www.w3.org/2000/svg" id="star-half" viewBox="0 0 24 24"><path fill="currentColor" d="m3.1 11.3l3.6 3.3l-1 4.6c-.1.6.1 1.2.6 1.5c.2.2.5.3.8.3c.2 0 .4 0 .6-.1c0 0 .1 0 .1-.1l4.1-2.3l4.1 2.3s.1 0 .1.1c.5.2 1.1.2 1.5-.1c.5-.3.7-.9.6-1.5l-1-4.6c.4-.3 1-.9 1.6-1.5l1.9-1.7l.1-.1c.4-.4.5-1 .3-1.5s-.6-.9-1.2-1h-.1l-4.7-.5l-1.9-4.3s0-.1-.1-.1c-.1-.7-.6-1-1.1-1c-.5 0-1 .3-1.3.8c0 0 0 .1-.1.1L8.7 8.2L4 8.7h-.1c-.5.1-1 .5-1.2 1c-.1.6 0 1.2.4 1.6m8.9 5V5.8l1.7 3.8c.1.3.5.5.8.6l4.2.5l-3.1 2.8c-.3.2-.4.6-.3 1c0 .2.5 2.2.8 4.1l-3.6-2.1c-.2-.2-.3-.2-.5-.2"/></symbol>
+        </defs>
+    </svg>
 
     <!--logo-->
     <script type="application/ld+json">
@@ -89,6 +104,7 @@
                         <a href="product.html" class="nav-item nav-link">Product</a>
                         <a href="tutorial.html" class="nav-item nav-link">Tutorial</a>
                         <a href="article.html" class="nav-item nav-link">Article</a>
+                        <a href="#" class="nav-item nav-link">Project</a>
                         <a href="#" class="nav-item nav-link">About</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                         
@@ -118,69 +134,90 @@
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                    <h1 class="text-center mb-5">What Solutions We Provide</h1>
+                    <h1 class="text-center mb-0">What <span style="color: rgb(14, 14, 164);">Solutions</span> We Provide</h1>
+                    <p class="section-title text-secondary justify-content-center mb-5 mt-3" style="opacity: 0.3;"><span></span>Our Services<span></span></p>
+
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-microchip fa-2x"></i>
+                        <a href="service.html" class="text-decoration-none text-reset">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa-vr-cardboard fa-2x"></i>
+                                </div>
+                                <h4 class="mb-3 h5">VR and Game Development</h4>
+                                <p class="m-0">We deliver end-to-end VR and game development, creating immersive, interactive experiences from concept to cross-platform deployment</p>
+                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
                             </div>
-                            <h5 class="mb-3">PCB Design</h5>
-                            <p class="m-0">We will design your pcb as well as circuit schematic</p>
-                            <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </a>
+                        
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-terminal fa-2x"></i>
+                        <a href="service.html" class="text-decoration-none text-reset">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa-microchip fa-2x"></i>
+                                </div>
+                                <h4 class="mb-3 h5">PCB Design</h4>
+                                <p class="m-0">We provide end-to-end PCB design services—from schematic capture and PCB layout to manufacturing-ready Gerber files—ensuring high performance, quality, and manufacturability.</p>
+                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
                             </div>
-                            <h5 class="mb-3">IOT</h5>
-                            <p class="m-0">We will do your programming for your it project</p>
-                            <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </a>
+                        
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-vr-cardboard fa-2x"></i>
+                        <a href="service.html" class="text-decoration-none text-reset">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa-terminal fa-2x"></i>
+                                </div>
+                                <h4 class="mb-3 h5">IOT</h4>
+                                <p class="m-0">We provide end-to-end IoT solutions—connecting and securing devices, collecting and analyzing real-time data, and delivering actionable insights—ensuring scalable, reliable deployments.</p>
+                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
                             </div>
-                            <h5 class="mb-3">VR</h5>
-                            <p class="m-0">We will do your vr project.</p>
-                            <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </a>
+                        
                     </div>
+                    
                     <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-search fa-2x"></i>
+                        <a href="service.html" class="text-decoration-none text-reset">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa-search fa-2x"></i>
+                                </div>
+                                <h4 class="mb-3 h5">SEO Optimization</h4>
+                                <p class="m-0">We deliver comprehensive SEO services—conducting in-depth keyword research, on-page and technical optimization, strategic link building, and performance analytics—to boost organic traffic and elevate search rankings. </p>
+                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
                             </div>
-                            <h5 class="mb-3">SEO Optimization</h5>
-                            <p class="m-0">We will do SEO for your website</p>
-                            <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </a>
+                        
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop-code fa-2x"></i>
+                        <a href="service.html" class="text-decoration-none text-reset">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa-laptop-code fa-2x"></i>
+                                </div>
+                                <h4 class="mb-3 h5">Web Design</h4>
+                                <p class="m-0">We provide end-to-end web design services—crafting responsive, SEO-friendly websites with intuitive UX, custom branding, and seamless cross-device performance to drive engagement and conversions.</p>
+                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
                             </div>
-                            <h5 class="mb-3">Web Design</h5>
-                            <p class="m-0">We will do professional web design</p>
-                            <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </a>
+                        
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-android fa-2x"></i>
+                        <a href="service.html" class="text-decoration-none text-reset">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fab fa-android fa-2x"></i>
+                                </div>
+                                <h4 class="mb-3 h5">App Development</h4>
+                                <p class="m-0">We provide end-to-end app development services—crafting intuitive UI/UX, writing robust and secure code, executing rigorous testing and deployment—to deliver scalable, user-centric mobile and web applications.</p>
+                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
+                                
                             </div>
-                            <h5 class="mb-3">App Development</h5>
-                            <p class="m-0 text-black">We will develop app according to your needs</p>
-                            <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                            
-                        </div>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -194,29 +231,38 @@
             <div class="container py-2 px-lg-5">
                 <div class="row g-4">
                     <div class="wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="text-center mb-5">Our Products</h1>
+                        <h1 class="text-center mb-2">Our Products</h1>
                     </div>
                     <div class="row mt-n3 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="col-12 text-center text-sm-end text-md-end text-lg-end">
                             <ul class="list-inline mb-3">
-                                <a href="product.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mb-2 ">View All</a>                               
+                                <a href="product.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mt-3 mb-0 ">View All</a>                               
                             </ul>
                         </div>
                     </div>
                     
-                    <div class="col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="product-item bg-light mb-4 our-product most-popular top-rated ">
                             <div class="product-img position-relative overflow-hidden rounded-top-custom">
                                 <a href="#"><img class="img-fluid w-100 " src="img/products/cc12dspsqh424v1.png" alt=""></a>
                                 <div class="product-action">
-                                    <a class="btn btn-outline-dark " href="#">Quick view</a>
+                                    <a class="btn btn-outline-dark " href="#">View Details</a>
                                 </div>                                                                 
                             </div>
                             <div class="text-center pt-4">
-                                <a class="h6 text-decoration-none text-wrap p-1" href="#">12V Charge Controller V1</a>
+                                <h4><a class="h6 text-decoration-none text-wrap p-1" href="#">12V Charge Controller V1</a></h4>
                                 <div class="d-flex flex-wrap align-items-center justify-content-center mt-2 gap-2 mb-0">
-                                    <h5>৳220</h5><h6 class="text-muted ml-2"><del>৳320</del></h6>
-                                    
+                                    <p class="h5">৳220</p><p class="h6 text-muted ml-2"><del>৳320</del></p>    
+                                </div>
+                                <div>
+                                    <span class="rating">
+                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
+                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
+                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
+                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
+                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
+                                    </span>
+                                    <span>(27)</span>
                                 </div>
                                 <div class="button-area p-2 pt-0 mt-0">
                                     <div class="row g-2 mt-2 justify-content-center">
@@ -232,7 +278,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="product-item bg-light mb-4 our-product most-popular top-rated">
                             <div class="product-img position-relative overflow-hidden">
                                 <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
@@ -260,7 +306,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="product-item bg-light mb-4 our-product most-popular top-rated">
                             <div class="product-img position-relative overflow-hidden">
                                 <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
@@ -288,7 +334,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="product-item bg-light mb-4 our-product most-popular top-rated">
                             <div class="product-img position-relative overflow-hidden">
                                 <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
@@ -316,7 +362,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="product-item bg-light mb-4 our-product most-popular top-rated">
                             <div class="product-img position-relative overflow-hidden">
                                 <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
@@ -344,7 +390,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="product-item bg-light mb-4 our-product most-popular top-rated">
                             <div class="product-img position-relative overflow-hidden">
                                 <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
@@ -383,75 +429,75 @@
             <div class="container py-2 px-lg-5">
                 <div class="row g-4">
                     <div class="wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="text-center mb-5">Tutorials</h1>
+                        <h1 class="text-center mb-2">Tutorials</h1>
                     </div>
                     <div class="row mt-n3 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="col-12 text-center text-sm-end text-md-end text-lg-end">
                             <ul class="list-inline mb-3">
-                                <a href="tutorial.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mb-2 ">View All</a>                               
+                                <a href="tutorial.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mt-3 mb-0 ">View All</a>                               
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="tutorial/diy-12v-pwm-motor-controller.html" target="_blank">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/tutorial/img1.png" alt="">
-                                <h5 class="mb-3 mt-3">12V PWM Motor Speed Controller</h5>
+                                <h4 class="h6 mb-3 mt-3">12V PWM Motor Speed Controller</h4>
                                 <p class="m-0 text-black">DIY 12V PWM Motor Speed Controller | Step-by-Step Guide & Circuit Diagram</p>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="tutorial/How-to-Build-a-Simple-High-Voltage-Generator-at-Home.html" target="_blank">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/tutorial/High-voltage-arc-demonstration.png" alt="">
-                                <h5 class="mb-3 mt-3">Simple High Voltage Generator</h5>
+                                <h4 class="h6 mb-3 mt-3">Simple High Voltage Generator</h4>
                                 <p class="m-0 text-black">How to Build a Simple High Voltage Generator at Home</p>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item bg-light rounded text-center p-0">
                             <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
                             <h5 class="mb-2 mt-3">Tutorials</h5>
                             <p class="m-0">Coming Soon...!</p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded text-center p-0">
+                            <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                            <h5 class="mb-2 mt-3">Tutorials</h5>
+                            <p class="m-0">Coming Soon...!</p>
+                        </div>
+                    </div><!--
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item bg-light rounded text-center p-0">
                             <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
                             <h5 class="mb-2 mt-3">Tutorials</h5>
                             <p class="m-0">Coming Soon...!</p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item bg-light rounded text-center p-0">
                             <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
                             <h5 class="mb-2 mt-3">Tutorials</h5>
                             <p class="m-0">Coming Soon...!</p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item bg-light rounded text-center p-0">
                             <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
                             <h5 class="mb-2 mt-3">Tutorials</h5>
                             <p class="m-0">Coming Soon...!</p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item bg-light rounded text-center p-0">
                             <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
                             <h5 class="mb-2 mt-3">Tutorials</h5>
                             <p class="m-0">Coming Soon...!</p>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-0">
-                            <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                            <h5 class="mb-2 mt-3">Tutorials</h5>
-                            <p class="m-0">Coming Soon...!</p>
-                        </div>
-                    </div>
+                    </div>-->
                     
                 </div>
             </div>
@@ -463,25 +509,25 @@
             <div class="container py-2 px-lg-5">
                 <div class="row g-4">
                     <div class="wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="text-center mb-3">Article</h1>
+                        <h1 class="text-center mb-2">Article</h1>
                     </div>
                     <div class="row mt-n3 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="col-12 text-center text-sm-end text-md-end text-lg-end">
                             <ul class="list-inline mb-3">
-                                <a href="article.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mb-2 ">View All</a>                               
+                                <a href="article.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mt-3 mb-0 ">View All</a>                               
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="article/industrial-robotics-2.0-ai-&-rugged-electronics-in-manufacturing.html" target="_blank">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="article/industrial-robotics-2-0-ai-rugged-electronics-in-manufacturing.html" target="_blank">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/article/Rugged-LiDAR-sensor.png" alt="">
-                                <h5 class="mb-3 mt-3">Industrial Robotics-2.0</h5>
+                                <h4 class="h6 mb-3 mt-3">Industrial Robotics-2.0</h4>
                                 <p class="m-0 text-black">Detailed technical analysis of AI-driven industrial robotics systems</p>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="#">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
@@ -490,7 +536,7 @@
                             </div>
                         </a> 
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="#">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
@@ -499,7 +545,16 @@
                             </div>
                         </a> 
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="#">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                                <h5 class="mb-3 mt-3">Article</h5>
+                                <p class="m-0 text-black">Coming Soon...!</p>
+                            </div>
+                        </a> 
+                    </div><!--
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="#">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
@@ -508,7 +563,7 @@
                             </div>
                         </a> 
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="#">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
@@ -517,7 +572,7 @@
                             </div>
                         </a> 
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="#">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
@@ -526,7 +581,7 @@
                             </div>
                         </a> 
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="#">
                             <div class="feature-item bg-light rounded text-center p-0">
                                 <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
@@ -534,16 +589,7 @@
                                 <p class="m-0 text-black">Coming Soon...!</p>
                             </div>
                         </a> 
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-3 mt-3">Article</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a> 
-                    </div>
+                    </div>-->
                     
                 </div>
             </div>
@@ -560,12 +606,12 @@
                 <div class="row mt-n3 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="col-12 text-center text-sm-end text-md-end text-lg-end">
                         <ul class="list-inline mb-5">
-                            <a href="#" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mb-2 ">View All</a>                               
+                            <a href="#" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mt-3 mb-0 ">View All</a>                               
                         </ul>
                     </div>
                 </div>
-                <div class="row g-4 portfolio-container">
-                    <div class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row g-4 owl-carousel testimonial-carousel">
+                    <div class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/project/1.png" alt="">
@@ -583,19 +629,34 @@
                     <div class="col-lg-3 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/project/2.png" alt="">
+                                <img class="img-fluid w-100" src="img/project/vr-shop.png" alt="vr-shop-design">
                                 <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/project/2.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href="img/project/vr-shop.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                             <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">3D Printing</p>
-                                <h5 class="lh-base mb-0">3d Printed electronics pcb case</a>
+                                <p class="text-primary fw-medium mb-2">VR Development</p>
+                                <h5 class="lh-base mb-0">VR Shop</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-lg-3 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/project/vr-practical-tutorial.png" alt="vr-practical-tutorial-simulation">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="img/project/vr-practical-tutorial.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">VR Development</p>
+                                <h5 class="lh-base mb-0">VR Practical Tutorial Simulation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/project/4.png" alt="">
@@ -610,7 +671,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-3 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/project/3.png" alt="">
@@ -625,13 +686,14 @@
                             </div>
                         </div>
                     </div> 
+                    
                    
                 </div>
             </div>
         </div>
         <!-- Projects End -->
 
-
+        
         <!-- Footer Start -->
         <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-4  px-lg-5">
@@ -640,49 +702,69 @@
                         <p class="section-title text-white h5 mb-4">Address<span></span></p>
                         <p><i class="fa fa-map-marker-alt me-3"></i>Location</p>
                         <p><i class="fa fa-phone-alt me-3"></i>Phone</p>
-                        <p><i class="fa fa-envelope me-3"></i>E-Mail</p>
+                        <p><i class="fa fa-envelope me-3"></i>roboorion.services@gmail.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank"><i class="fab fa-facebook-f"></i></a> <!--
                             <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
+                            <a class="btn btn-outline-light btn-social" href="https://kwork.com/user/alaminshuvo71" target="_blank"><i class="fa-brands fa-korvue large-icon"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="#">About Us</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="#">Privacy Policy</a>
-                        <a class="btn btn-link" href="#">Terms & Condition</a>
-                        <a class="btn btn-link" href="#">Career</a>
+                        <a class="btn btn-link" href="#" target="_blank">About Us</a>
+                        <a class="btn btn-link" href="contact.html" target="_blank">Contact Us</a> <!--
+                        <a class="btn btn-link" href="#" target="_blank">Privacy Policy</a>
+                        <a class="btn btn-link" href="#" target="_blank">Terms & Condition</a>
+                        <a class="btn btn-link" href="#" target="_blank">Career</a>-->
+                        <a class="btn btn-link" href="https://youtube.com/@oriontv-xyz?si=y5LDXB11WmK3QiaP" target="_blank">Orion TV</a>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
-                        <div class="row g-2">
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/1.png" alt="Image">
+                        <p class="section-title text-white h5 mb-4">Online Workplace<span></span></p>
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Kwork -->
+                            <div class="d-flex align-items-center">
+                                <a href="https://kwork.com/user/alaminshuvo71" target="_blank"><img src="img/k-work.png" alt="Kwork Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
+                                <a href="https://kwork.com/user/alaminshuvo71" class="text-white text-decoration-none" target="_blank">Kwork</a>
                             </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/2.png" alt="Image">
+                            <!-- Fiverr -->
+                            <div class="d-flex align-items-center">
+                                <a href="https://www.fiverr.com/s/XLkr852" target="_blank"></a><img src="img/fiverr.png" alt="Fiverr Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
+                                <a href="https://www.fiverr.com/s/XLkr852" class="text-white text-decoration-none" target="_blank">Fiverr</a>
                             </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/3.png" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/4.png" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/2.png" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/4.png" alt="Image">
-                            </div>
+                            <!-- Freelancer 
+                            <div class="d-flex align-items-center">
+                                <a href="https://www.freelancer.com/u/alamins71?sb=t" target="_blank"></a><img src="img/freelancer.png" alt="Freelancer Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
+                                <a href="https://www.freelancer.com/u/alamins71?sb=t" class="text-white text-decoration-none" target="_blank">Freelancer</a>
+                            </div>-->
+                            <!-- Upwork 
+                            <div class="d-flex align-items-center">
+                                <a href="https://upwork.com" target="_blank"></a><img src="img/upwork.png" alt="Upwork Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
+                                <a href="https://upwork.com" class="text-white text-decoration-none" target="_blank">Upwork</a>
+                            </div>-->
+                            <!-- PeoplePerHour 
+                            <div class="d-flex align-items-center">
+                                <img src="img/people-per-hour-logo.png" alt="PeoplePerHour Logo" style="height: 24px; width: auto; margin-right: 8px;">
+                                <a href="https://peopleperhour.com" class="text-white text-decoration-none" target="_blank">PeoplePerHour</a>
+                            </div>-->
+                            <!-- Guru 
+                            <div class="d-flex align-items-center">
+                                <img src="img/guru-logo.png" alt="Guru Logo" style="height: 24px; width: auto; margin-right: 8px;">
+                                <a href="https://guru.com" class="text-white text-decoration-none" target="_blank">Guru</a>
+                            </div>-->
+                            <!-- WellFound 
+                            <div class="d-flex align-items-center">
+                                <img src="img/wellfound-logo.png" alt="well-found Logo" style="height: 24px; width: auto; margin-right: 8px;">
+                                <a href="https://wellfound.com" class="text-white text-decoration-none" target="_blank">WellFound</a>
+                            </div>-->
                         </div>
                     </div>
+                    
                     <div class="col-md-6 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Robo Orion<span></span></p>
-                        <p>We are always active for you. Whenever you needs help, contact with us.</p>
+                        <p>Get our latest news and ideas to your inbox.</p>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
                             <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
@@ -699,7 +781,8 @@
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="index.html">Home</a><!--
+                                <a href="index.html">Home</a>
+                                <a href="https://youtube.com/@oriontv-xyz?si=y5LDXB11WmK3QiaP" target="_blank">News</a><!--
                                 <a href="#">Cookies</a>-->
                                 <a href="contact.html">Help</a><!--
                                 <a href="#">FQAs</a>-->
@@ -715,6 +798,8 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+
+    
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -740,11 +825,6 @@
           "url": "https://robo-orion.com",
           "description": "Robo Orion hub for robotics, IoT projects, electronics tutorials, and DIY home automation kits.",
           "founder": "MD. Al-Amin",
-          <!--
-          //"sameAs": [
-            //"https://facebook.com/robo-orion",
-            //"https://youtube.com/robo-orion-tutorials"
-          ] -->
         }
     </script>
 </body>
