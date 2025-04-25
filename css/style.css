@@ -470,6 +470,8 @@ h6,
 }
 
 
+
+
 /*** Newsletter ***/
 .newsletter {
     margin: 6rem 0;
@@ -519,6 +521,61 @@ h6,
     color: #FFFFFF;
     background: var(--primary);
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+/** custom css **/
+.owl-carousel {
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
+}
+.testimonial-carousel .owl-stage {
+    display: flex !important;
+}
+.testimonial-carousel .owl-item {
+    margin-right: 25px !important;
+    width: calc(100% / 4 - 25px) !important; /* Calculate proper width */
+}
+
+.testimonial-carousel .owl-item {
+    margin-right: 25px !important;
+}
+
+.portfolio-item {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
+}
+
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.testimonial-carousel .owl-prev,
+.testimonial-carousel .owl-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.5) !important;
+    opacity: .3;
+    color: white !important;
+    border-radius: 50% !important;
+    transition: all 0.3s;
+}
+
+.testimonial-carousel .owl-prev {
+    left: -70px;
+}
+
+.testimonial-carousel .owl-next {
+    right: -80px;
+}
+
+.testimonial-carousel .owl-prev:hover,
+.testimonial-carousel .owl-next:hover {
+    background: rgba(0,0,0,0.8) !important;
 }
 
 
