@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tutorials | Robo Orion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master robotics and electronics with Robo Orion's expert tutorials. Learn IoT programming, PCB design, microcontroller setup, and DIY electronics projects through detailed guides.">
+    <meta name="keywords" content="electronics tutorials, robotics guides, IoT programming, Arduino tutorials, Raspberry Pi projects, PCB design guide, DIY electronics, home automation tutorials, VR development, microcontroller programming">
+    
+    <!-- Social & Structured Data -->
+    <meta property="og:title" content="Robo Orion Tutorials | Learn Robotics & Electronics Step-by-Step">
+    <meta property="og:description" content="Free expert tutorials on robotics kits, IoT programming, PCB design, and electronics projects. Perfect for makers and developers.">
+    <meta property="og:image" content="https://roboorion.com/shop-banner-2">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://roboorion.com/tutorial.html">
+    <meta name="author" content="Robo Orion Team">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Robo Orion Tutorials",
+            "url": "https://roboorion.com/tutorial.html",
+            "description": "Professional resource for robotics engineering, IoT development, and electronics tutorials",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Robo Orion",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://roboorion.com/img/logo-full.png"
+                }
+            }
+        }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo-2.png">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Keep this for any custom Bootstrap styles -->
+    
+    <!-- Icon Font Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Additional Libraries -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <div class="container-fluid bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0">RoboOrion</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="product.html" class="nav-item nav-link">Product</a>
+                        <a href="tutorial.html" class="nav-item nav-link">Tutorial</a>
+                        <a href="article.html" class="nav-item nav-link">Article</a>
+                        <a href="project.html" class="nav-item nav-link active">Project</a>
+                        <a href="#" class="nav-item nav-link">About</a>
+                        <a href="contact.html" class="nav-item nav-link nav-link">Contact</a>
+                    </div>
+                    <a href="#" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
+                </div>
+            </nav>
+
+            <div class="container-fluid hero-header">
+                <div class="container my-5 py-4 px-lg-5">
+                </div>
+            </div>
+        </div> 
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Tutorials -->
+        <div class="container-fluid py-2">
+            <div class="container py-1 px-lg-5">
+                <div class="row g-4">
+                    <div class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class=" text-center mb-5">Our Projects</h1>
+                    </div>
+                    <div class="wow row mt-n2  fadeInUp" data-wow-delay="0.3s">
+                        <div class="col-12 text-start">
+                            <ul class="list-inline mb-5" id="portfolio-flters">
+                                <li class="mx-2 active" data-filter="*">All</li>
+                                <li class="mx-2" data-filter=".gamedev">VR and Game Development</li>
+                                <li class="mx-2" data-filter=".app">Apps</li>
+                                <li class="mx-2" data-filter=".software">Software</li>
+                                <li class="mx-2" data-filter=".iot">IoT</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>  
+                
+                <div class="row g-4 tutorial-container" >
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 tutorial-item electronics wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="project/digital-vr-coffee-shop.html" target="_blank">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/project/digital-vr-shop.png" alt="Digital VR Shop">
+                                <h4 class="h6 mb-2 mt-3">Digital VR Shop</h4>
+                                <p class="m-0 text-black">Interactive Digital VR Shop Design</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 tutorial-item wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="project/fire-boiler-unity-vr-project.html" target="_blank">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/project/vr-practical-tutorial.png" alt="Digital VR Shop">
+                                <h4 class="h6 mb-2 mt-3">VR Training Simulation</h4>
+                                <p class="m-0 text-black">Interactive Industrial VR Training Simulation</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 tutorial-item electronics  wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="#">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                                <h5 class="mb-2 mt-3">Tutorials</h5>
+                                <p class="m-0 text-black">Coming Soon...!</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 tutorial-item iot  wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="#">
+                            <div class="feature-item bg-light rounded text-center p-0">
+                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
+                                <h5 class="mb-2 mt-3">Tutorials</h5>
+                                <p class="m-0 text-black">Coming Soon...!</p>
+                            </div>
+                        </a>                           
+                    </div>
+                    
+  
+                </div>
+            </div>
+        </div>
+        <!-- Tutorials End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4  px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Location</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>Phone</p>
+                        <p><i class="fa fa-envelope me-3"></i>roboorion.services@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank"><i class="fab fa-facebook-f"></i></a> <!--
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
+                            <a class="btn btn-outline-light btn-social" href="https://kwork.com/user/alaminshuvo71" target="_blank"><i class="fa-brands fa-korvue large-icon"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://github.com/Al-Amin7124" target="_blank"><i class="fa-brands fa-github large-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                        <a class="btn btn-link" href="#" target="_blank">About Us</a>
+                        <a class="btn btn-link" href="contact.html" target="_blank">Contact Us</a> <!--
+                        <a class="btn btn-link" href="#" target="_blank">Privacy Policy</a>
+                        <a class="btn btn-link" href="#" target="_blank">Terms & Condition</a>
+                        <a class="btn btn-link" href="#" target="_blank">Career</a>-->
+                        <a class="btn btn-link" href="https://youtube.com/@oriontv-xyz?si=y5LDXB11WmK3QiaP" target="_blank">Orion TV</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Online Workplace<span></span></p>
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Fiverr -->
+                            <div class="d-flex align-items-center">
+                                <a href="https://www.fiverr.com/s/XLkr852" target="_blank"></a><img src="img/fiverr.png" alt="Fiverr Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
+                                <a href="https://www.fiverr.com/s/XLkr852" class="text-white text-decoration-none" target="_blank">Fiverr</a>
+                            </div>
+                            <!-- Kwork -->
+                            <div class="d-flex align-items-center">
+                                <a href="https://kwork.com/user/alaminshuvo71" target="_blank"><img src="img/k-work.png" alt="Kwork Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
+                                <a href="https://kwork.com/user/alaminshuvo71" class="text-white text-decoration-none" target="_blank">Kwork</a>
+                            </div>
+                            
+                            
+                            <!-- Freelancer 
+                            <div class="d-flex align-items-center">
+                                <a href="https://www.freelancer.com/u/alamins71?sb=t" target="_blank"></a><img src="img/freelancer.png" alt="Freelancer Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
+                                <a href="https://www.freelancer.com/u/alamins71?sb=t" class="text-white text-decoration-none" target="_blank">Freelancer</a>
+                            </div>-->
+                            <!-- Upwork 
+                            <div class="d-flex align-items-center">
+                                <a href="https://upwork.com" target="_blank"></a><img src="img/upwork.png" alt="Upwork Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
+                                <a href="https://upwork.com" class="text-white text-decoration-none" target="_blank">Upwork</a>
+                            </div>-->
+                            <!-- PeoplePerHour 
+                            <div class="d-flex align-items-center">
+                                <img src="img/people-per-hour-logo.png" alt="PeoplePerHour Logo" style="height: 24px; width: auto; margin-right: 8px;">
+                                <a href="https://peopleperhour.com" class="text-white text-decoration-none" target="_blank">PeoplePerHour</a>
+                            </div>-->
+                            <!-- Guru 
+                            <div class="d-flex align-items-center">
+                                <img src="img/guru-logo.png" alt="Guru Logo" style="height: 24px; width: auto; margin-right: 8px;">
+                                <a href="https://guru.com" class="text-white text-decoration-none" target="_blank">Guru</a>
+                            </div>-->
+                            <!-- WellFound 
+                            <div class="d-flex align-items-center">
+                                <img src="img/wellfound-logo.png" alt="well-found Logo" style="height: 24px; width: auto; margin-right: 8px;">
+                                <a href="https://wellfound.com" class="text-white text-decoration-none" target="_blank">WellFound</a>
+                            </div>-->
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Robo Orion<span></span></p>
+                        <p>Get our latest news and ideas to your inbox.</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="https://roboorion.com">Robo Orion</a>, All Right Reserved. 							
+							Designed By <a class="border-bottom" href="https://roboorion.com">Robo Orion</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                                <a href="https://youtube.com/@oriontv-xyz?si=y5LDXB11WmK3QiaP" target="_blank">News</a><!--
+                                <a href="#">Cookies</a>-->
+                                <a href="contact.html">Help</a><!--
+                                <a href="#">FQAs</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    
+    
+    
+
+    <!-- jQuery (Needed before Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Other JavaScript Libraries -->
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Boxicons JS -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    
+    
+
+    <!-- Template JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/index.js"></script> <!-- Add this -->
+
+
+   
+</body>
+
+</html>
