@@ -99,6 +99,20 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
+
+    // Portfolio isotope and filter
+var portfolioIsotope = $('.tutorial-container').isotope({
+    itemSelector: '.tutorial-item',
+    layoutMode: 'fitRows'
+});
+
+$('#portfolio-flters li').on('click', function () {
+    $("#portfolio-flters li").removeClass('active');
+    $(this).addClass('active');
+
+    portfolioIsotope.isotope({ filter: $(this).data('filter') });
+});
+
     
 })(jQuery);
 
