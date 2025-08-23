@@ -35,8 +35,6 @@
   <link href="css/contact.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
-  
-
 
 </head>
 
@@ -50,8 +48,7 @@
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
+      
       <h1 class="sitename">Md. Al-Amin</h1>
     </a>
 
@@ -78,17 +75,17 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
+    <!-- Section -->
     <section id="home" class="hero section dark-background">
 
-      <img src="img/portfolio/4.jpg" alt="" data-aos="fade-in" class="">
+      <img src="img/portfolio/4.jpg" alt="background-image" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Md. Al-Amin</h2>
         <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section><!-- /Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -121,7 +118,7 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>15 March 2003</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>March 2003</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://roboorion.com/" target="_blank">Robo Orion</a> </span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+880 1999506021</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Dhaka, Bangladesh</span></li>
@@ -289,8 +286,9 @@
 
         <div class="row">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
+          <!-- Summary Section -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100" style="background-color: #eeeeee;">
+            <h3 class="resume-title">Summary</h3>
 
             <div class="resume-item pb-0">
               <h4>Md. Al-Amin</h4>
@@ -318,12 +316,12 @@
             <h3 class="resume-title" >Technical Skills</h3>
             <div class="resume-item">
               <ul>
-                <li><strong>Languages:</strong> C#, C++, HTML, CSS</li>
-                <li><strong>Simulation/Game Development:</strong> Unity (2D/3D/VR), Blender</li>
+                <li><strong>Languages:</strong> C#, C++, HTML, CSS, Java</li>
+                <li><strong>Simulation/Game Development:</strong> Unity (2D/3D/VR), Blender, Photoshop</li>
                 <li><strong>Embedded Systems:</strong> ESP32, Arduino, PWM control</li>
-                <li><strong>Web:</strong> HTML, CSS, Bootstrap</li>
+                <li><strong>Web:</strong> HTML, CSS, Bootstrap, Tailwind CSS</li>
                 <li><strong>Tool Development:</strong> File processing tools (image/pdf converter/merger)</li>
-                <li><strong>Other Tools:</strong> Visual Studio, VS Code, GitHub, EasyEDA</li>
+                <li><strong>Other Tools:</strong> Visual Studio, VS Code, GitHub, EasyEDA, Proteus, Premiere Pro, Solidworks</li>
               </ul>
             </div><!-- Edn Resume Item -->
 
@@ -335,16 +333,15 @@
               </ul>
             </div><!-- Edn Resume Item -->
 
-            
-
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200" style="background-color: #d5eeff;">
+            
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
               <h4>Unity VR/AR/XR & Game Developer</h4>
               <h5>2024 - Present</h5>
-              <p><em>Aesthetic Code Lab</em></p>
+              <p><em>Aesthetic Code Lab / Freelance</em></p>
               <ul>
                 <li>Designed and developed interactive 2D/3D games and simulations using Unity and C#.</li>
                 <li>Created immersive VR training applications for real-world scenarios using Oculus/PC VR platforms.</li>
@@ -391,9 +388,18 @@
                 </ul>
             </div><!-- End Resume Item -->
 
+            
+
+          </div>
+
+          <!-- Blank Section -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100" style="background-color: #eeeeee;"></div>
+
+          <!-- Project Start -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200" style="background-color: #f0fbff;">
             <!-- Project Item Start -->
 
-            <h3 class="resume-title">Projects</h3>
+            <h3 class="resume-title">My Projects</h3>
             <div class="resume-item">
               <h4>1. Industrial VR Training Simulation – Fire Boiler</h4>   
               <ul>
@@ -434,16 +440,25 @@
             <div class="resume-item">
               <h4>3. Home Automation System – ESP32 (IoT Project)</h4>   
               <ul>
-                <li>Controlled lights and fans (including speed adjustment) with ESP32 using C++ and PWM.</li>
-                <li>Tested in real hardware; includes logic control and safety handling</li>
+                <li>Developed a smart home automation system using ESP32 and C++ for IoT control.</li>
+                <li>Added 4-switch control system for lights with real-time operation.</li>
+                <li>Implemented ac fan speed control with smooth adjustment.</li>
+                <li>Integrated temperature and humidity monitoring with live display output.</li>
+                <li>Designed an automatic AC control system for temperature and airflow regulation.</li>
+                <li>Enabled smartphone-based control for AC and other connected devices.</li>
+                <li>Tested on real hardware with safety handling and reliable logic control.</li>
               </ul>
             </div><!-- Edn Resume Item -->
 
             <div class="resume-item">
-              <h4>4. PCB Circuit Design for IoT Projects</h4>   
+              <h4>4. PCB Circuit Design for IoT & Electronics Projects</h4>   
               <ul>
-                <li>Designed PCBs for ESP32-based systems using EasyEDA.</li>
-                <li>Showcases services, projects, and features a shop page with categories.</li>
+                <li>Designed professional PCB layouts for multiple electronics and IoT applications using EasyEDA and Proteus.</li>
+                <li>Developed PCB for IoT home automation system (ESP32-based smart control).</li>
+                <li>Designed PCB for 12V battery charge controller circuit.</li>
+                <li>Created PCB layout for TDA2030 audio amplifier circuit.</li>
+                <li>Designed PCB for LDR sensor-based automation circuit.</li>
+                <li>Optimized designs with professional schematics, component placement, and routing for reliable performance.</li>
               </ul>
             </div><!-- Edn Resume Item -->
 
@@ -454,9 +469,6 @@
                 <li>Completed schematic, layout, and routing for real-world fabrication.</li>
               </ul>
             </div><!-- Edn Resume Item -->
-
-    
-
           </div>
 
         </div>
@@ -503,7 +515,7 @@
               </div>
             </div><!-- End Portfolio Item 1 -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-industrial">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-industrial filter-vr">
               <div class="portfolio-content h-100">
                 <img src="img/project/vr-practical-tutorial.png" class="img-fluid" alt="image-vr-training-simulation">
                 <div class="portfolio-info">
@@ -527,7 +539,7 @@
 
     
     <!--services start-->
-    <section id="services" class="services section">
+    <section id="services" class="services section" style="background-color: #f2f4f7;">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -556,11 +568,27 @@
         </div>
       </div><!-- End Service Item -->
 
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+        <div class="icon flex-shrink-0"><i class="bi bi-phone"></i></div>
+        <div>
+          <h4 class="title"><a class="stretched-link">App Development</a></h4>
+          <p class="description">Developing responsive and user-friendly mobile and desktop applications with seamless UI/UX, backend integration, and cross-platform support for real-world solutions.</p>
+        </div>
+      </div><!-- End Service Item -->
+
       <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
         <div class="icon flex-shrink-0"><i class="bi bi-pc-display"></i></div>
         <div>
           <h4 class="title"><a class="stretched-link">Web Development</a></h4>
           <p class="description">Building responsive, modern websites using HTML, CSS, Bootstrap, and JavaScript to ensure a seamless user experience across all devices.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon flex-shrink-0"><i class="bi bi-graph-up"></i></div>
+        <div>
+          <h4 class="title"><a class="stretched-link">Web SEO</a></h4>
+          <p class="description">Boosting website visibility with SEO optimization, keyword strategy, and technical improvements to increase traffic, improve ranking, and enhance user engagement.</p>
         </div>
       </div><!-- End Service Item -->
 
@@ -588,8 +616,17 @@
         </div>
       </div><!-- End Service Item -->
 
-      </div>
 
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon flex-shrink-0"><i class="bi bi-cpu"></i></div>
+        <div>
+          <h4 class="title"><a class="stretched-link">PCB Design</a></h4>
+          <p class="description">Professional PCB design for IoT, automation, and electronic projects using EasyEDA and Proteus, ensuring optimized schematics, reliable performance, and production-ready layouts.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+
+      </div>
       </div>
 
     </section>
