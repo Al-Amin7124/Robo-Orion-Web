@@ -2,603 +2,594 @@
 <html lang="en">
 
 <head>
+    <title>Robo Orion | Expert Robotics, IoT & Electronics Solutions</title>
     <meta charset="utf-8">
-    <title>Robo Orion</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/logo-2.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"> 
-    <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pEMc+gY/5v5+2NH8GJ4p9C1G7Ux4ZQc4A1nZB5lYfR2kOvEe6V1a36P1zF+r8W3D+E5Fqk7QvZ0Z0FY5C7sZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
+    <!-- Customized tailwind Stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="asset/css/main.css" rel="stylesheet">
+    <link href="asset/css/service.css" rel="stylesheet">
+    
+
+    <script>
+        // Configure Tailwind to use both fonts
+        
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        ubuntu: ['Ubuntu', 'sans-serif'],
+                        exo: ['"Exo 2"', 'sans-serif'],
+                    },
+                    textShadow: {
+                        'default': '2px 2px 4px rgba(0, 0, 0, 0.3)',
+                        'lg': '4px 4px 8px rgba(0, 0, 0, 0.4)',
+                        'xl': '4px 4px 16px rgba(0, 0, 0, 0.5)',
+                    }
+                },
+            },
+        }
+    </script>
+    
+    
+    
+        
 </head>
 
-<body>
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+<body class="bg-gray-100">
+    <div class="bg-gray-100">
+        <!-- nav bar -->
+        <header class="sticky inset-0 z-50 border-b border-slate-100 bg-white/30 backdrop-blur-lg shadow-lg">
+            <nav  class="mx-auto flex max-w-8xl items-center gap-8 justify-between px-6 py-4 lg:px-12 transition-all duration-200 ease-in-out z-50">
+                
+                <!-- Left logo -->
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-full overflow-hidden shadow-xl ring-1 ring-gray-400">
+                            <img 
+                                src="asset/img/logo-2.png" 
+                                loading="lazy" 
+                                class="w-full h-full object-cover scale-140"
+                                alt="Robo Orion Logo">
+                        </div>
+                        <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-black">
+                            <span class="text-black-500 font-exo text-shadow">Robo</span>
+                            <span class="text-blue-500 font-ubuntu text-shadow">Orion</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Spacer -->
+                <div class="flex-grow hidden md:block"></div>
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex items-center gap-6">
+                    <li><a href="index.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Home</a></li>
+                    <li><a href="service.html" class="pt-1.5 font-dm text-md font-bold text-blue-600">Service</a></li>
+                    <li><a href="project.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Project</a></li>
+                    <li><a href="product.html.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Product</a></li>
+                    <li><a href="tutorial.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Tutorial</a></li>
+                    <li><a href="article.hrml" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Article</a></li>
+                    <li><a href="about.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">About</a></li>
+                    <li><a href="contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>      
+                </ul>
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="m-0">RoboOrion</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        
-                        <a href="service.html" class="nav-item nav-link active">Service</a>
-                        <a href="product.html" class="nav-item nav-link">Product</a>
-                        <a href="tutorial.html" class="nav-item nav-link">Tutorial</a>
-                        <a href="article.html" class="nav-item nav-link">Article</a>
-                        <a href="#" class="nav-item nav-link">About</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <!-- Mobile Menu Button -->
+                <div class="relative md:hidden">
+                    <button id="menu-btn" class="flex items-center text-slate-900 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" viewBox="0 0 24 24" 
+                            stroke-width="1.5" stroke="currentColor" 
+                            class="h-7 w-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" 
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Dropdown Menu (Right aligned) -->
+                    <div id="mobile-menu" class="absolute right-0 mt-2 hidden w-48 flex-col rounded-lg bg-white/90 backdrop-blur-xs shadow-lg p-2">
+                        <a href="index.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Home</a>
+                        <a href="service.html" class="block px-4 py-2 text-sm font-bold text-blue-600 hover:bg-slate-200 rounded-md">Service</a>
+                        <a href="project.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Project</a>
+                        <a href="product.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Product</a>
+                        <a href="tutorial.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Tutorial</a>
+                        <a href="article.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Article</a>
+                        <a href="about.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">About</a>
+                        <a href="contact.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Contact</a>
                     </div>
-                    <a href="#" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
                 </div>
             </nav>
+        </header>
+        <!-- Nav End -->
 
-            <div class="container-fluid hero-header">
-                <div class="container my-5 py-4 px-lg-5">
+        <!-- Service Section -->
+        <div class="mx-auto max-w-8xl py-8 bg-[#e7eaf6]" id="service">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold  text-gray-800"><span class="text-shadow-lg">Our Services</span></h1>
+            </div>
+
+            <!-- Service -- Item Start --Unity -->
+            <div class="max-w-7xl mt-10 mb-10 mx-auto p-1 pb-5" data-section="unity">
+                <div class="pb-2">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4 text-shadow">Develop <span class="text-blue-600">Engaging Games & Simulation</span> <br>with monetization features with <span class="text-blue-800">Unity</span></h2>
+                </div>
+                <!-- Card Start -- Unity Development -->                 
+                <div class="grid grid-cols-1 lg:grid-cols-2 h-full rounded-2xl border shadow-2xl overflow-hidden">   
+
+                    <!-- Left Column -->
+                    <div class="bg-[#38598b] flex items-center justify-center p-4 max-h-sm">
+                       <img src="asset/img/game.png" class="lg:max-w-2xl">
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="bg-[#9cd3d3] items-center p-4">
+                        <div class="flex gap-2">
+                            <i class="fa-solid fa-gamepad text-lg text-shadow"></i>
+                            <p class="text-xl font-medium text-gray-700 font-ubuntu pb-1 text-shadow">Game</p>
+                        </div>                        
+                       <h3 class="text-4xl font-semibold  text-gray-700 font-ubuntu">Create immersive games & simulations for multiple platforms with engaging gameplay</h3>
+                       <!-- inner card 1 -->
+                        <div class="bg-white/5 rounded-2xl border border-white shadow-xl overflow-hidden p-2 mt-5">
+                            <div class="card-toggle flex items-center justify-between p-4 cursor-pointer" onclick="toggleCard(1, 'unity')">
+                                <div class="gap-2 flex items-center pb-1 hover:text-fuchsia-700 transition-colors duration-200">
+                                    <i class="fa fa-laptop-code text-lg "></i>
+                                    <h4 class="text-lg text-gray-700 font-normal font-exo hover:text-fuchsia-700 transition-colors duration-200">Self-Developed Game</h4>                                    
+                                </div>
+                                <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300" id="icon-unity-1"></i>
+                            </div>
+                            <!-- Content -->
+                            <div class="card-content active" id="content-unity-1">
+                                <div class="px-4">
+                                    <p class="text-xl font-medium text-gray-700 font-exo text-shadow text-border">Robo Orion offers flexible game architecture with building blocks like GameCore SDK, Extension SDK, and UI GameBundle SDK that can be adapted to your game development needs.
+                                    </p>
+                                    
+                                    <div class="p-4 flex flex-col space-y-2">
+                                        <a href="project.html" class="flex items-center border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex 
+                                                    text-indigo-700 transition-all duration-300
+                                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-pink-500 max-w-[180px]">
+                                            <span>View Projects</span>
+                                            <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                        <a href="contact.html" class="flex items-center border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex 
+                                                    text-indigo-700 transition-all duration-300
+                                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-pink-500 max-w-[180px]">
+                                            <span>Order Now</span>
+                                            <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                                                      
+                        </div>
+
+                        <!-- Inner Card 2 -->
+                        <div class="bg-white/5 rounded-2xl border border-white shadow-xl overflow-hidden p-2 mt-5">
+                            <div class="card-toggle flex items-center justify-between p-4 cursor-pointer" onclick="toggleCard(2, 'unity')">
+                                <div class="gap-2 flex items-center pb-1 hover:text-fuchsia-700 transition-colors duration-200">
+                                    <i class="fa fa-palette text-lg"></i>                                    
+                                    <h4 class="text-lg text-gray-700 font-normal font-exo hover:text-fuchsia-700 transition-colors duration-200">Custom UI Development</h4>                                    
+                                </div>
+                                <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300" id="icon-unity-2"></i>
+                            </div>
+                            <!-- Content -->
+                            <div class="card-content" id="content-unity-2">
+                                <div class="px-4">
+                                    <p class="text-xl font-medium text-gray-700 font-exo text-shadow text-border">Feature-rich components help you quickly create intuitive, multi-platform game interfaces with smooth in-game experiences.
+                                    </p>
+                                    
+                                    <div class="p-4 flex flex-col space-y-2">
+                                        <a href="#" class="flex items-center border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex 
+                                                    text-indigo-700 transition-all duration-300
+                                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-pink-500 max-w-[180px]">
+                                            <span>Learn More</span>
+                                            <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <!-- Inner Card 3 -->
+                        <div class="bg-white/5 rounded-2xl border border-white shadow-xl overflow-hidden p-2 mt-5">
+                            <div class="card-toggle flex items-center justify-between p-4 cursor-pointer" onclick="toggleCard(3, 'unity')">
+                                <div class="gap-2 flex items-center pb-1 hover:text-fuchsia-700 transition-colors duration-200">   
+                                    <i class="fa-solid fa-code-pull-request text-lg"></i>                                    
+                                    <h4 class="text-lg text-gray-700 font-normal font-exo hover:text-fuchsia-600 transition-colors duration-200">Smart Game Features</h4>                                    
+                                </div>
+                                <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300" id="icon-unity-3"></i>
+                            </div>
+                            <!-- Content -->
+                            <div class="card-content" id="content-unity-3">
+                                <div class="px-4">
+                                    <p class="text-xl font-medium text-gray-700 font-exo text-shadow text-border">Incorporate versatile smart features into your games to enhance gameplay, increase engagement, and unlock new revenue opportunities.
+                                    </p>
+                                    
+                                    <div class="p-4 flex flex-col space-y-2">
+                                        <a href="#" class="flex items-center border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex 
+                                                    text-indigo-700 transition-all duration-300
+                                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-pink-500 max-w-[180px]">
+                                            <span>Get Started</span>
+                                            <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        
+                    </div>
+
+                     
+
                 </div>
             </div>
-        </div> 
-        <!-- Navbar & Hero End -->
 
+            <!-- Service -- Item Start --App -->
+            <div class="max-w-7xl mt-20  mx-auto p-1 pb-5" data-section="app">
+                <div class="pb-2">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4 text-shadow">Develop <span class="text-blue-600">Smart Mobile App</span>  <br>with monetization features</h2>
+                </div>
+                <!-- Card Start -- App Development -->                 
+                <div class="grid grid-cols-1 lg:grid-cols-2 h-full rounded-2xl border shadow-2xl overflow-hidden">   
 
-        <!-- Service Start -->
-        <div class="container-fluid pt-0 pb-2">
-            <div class="container py-2 pb-5 px-lg-5">
-                <div class="wow fadeInUp pt-2" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                    <h1 class="text-center mb-5">What Solutions We Provide</h1>
-                </div>
+                    <!-- Left Column -->
+                    <div class="bg-[#93e4c1] items-center p-4">
+                        <div class="flex gap-2">
+                            <i class="fas fa-mobile-alt pt-0 text-lg text-shadow"></i>
+                            <p class="text-xl font-medium text-gray-700 font-ubuntu pb-1 text-shadow">App</p>
+                        </div>                        
+                       <h3 class="text-4xl font-semibold  text-gray-700 font-ubuntu">Create multi-platform apps with broad approaches to mobile dev</h3>
+                       <!-- inner card 1 -->
+                        <div class="bg-white/5 rounded-2xl border border-white shadow-xl overflow-hidden p-2 mt-5">
+                            <div class="card-toggle flex items-center justify-between p-4 cursor-pointer" onclick="toggleCard(1,'app')">
+                                <div class="gap-2 flex items-center pb-1 hover:text-fuchsia-700 transition-colors duration-200">
+                                    <i class="fa fa-laptop-code text-lg "></i>
+                                    <h4 class="text-lg text-gray-700 font-normal font-exo hover:text-fuchsia-700 transition-colors duration-200">Self-Developed App</h4>                                    
+                                </div>
+                                <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300" id="icon-app-1"></i>
+                            </div>
+                            <!-- Content -->
+                            <div class="card-content active" id="content-app-1">
+                                <div class="px-4">
+                                    <p class="text-xl font-medium text-gray-700 font-exo text-shadow text-border">Robo Orion offers flexible architecture with building blocks like SmartLife App SDK,
+                                        Extension SDK, and UI BizBundle SDK that can be adapted to your needs.
+                                    </p>
+                                    
+                                    <div class="p-4 flex flex-col space-y-2">
+                                        <a href="#" class="flex items-center border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex 
+                                                    text-indigo-700 transition-all duration-300
+                                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-pink-500 max-w-[180px]">
+                                            <span>View Projects</span>
+                                            <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="flex items-center border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex 
+                                                    text-indigo-700 transition-all duration-300
+                                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-pink-500 max-w-[180px]">
+                                            <span>Order Now</span>
+                                            <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                                                      
+                        </div>
 
-                <!-- Single Service 1 Start -->
-                <div class="container-xxl bg-primary py-2 mt-4 border rounded wow fadeInUp" data-wow-delay="0.1s ">
-                    <div class="container py-1 px-lg-5">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 text-center text-lg-start">
-                                <img class="img-fluid animated wow zoomIn border rounded" data-wow-delay="0.3s" src="img/service/pcb.png" alt="">
+                        <!-- Inner Card 2 -->
+                        <div class="bg-white/5 rounded-2xl border border-white shadow-xl overflow-hidden p-2 mt-5">
+                            <div class="card-toggle flex items-center justify-between p-4 cursor-pointer" onclick="toggleCard(2,'app')">
+                                <div class="gap-2 flex items-center pb-1 hover:text-fuchsia-700 transition-colors duration-200">
+                                    <i class="fa fa-palette text-lg"></i>                                    
+                                    <h4 class="text-lg text-gray-700 font-normal font-exo hover:text-fuchsia-700 transition-colors duration-200">Custom UI Development</h4>                                    
+                                </div>
+                                <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300" id="icon-app-2"></i>
                             </div>
-                            <div class="col-lg-6 text-center  align-items-center justify-content-center">
-                                <h2 class="text-white mb-4 wow animated zoomIn" data-wow-delay="0.3s">PCB Design</h2>
-                                <div class="row justify-content-between px-4 wow animated zoomIn" data-wow-delay="0.3s">
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">PCB Layout Design</p>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">PCB Schematic Design</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">PCB Board Testing</a>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Complete PCB</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Gerber File</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Bill of Materials</a>
-                                        </div>
+                            <!-- content -->
+                            <div class="card-content" id="content-app-2">
+                                <div class="px-4">
+                                    <p class="text-xl font-medium text-gray-700 font-exo text-shadow text-border">Feature-rich components help you readily build a multi-platform intuitive device operation UI with seamless native in-app experiences.
+                                    </p>
+                                    
+                                    <div class="p-4 flex flex-col space-y-2">
+                                        <a href="#" class="flex items-center border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex 
+                                                    text-indigo-700 transition-all duration-300
+                                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-pink-500 max-w-[180px]">
+                                            <span>Learn More</span>
+                                            <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
-                                
-                                <p class="text-white pt-4 animated zoomIn pb-3">Contact with us for Order and more information</p>
-                                <a href="#" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">View Details</a>
-                                <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight ">Contact Us</a>
-                            </div>
-                            
+                            </div>    
                         </div>
-                    </div>
-                </div>
-                <!-- Single Service1 End -->
-                 <!-- Single Service2 Start -->
-                <div class="container-xxl bg-primary py-2 mt-4 border rounded wow fadeInUp" data-wow-delay="0.1s ">
-                    <div class="container py-1 px-lg-5">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 text-center text-lg-start">
-                                <img class="img-fluid animated wow zoomIn border rounded" data-wow-delay="0.4s" src="img/service/iot.png" alt="">
+                        <!-- Inner Card 3 -->
+                        <div class="bg-white/5 rounded-2xl border border-white shadow-xl overflow-hidden p-2 mt-5">
+                            <div class="card-toggle flex items-center justify-between p-4 cursor-pointer" onclick="toggleCard(3,'app')">
+                                <div class="gap-2 flex items-center pb-1 hover:text-fuchsia-700 transition-colors duration-200">   
+                                    <i class="fa-solid fa-code-pull-request text-lg"></i>                                    
+                                    <h4 class="text-lg text-gray-700 font-normal font-exo hover:text-fuchsia-600 transition-colors duration-200">Smart MiniApp</h4>                                    
+                                </div>
+                                <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300" id="icon-app-3"></i>
                             </div>
-                            <div class="col-lg-6 text-center  align-items-center justify-content-center">
-                                <h2 class="text-white mb-4 wow animated zoomIn" data-wow-delay="0.3s">IoT</h2>
-                                <div class="row justify-content-between px-4 wow animated zoomIn" data-wow-delay="0.3s">
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Microcontroller</p>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Programing</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Complete Project</a>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Project Testing</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Project Prototype</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Home Automation</a>
-                                        </div>
+                            <!-- Content -->
+                            <div class="card-content" id="content-app-3">
+                                <div class="px-4">
+                                    <p class="text-xl font-medium text-gray-700 font-exo text-shadow text-border">Incorporate more versatile smart features into your mobile app to gain a competitive edge and unlock new revenues.
+                                    </p>
+                                    
+                                    <div class="p-4 flex flex-col space-y-2">
+                                        <a href="#" class="flex items-center border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex 
+                                                    text-indigo-700 transition-all duration-300
+                                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-pink-500 max-w-[180px]">
+                                            <span>Get Started</span>
+                                            <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
-                                
-                                <p class="text-white pt-4 animated wow zoomIn pb-3 "data-wow-delay="0.2s">Contact with us for Order and more information</p>
-                                <a href="#" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 wow animated slideInLeft"data-wow-delay="0.1">View Details</a>
-                                <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill wow animated slideInRight "data-wow-delay="0.1s">Contact Us</a>
-                            </div>
-                            
+                            </div>    
                         </div>
+                        
                     </div>
-                </div>
-                <!-- Single Service2 End -->
-                 <!-- Single Service3 Start -->
-                <div class="container-xxl bg-primary py-2 mt-4 border rounded wow fadeInUp" data-wow-delay="0.1s ">
-                    <div class="container py-1 px-lg-5">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 text-center text-lg-start">
-                                <img class="img-fluid animated wow zoomIn border rounded" data-wow-delay="0.4s" src="img/service/web.png" alt="">
-                            </div>
-                            <div class="col-lg-6 text-center  align-items-center justify-content-center">
-                                <h2 class="text-white mb-4 wow animated zoomIn" data-wow-delay="0.3s">Web Design</h2>
-                                <div class="row justify-content-between px-4 wow animated zoomIn" data-wow-delay="0.3s">
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Complete Webpage</p>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Static Web</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Dynamic Web</a>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">E-Commerce Web</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Portfolio Design</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Web Maintenance</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <p class="text-white pt-4 animated wow zoomIn pb-3 "data-wow-delay="0.2s">Contact with us for Order and more information</p>
-                                <a href="#" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 wow animated slideInLeft"data-wow-delay="0.1">View Details</a>
-                                <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill wow animated slideInRight "data-wow-delay="0.1s">Contact Us</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Service3 End -->
-                 <!-- Single Service4 Start -->
-                <div class="container-xxl bg-primary py-2 mt-4 border rounded wow fadeInUp" data-wow-delay="0.1s ">
-                    <div class="container py-1 px-lg-5">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 text-center text-lg-start">
-                                <img class="img-fluid animated wow zoomIn border rounded" data-wow-delay="0.4s" src="img/service/vr.png" alt="">
-                            </div>
-                            <div class="col-lg-6 text-center  align-items-center justify-content-center">
-                                <h2 class="text-white mb-4 wow animated zoomIn" data-wow-delay="0.3s">VR Project</h2>
-                                <div class="row justify-content-between px-4 wow animated zoomIn" data-wow-delay="0.3s">
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">3D VR Design</p>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">3D to VR</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Web VR</a>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Loading...</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Loading...</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Loading...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <p class="text-white pt-4 animated wow zoomIn pb-3 "data-wow-delay="0.2s">Contact with us for Order and more information</p>
-                                <a href="#" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 wow animated slideInLeft"data-wow-delay="0.1">View Details</a>
-                                <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill wow animated slideInRight "data-wow-delay="0.1s">Contact Us</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Service4 End -->
-                 <!-- Single Service5 Start -->
-                <div class="container-xxl bg-primary py-2 mt-4 border rounded wow fadeInUp" data-wow-delay="0.1s ">
-                    <div class="container py-1 px-lg-5">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 text-center text-lg-start">
-                                <img class="img-fluid animated wow zoomIn border rounded" data-wow-delay="0.4s" src="img/service/seo.png" alt="">
-                            </div>
-                            <div class="col-lg-6 text-center  align-items-center justify-content-center">
-                                <h2 class="text-white mb-4 wow animated zoomIn" data-wow-delay="0.3s">SEO</h2>
-                                <div class="row justify-content-between px-4 wow animated zoomIn" data-wow-delay="0.3s">
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Web SEO</p>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Youtube SEO</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Web Ads Management</a>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Loading...</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Loading...</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Loading...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <p class="text-white pt-4 animated wow zoomIn pb-3 "data-wow-delay="0.2s">Contact with us for Order and more information</p>
-                                <a href="#" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 wow animated slideInLeft"data-wow-delay="0.1">View Details</a>
-                                <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill wow animated slideInRight "data-wow-delay="0.1s">Contact Us</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Service5 End -->
-                 <!-- Single Service6 Start -->
-                <div class="container-xxl bg-primary py-2 mt-4 border rounded wow fadeInUp" data-wow-delay="0.3s ">
-                    <div class="container py-1 px-lg-5">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 text-center text-lg-start">
-                                <img class="img-fluid animated wow zoomIn border rounded" data-wow-delay="0.4s" src="img/service/app.png" alt="">
-                            </div>
-                            <div class="col-lg-6 text-center  align-items-center justify-content-center">
-                                <h2 class="text-white mb-4 wow animated zoomIn" data-wow-delay="0.3s">App Development</h2>
-                                <div class="row justify-content-between px-4 wow animated zoomIn" data-wow-delay="0.3s">
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Offline App</p>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Online App</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Game</a>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-6 text-lg-start">
-                                        <p class="section-title text-white h5 mb-4"><span></span></p>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Web App</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Loading...</a>
-                                        </div>
-                                        <div class="service-icon flex-shrink-0 ">
-                                            <i class="fa fa-check"></i>
-                                            <p class="btn btn-light mb-1">Loading...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <p class="text-white pt-4 animated wow zoomIn pb-3 "data-wow-delay="0.2s">Contact with us for Order and more information</p>
-                                <a href="#" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 wow animated slideInLeft"data-wow-delay="0.1">View Details</a>
-                                <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill wow animated slideInRight "data-wow-delay="0.1s">Contact Us</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Service6 End -->
 
-                <!-- Other Service Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                    <h1 class="text-center mb-5">What Solutions We Provide</h1>
+                    <!-- Right Column -->
+                    <div class="bg-[#c4bbf0] flex items-center justify-center p-4">
+                       <img src="asset/img/img1.png" class="max-w-lg">
+                    </div> 
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-microchip fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">PCB Design</h5>
-                            <p class="m-0">We will design your pcb as well as circuit schematic</p>
-                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-terminal fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">IOT</h5>
-                            <p class="m-0">We will do your programming for your it project</p>
-                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-vr-cardboard fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">VR</h5>
-                            <p class="m-0">We will do your vr project.</p>
-                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-search fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">SEO Optimization</h5>
-                            <p class="m-0">We will do SEO for your website</p>
-                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop-code fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Web Design</h5>
-                            <p class="m-0">We will do professional web design</p>
-                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-android fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">App Development</h5>
-                            <p class="m-0">We will develop app according to your needs</p>
-                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- other Service End -->
             </div>
         </div>
         <!-- Service End -->
 
+        <!-- Service Contact Panel -->
+        <div class="bg-gray-200 ">
+            <div class="mx-auto max-w-7xl items-center">
+                <!-- Title -->
+                <div class="flex p-4 gap-4">
+                    <h5 class="text-4 text-4xl font-bold font-ubuntu text-gray-800 text-shadow-lg">Embark on your smart journey right now!</h5>
 
-        <!-- Newsletter Start --><!--
-        <div class="container-xxl bg-primary newsletter py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span></p>
-                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
-                        <p class="text-white mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>-->
-        <!-- Newsletter End -->
+
+                <!-- Card Section -->
+                <div class="flex gap-4 grid grid-cols-1 lg:grid-cols-3 pb-20 pt-2">
+
+                    <!-- Card 1 -->
+                    <div class="bg-[#a2a8d3] items-center h-full rounded-2xl border shadow-2xl overflow-hidden grid grid-cols-2 md:grid-cols-2 lg:grid-cols-1">
+                        <div class="">
+                            <h6 class="text-3xl font-semibold font-exo text-gray-800 px-4 pt-5 text-shadow">Discuss With Experts</h6>
+                            <div class="flex gap-3 max-w-sm pt-5 pb-4 px-4">
+                                <a href="#">
+                                    <button 
+                                        class=" flex gap-4 py-2.5 px-5 rounded-full text-sm font-medium text-white bg-[#a2a8d3] shadow border border-gray-200
+                                            transition-all duration-300 ease-in-out
+                                            hover:bg-white hover:text-teal-600 hover:shadow-lg hover:border hover:border-teal-600">
+                                        <p>Let's Talk</p>
+                                        <svg class="w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </div>
+
+                        </div>
+                        
+                        <div class="mt-0 lg:mt-2 flex relative overflow-hidden rounded-2xl group">
+                            <!-- Image -->
+                            <img 
+                                src="asset/img/employee.png" 
+                                alt="Employee" 
+                                class="w-fullrounded-2xl transform transition-transform duration-500 group-hover:scale-110"
+                            >
+                            <!-- Overlay 
+                            <div class="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-10 transition-opacity duration-500 ease-in-out"></div>-->
+                        </div>
 
 
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-[#38598b] items-center h-full rounded-2xl border shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+                        <div class="">
+                            <h6 class="text-3xl font-semibold font-exo text-gray-200 px-4 pt-5 text-shadow">Go to Platform</h6>
+                            <div class="flex gap-3 max-w-sm pt-5 pb-4 px-4">
+                                <a href="#">
+                                    <button 
+                                        class=" flex gap-4 py-2.5 px-5 rounded-full text-sm font-medium text-white bg-[#38598b] shadow border border-gray-200
+                                            transition-all duration-300 ease-in-out
+                                            hover:bg-white hover:text-teal-600 hover:shadow-lg hover:border hover:border-teal-600">
+                                        <p>Login</p>
+                                        <svg class="w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </div>
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-4  px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Location</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>Phone</p>
-                        <p><i class="fa fa-envelope me-3"></i>E-Mail</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="#">About Us</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="#">Privacy Policy</a>
-                        <a class="btn btn-link" href="#">Terms & Condition</a>
-                        <a class="btn btn-link" href="#">Career</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
-                        <div class="row g-2">
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/1.png" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/2.png" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/3.png" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/4.png" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/2.png" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/project/4.png" alt="Image">
-                            </div>
+                        
+                        <div class="mt-0 lg:mt-2 flex relative overflow-hidden rounded-2xl group hidden md:flex">
+                            <!-- Image -->
+                            <img 
+                                src="asset/img/platform.png" 
+                                alt="Employee" 
+                                class="w-fullrounded-2xl transform transition-transform duration-500 group-hover:scale-110"
+                            >
+                            <!-- Overlay 
+                            <div class="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-10 transition-opacity duration-500 ease-in-out"></div>-->
                         </div>
+
+
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Robo Orion<span></span></p>
-                        <p>We are always active for you. Whenever you needs help, contact with us.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+
+                    <!-- Card 3 -->
+                    <div class="bg-gray-900 items-center h-full rounded-2xl border shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+                        <div class="">
+                            <h6 class="text-3xl font-semibold font-exo text-gray-100 px-4 pt-5 text-shadow">Become a Service Provider</h6>
+                            <div class="flex gap-3 max-w-sm pt-5 pb-4 px-4">
+                                <a href="#">
+                                    <button 
+                                        class=" flex gap-4 py-2.5 px-5 rounded-full text-sm font-medium text-white bg-gray-900/0 border border-gray-200
+                                            transition-all duration-300 ease-in-out
+                                            hover:bg-white hover:text-teal-600 hover:shadow-lg hover:border hover:border-teal-600">
+                                        <p>Apply Now</p>
+                                        <svg class="w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+                                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </div>
+
                         </div>
+                        
+                        <div class="mt-0 lg:mt-2 flex relative overflow-hidden rounded-2xl group hidden md:flex">
+                            <!-- Image -->
+                            <img 
+                                src="asset/img/service-provider.png" 
+                                alt="Employee" 
+                                class="w-fullrounded-2xl transform transition-transform duration-500 group-hover:scale-110"
+                            >
+                            <!-- Overlay 
+                            <div class="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-10 transition-opacity duration-500 ease-in-out"></div>-->
+                        </div>
+
+
                     </div>
+                    
                 </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="https://roboorion.com">Robo Orion</a>, All Right Reserved. 							
-							Designed By <a class="border-bottom" href="https://roboorion.com">Robo Orion</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a><!--
-                                <a href="#">Cookies</a>-->
-                                <a href="contact.html">Help</a><!--
-                                <a href="#">FQAs</a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+            
             </div>
         </div>
-        <!-- Footer End -->
 
+        <!-- Footer Section -->
+        <footer>
+            <!-- Top Footer -->
+            <div class="bg-gray-700 border-gray-400">
+                <!-- bottom -->
+                <div class="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 py-3 border-t border-gray-300">
+    
+                    <!-- Logo + Brand -->
+                    <div class="flex items-center gap-3">
+                        <a href="/" class="flex items-center gap-2">
+                            <!-- Logo -->
+                            <div class="w-6 h-6 rounded-full overflow-hidden shadow-neon ring-2 ring-gray-500">
+                                <img 
+                                    src="asset/img/logo-2.png" 
+                                    loading="lazy" 
+                                    class="w-full h-full object-cover"
+                                    alt="Robo Orion Logo">
+                            </div>
+                            <!-- Brand Name -->
+                            <span class="text-lg font-bold tracking-wide whitespace-nowrap">
+                            <span class="text-gray-800 font-exo drop-shadow-sm text-shadow-white">Robo</span>
+                            <span class="text-blue-600 font-ubuntu drop-shadow-sm text-shadow-white">Orion</span>
+                            </span>
+                        </a>
+                    </div>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+                    <!-- Optional Right Section -->
+                    <div class="mt-3 sm:mt-0 flex items-center gap-4">
+                        <a href="https://github.com" target="_blank" class="text-gray-300 hover:text-gray-900 transition">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="text-gray-300 hover:text-blue-600 transition">
+                            <i class="fa-brands fa-square-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-300 hover:text-sky-500 transition">
+                            <i class="fa-brands fa-x-twitter text-2xl"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-blue-700 transition">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-red-700 transition">
+                            <i class="fa-brands fa-youtube text-2xl"></i>
+                        </a>
+                        
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="bg-gray-800 text-gray-300 text-xs font-sans">
+                <div class=" max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 py-3">
+    
+                    <!-- Left Side: Links -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                        <span class="text-gray-500">|</span>
+                        <a href="#" class="hover:text-white transition">Terms of Use</a>
+                        <span class="text-gray-500">|</span>
+                        <a href="#" class="hover:text-white transition">Cookie Preferences</a>
+                    </div>
+
+                    <!-- Right Side: Copyright -->
+                    <div class="mt-2 sm:mt-0">
+                        <p class="text-gray-400">&copy; 2025 Robo Orion. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+
+
+<script src="asset/js/main.js"></script>
+<script src="asset/js/service.js"></script>
+<script src="asset/js/tailwind.config.js"></script>
+
+
+
+
+
+
+
+
+
+    
 </body>
-
-</html>

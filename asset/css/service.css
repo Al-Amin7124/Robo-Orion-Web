@@ -1,0 +1,12 @@
+/* Smooth, auto-height accordion using CSS grid */
+  .card-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .35s ease, opacity .25s ease;
+    opacity: 0;
+  }
+  .card-content > div { overflow: hidden; } /* the inner wrapper */
+  .card-content.active {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
