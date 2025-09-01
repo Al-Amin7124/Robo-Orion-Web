@@ -29,3 +29,19 @@ if (typeof tailwind !== "undefined") {
 }
 
 
+// Configure Tailwind to use both fonts
+  tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        ubuntu: ['Ubuntu', 'sans-serif'],
+                        exo: ['"Exo 2"', 'sans-serif'],
+                    },
+                    textShadow: {
+                        'default': '2px 2px 4px rgba(0, 0, 0, 0.3)',
+                        'lg': '4px 4px 8px rgba(0, 0, 0, 0.4)',
+                        'xl': '4px 4px 16px rgba(0, 0, 0, 0.5)',
+                    }
+                },
+            },
+        }
