@@ -1,3 +1,14 @@
+// Navbar
+const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+
+
+
 // Enhanced toggleCard function for multiple sections
 function toggleCard(cardNumber, sectionId = '') {
     // Create unique identifiers using section ID if provided
