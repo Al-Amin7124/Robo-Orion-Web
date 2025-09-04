@@ -175,54 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     autoTimer = null;
   }
 
-  // pointer (drag/hold) support
-  let isPointerDown = false;
-  let startX = 0;
-  let prevTranslate = 0;
 
-  viewport.addEventListener('pointerdown', (e) => {
-    // user starts hold/drag; stop auto slide but do not pause on hover
-    isPointerDown = true;
-    startX = e.clientX;
-    prevTranslate = -index * slideWidth;
-    stopAuto();
-    // capture pointer so we get pointerup outside viewport
-    viewport.setPointerCapture(e.pointerId);
-  });
-
-  viewport.addEventListener('pointermove', (e) => {
-    if (!isPointerDown) return;
-    const dx = e.clientX - startX;
-    track.style.transition = 'none';
-    track.style.transform = `translateX(${prevTranslate + dx}px)`;
-  });
-
-  function endPointer(e) {
-    if (!isPointerDown) return;
-    isPointerDown = false;
-    const dx = e.clientX - startX;
-    // threshold to decide slide
-    const threshold = Math.max(50, slideWidth * 0.15);
-    if (dx < -threshold) {
-      // user dragged left -> next
-      moveSlide(1);
-    } else if (dx > threshold) {
-      // user dragged right -> prev
-      moveSlide(-1);
-    } else {
-      // snap back
-      track.style.transition = 'transform 300ms ease-in-out';
-      track.style.transform = `translateX(${-index * slideWidth}px)`;
-    }
-    startAuto();
-  }
-
-  viewport.addEventListener('pointerup', endPointer);
-  viewport.addEventListener('pointercancel', endPointer);
-  viewport.addEventListener('pointerleave', (e) => {
-    // If pointer leaves while down, treat as end
-    if (isPointerDown) endPointer(e);
-  });
 
   // Start auto-sliding
   startAuto();
