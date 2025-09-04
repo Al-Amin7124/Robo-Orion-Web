@@ -174,9 +174,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (autoTimer) clearInterval(autoTimer);
     autoTimer = null;
   }
-
-
-
   // Start auto-sliding
   startAuto();
+
+  // When tab becomes visible again, re-sync slider
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    // reset position to current index
+    track.style.transition = "none";
+    track.style.transform = `translateX(${-index * slideWidth}px)`;
+    // restart auto-sliding
+    startAuto();
+  } else {
+    // pause while hidden (optional)
+    stopAuto();
+  }
+});
+
 });
