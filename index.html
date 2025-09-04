@@ -2,833 +2,467 @@
 <html lang="en">
 
 <head>
-    <title>Robo Orion | Expert Robotics, IoT & Electronics Solutions</title>
+    <title>Robo Orion - Global IT, Automation, Robotics & IoT Service Provider</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description" content="Robo Orion delivers expert solutions in VR, Gaming, Apps, IoT, SEO, Web, and PCB design—driving innovation across digital and electronic domains.">
     <meta name="keywords" content="robotics solutions, IoT kits, microcontroller programming, DIY electronics, home automation, VR projects, PCB design services, electronics tutorials, robotics kits, custom electronics solutions">
     <meta name="author" content="Robo Orion Team">
-    <!-- Social & Structured Data -->
-    <meta property="og:title" content="Robo Orion | Expert Robotics, IoT & Electronics Solutions">
-    <meta property="og:description" content="Robo Orion provides cutting-edge robotics kits, IoT tutorials, and home automation products. Learn, build, and innovate with expert support for PCB design, VR projects, and more.">
-    <meta property="og:image" content="https://roboorion.com/img/service/iot">
+
     <link rel="canonical" href="https://roboorion.com/">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/logo-2.png">
+    <link rel="icon" type="image/png" href="asset/img/logo.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTD9WXLSE6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-XTD9WXLSE6');
+    </script>
+
+    <!-- Social & Structured Data -->
+    <meta property="og:title" content="Robo Orion - Global IT, Automation, Robotics & IoT Service Provider">
+    <meta property="og:description" content="Robo Orion provides cutting-edge robotics kits, IoT tutorials, and home automation products. Learn, build, and innovate with expert support for PCB design, VR projects, and more.">
+    <meta property="og:image" content="https://roboorion.com/img/service/iot">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
 
-    <!-- Icon Font Stylesheet -->
+    <!-- Customized tailwind Stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"> 
-    <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/product.css" rel="stylesheet">
-
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <defs>
-            <symbol xmlns="http://www.w3.org/2000/svg" id="star-full" viewBox="0 0 24 24"><path fill="currentColor" d="m3.1 11.3l3.6 3.3l-1 4.6c-.1.6.1 1.2.6 1.5c.2.2.5.3.8.3c.2 0 .4 0 .6-.1c0 0 .1 0 .1-.1l4.1-2.3l4.1 2.3s.1 0 .1.1c.5.2 1.1.2 1.5-.1c.5-.3.7-.9.6-1.5l-1-4.6c.4-.3 1-.9 1.6-1.5l1.9-1.7l.1-.1c.4-.4.5-1 .3-1.5s-.6-.9-1.2-1h-.1l-4.7-.5l-1.9-4.3s0-.1-.1-.1c-.1-.7-.6-1-1.1-1c-.5 0-1 .3-1.3.8c0 0 0 .1-.1.1L8.7 8.2L4 8.7h-.1c-.5.1-1 .5-1.2 1c-.1.6 0 1.2.4 1.6"/></symbol>
-            <symbol xmlns="http://www.w3.org/2000/svg" id="star-half" viewBox="0 0 24 24"><path fill="currentColor" d="m3.1 11.3l3.6 3.3l-1 4.6c-.1.6.1 1.2.6 1.5c.2.2.5.3.8.3c.2 0 .4 0 .6-.1c0 0 .1 0 .1-.1l4.1-2.3l4.1 2.3s.1 0 .1.1c.5.2 1.1.2 1.5-.1c.5-.3.7-.9.6-1.5l-1-4.6c.4-.3 1-.9 1.6-1.5l1.9-1.7l.1-.1c.4-.4.5-1 .3-1.5s-.6-.9-1.2-1h-.1l-4.7-.5l-1.9-4.3s0-.1-.1-.1c-.1-.7-.6-1-1.1-1c-.5 0-1 .3-1.3.8c0 0 0 .1-.1.1L8.7 8.2L4 8.7h-.1c-.5.1-1 .5-1.2 1c-.1.6 0 1.2.4 1.6m8.9 5V5.8l1.7 3.8c.1.3.5.5.8.6l4.2.5l-3.1 2.8c-.3.2-.4.6-.3 1c0 .2.5 2.2.8 4.1l-3.6-2.1c-.2-.2-.3-.2-.5-.2"/></symbol>
-        </defs>
-    </svg>
-
-    <!--logo-->
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Robo Orion",
-          "url": "https://roboorion.com/",
-          "logo": "https://roboorion.com/img/logo-2.png"
-        }
-    </script>
-        
+    <link href="asset/css/index.css" rel="stylesheet">
+    
+          
 </head>
 
 <body>
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+    <div class="bg-gradient-to-br from-[#e7eaf6] to-[#dbd8e3]">
+        <header class="sticky inset-0 z-50 border-b border-slate-100 bg-white/30 backdrop-blur-lg shadow-lg">
+            <nav  class="mx-auto flex max-w-8xl items-center gap-8 justify-between px-6 py-4 lg:px-12 transition-all duration-200 ease-in-out z-50">
+                
+                <!-- Left logo -->
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                            <img 
+                                src="asset/img/logo.png" 
+                                loading="lazy" 
+                                class="w-full h-full object-cover scale-140"
+                                alt="Robo Orion Logo">
+                        </div>
+                        <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-black">
+                            <span class="text-black-500 font-exo text-shadow">Robo</span>
+                            <span class="text-blue-500 font-ubuntu text-shadow">Orion</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Spacer -->
+                <div class="flex-grow hidden md:block"></div>
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex items-center gap-6">
+                    <li><a href="index.html" class="pt-1.5 font-dm text-md font-bold text-blue-600">Home</a></li>
+                    <li><a href="service.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Service</a></li>
+                    <li><a href="#" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Project</a></li>
+                    <li><a href="#" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Product</a></li>
+                    <li><a href="#" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Tutorial</a></li>
+                    <li><a href="#" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Article</a></li>
+                    <li><a href="#" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">About</a></li>
+                    <li><a href="#" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>      
+                </ul>
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="m-0">RoboOrion</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>                       
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
-                        <a href="product.html" class="nav-item nav-link">Product</a>
-                        <a href="tutorial.html" class="nav-item nav-link">Tutorial</a>
-                        <a href="article.html" class="nav-item nav-link">Article</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        
+                <!-- Mobile Menu Button -->
+                <div class="relative md:hidden">
+                    <button id="menu-btn" class="flex items-center text-slate-900 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" viewBox="0 0 24 24" 
+                            stroke-width="1.5" stroke="currentColor" 
+                            class="h-7 w-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" 
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Dropdown Menu (Right aligned) -->
+                    <div id="mobile-menu" class="absolute right-0 mt-2 hidden w-48 flex-col rounded-lg bg-white/80 backdrop-blur-lg shadow-lg p-2">
+                        <a href="index.html" class="block px-4 py-2 text-sm font-bold text-blue-600 hover:bg-slate-200 rounded-md">Home</a>
+                        <a href="service.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Service</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Project</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Product</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Tutorial</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Article</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">About</a>
+                        <a href="#" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Contact</a>
                     </div>
-                    <a href="#" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
                 </div>
             </nav>
+        </header>
 
-            <div class="container-fluid hero-header-index "style="background-color: #788590;">               
-                <div class="container px-lg-5">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated slideInDown">Welcome to Robo Orion</h1>
-                            <p class="text-white pb-3 animated slideInDown">Robo Orion is your trusted partner for innovative IT and electronics solutions, specializing in IoT, app development, PCB design, web development, and SEO.<br><br> Discover our wide range of robotics kits, IoT products, and free DIY tutorials designed to empower creators and tech enthusiasts. Whether you're a hobbyist, student, or professional, explore our custom-made products and expert resources to bring your ideas to life.<br>Join us on the journey to creativity and technological excellence!</p>
-                            <a href="service.html" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Our Services</a>
-                            <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+        <!-- Banner -->
+        <div class="-mt-20">
+            <div class="flex grid lg:grid-cols-3 bg-gradient-to-br from-blue-400 to-purple-400 pt-20 shadow-xl">
+                <!-- Left -->
+                <div class="col-span-2">
+                    <div class="relative overflow-hidden py-6 flex flex-col justify-center">
+
+                        <div class="w-full flex justify-center pt-10">
+                            <p class="text-7xl font-semibold font-ubuntu text-center max-w-3xl text-[#e3f6f5] text-shadow-lg">Create Next-Level Technology</p>
+                        </div>
+                        
+                        <!-- Rotating container 
+                        <div id="rotating-container" class="relative w-full mt-20 mb-20 flex items-center justify-center">
+                            <!- Define text in HTML ->
+                             <div id="text1" class="rotating-text absolute inset-0 flex items-center justify-center text-4xl md:text-4xl lg:text-5xl font-bold text-gray-800 opacity-100 text-shadow" data-text="Innovate the Future"></div>
+                            <div id="text2" class="rotating-text absolute inset-0 flex items-center justify-center text-4xl md:text-4xl lg:text-5xl font-bold text-gray-800 opacity-0 text-shadow" data-text="AI-Powered Solutions"></div>
+                            <div id="text3" class="rotating-text absolute inset-0 flex items-center justify-center text-4xl md:text-4xl lg:text-5xl font-bold text-gray-800 opacity-0 text-shadow" data-text="Seamless Automation"></div>
+                            <div id="text4" class="rotating-text absolute inset-0 flex items-center justify-center text-4xl md:text-4xl lg:text-5xl font-bold text-gray-800 opacity-0 text-shadow" data-text="Precision Engineering"></div>
+                            <div id="text5" class="rotating-text absolute inset-0 flex items-center justify-center text-4xl md:text-4xl lg:text-5xl font-bold text-gray-800 opacity-0 text-shadow" data-text="Creative Electronics"></div>
+                            <div id="text6" class="rotating-text absolute inset-0 flex items-center justify-center text-4xl md:text-4xl lg:text-5xl font-bold text-gray-800 opacity-0 text-shadow" data-text="Reliable Designs"></div>
+                        </div>-->
+
+                        <div class="m-10">
+                            <div id="cubeContainer" class="cube-container w-full h-20 relative flex  items-center justify-center" style="transform-style: preserve-3d; transform: rotateX(0deg);">
+                                <div class="cube-face face-1 py-7 px-10 absolute w-full h-full flex items-center justify-center text-5xl lg:text-6xl font-semibold text-blue-600  text-shadow" style="backface-visibility: hidden; transform: translateZ(40px);">Innovate the Future</div>
+                                <div class="cube-face face-2 py-7 px-10 absolute w-full h-full flex items-center justify-center text-5xl lg:text-6xl font-semibold text-blue-600  text-shadow" style="backface-visibility: hidden; transform: rotateX(90deg) translateZ(40px);">AI-Powered Solutions</div>
+                                <div class="cube-face face-3 py-7 px-10 absolute w-full h-full flex items-center justify-center text-5xl lg:text-6xl font-semibold text-blue-600  text-shadow" style="backface-visibility: hidden; transform: rotateX(180deg) translateZ(40px);">Seamless Automation</div>
+                                <div class="cube-face face-4 py-7 px-10 absolute w-full h-full flex items-center justify-center text-5xl lg:text-6xl font-semibold text-blue-600  text-shadow" style="backface-visibility: hidden; transform: rotateX(270deg) translateZ(40px);">Precision Engineering</div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="w-full max-w-6xl flex justify-center px-2">
+                            <p class="text-2xl font-medium font-exo text-center max-w-3xl text-gray-700 text-shadow">Harness cutting-edge technology and Robo Orion’s expertise to create smarter, innovative robotics, IoT, and electronics solutions with ease and efficiency.</p>
+                        </div>
+
+                        <!-- Buttons in the same row, aligned left -->
+                        <div class="flex gap-5  pb-10 pt-10 items-center justify-center">
+                            <a href="project.html" target="_blank" 
+                            class="flex items-center bg-[#e1f4f3] border border-indigo-600 py-2 px-4 gap-2 rounded-full inline-flex 
+                                    text-indigo-700 transition-all duration-300
+                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 max-w-[180px]">
+                                <span>Watch Now</span>
+                                <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                            <a href="project.html" target="_blank" 
+                            class="flex items-center border border-indigo-600 py-2 px-4 gap-2 rounded-full inline-flex 
+                                    text-indigo-700 transition-all duration-300
+                                    hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 max-w-[180px]">
+                                <span>Contact Us</span>
+                                <svg class="w-4 transition-all duration-300" fill="none" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <!--right-->
+                <div class="col-span-1 flex flex-col items-center justify-center w-full max-w-lg h-full px-5">
+                    <div class="relative overflow-hidden w-full h-3/4" id="image-slider-right">
+                        <!-- Image 1 -->
+                        <img src="asset/img/banner-img.png" 
+                            class="slide absolute inset-0 w-full h-full object-cover" alt="" />
+
+                        <!-- Image 2 -->
+                        <img src="asset/img/game-development.png" 
+                            class="slide absolute inset-0 w-full h-full object-cover" alt="" />
+
+                        <!-- Image 3 -->
+                        <img src="asset/img/circuit.png" 
+                            class="slide absolute inset-0 w-full h-full object-cover" alt="" />
+
+                        <!-- Image 4 -->
+                        <img src="asset/img/employee.png" 
+                            class="slide absolute inset-0 w-full h-full object-cover" alt="" />
+
+                        <!-- Image 5 -->
+                        <img src="asset/img/circuit.png" 
+                            class="slide absolute inset-0 w-full h-full object-cover" alt="" />
+
+                        <!-- Image 6 -->
+                        <img src="asset/img/app-development.png" 
+                            class="slide absolute inset-0 w-full h-full object-cover" alt="" />
+
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="w-full bg-gradient-to-br from-blue-400 to-purple-400">
+            <!-- Slider Section -->
+            <div class="w-full flex w-max-7xl bg-[#dbd8e3] grid grid-cols-1 lg:grid-cols-3 items-center justify-between">
+                <!-- left div -->
+                <div class="col-span-1 flex flex-col h-full text-center items-center justify-center w-max-7xl mt-5 mb-5 lg:mb-0 lg:mt-0 lg:py-0 px-0 ml-5 mr-5 lg:mr-0">
+                    <div class="flex items-center justify-center  lg:py-5 h-80 w-full rounded-2xl shadow-lg bg-gradient-to-br from-[#38598b] to-[#a393eb]">
+                        <p class="text-4xl font-semibold font-exo text-white px-6">
+                            Smart product, from idea to reality, made simple
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- right div-->
+                <div id="carousel" class="col-span-2">
+                    <div class="carousel-viewport w-full lg:py-8 overflow-hidden relative select-none">
+                        <div id="carousel-track" class="flex items-stretch">
+                            <!-- item 1 -->
+                            <div class="carousel-item col-span-1 relative overflow-hidden rounded-2xl m-5 ml-0 aspect-square shadow-lg">
+                                <img src="asset/img/globe.png" class="absolute blur-sm w-[180%] h-[180%] object-contain right-[-40%] bottom-[-40%]" />
+                                <p class="absolute top-5 left-5 text-2xl font-semibold font-exo text-white z-10 text-shadow">Global Developer</p>
+                                <p class="absolute inset-0 flex items-center justify-center text-7xl font-semibold font-exo text-white z-10 text-shadow-lg">1200+</p>
+                            </div>
+
+                            <!-- item 2 -->
+                            <div class="carousel-item col-span-1 relative overflow-hidden rounded-2xl m-5 ml-0 aspect-square shadow-lg">
+                                <img src="asset/img/game-developer.png" class="absolute  object-contain" />
+                                <p class="absolute top-5 left-5 text-2xl font-semibold font-exo text-white z-10 text-shadow">Game Developer</p>
+                                <p class="absolute inset-0 flex items-center justify-center text-7xl font-semibold font-exo text-white z-10 text-shadow-lg">200+</p>
+                            </div>
+
+                            <!-- item 3 -->
+                            <div class="carousel-item col-span-1 relative overflow-hidden rounded-2xl m-5 ml-0 aspect-square shadow-lg">
+                                <img src="asset/img/coding.png" class="absolute blur-sm object-contain" />
+                                <p class="absolute top-5 left-5 text-2xl font-semibold font-exo text-white z-10 text-shadow">Software Developer</p>
+                                <p class="absolute inset-0 flex items-center justify-center text-7xl font-semibold font-exo text-white z-10 text-shadow-lg">120+</p>
+                            </div>
+
+                            <!-- item 4 -->
+                            <div class="carousel-item col-span-1 relative overflow-hidden rounded-2xl m-5 ml-0 aspect-square shadow-lg">
+                                <img src="asset/img/circuit.png" class="absolute blur-sm object-contain" />
+                                <p class="absolute top-5 left-5 text-2xl font-semibold font-exo text-white z-10 text-shadow">IoT Developer</p>
+                                <p class="absolute inset-0 flex items-center justify-center text-7xl font-semibold font-exo text-white z-10 text-shadow-lg">70+</p>
+                            </div>
+
+                            <!-- (add more items here as needed) -->
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <!-- Service Section -->
+            <div class="mx-auto max-w-8xl py-8 bg-[#e7eaf6]">
+
+                <!---- Item Start -->
+                <div class="max-w-7xl mt-10 mb-10 mx-auto  pb-5">
+                    <div class="pb-2">
+                        <h3 class="text-4xl font-bold text-gray-800 mb-4 text-shadow px-5">One<span class="text-blue-600"> Platform</span> Endless<span class="text-blue-800"> Possibilities</span></h3>
+                    </div>
+                    <!-- Card Section -->
+                    <div class="flex gap-4 grid grid-cols-2 lg:grid-cols-4 pb-20 pt-2 px-5 lg:py-0">
+
+                        <!-- Card 1 -->
+                        <div class="bg-[#a2a8d3] items-center h-full rounded-2xl border shadow-2xl overflow-hidden grid grid-cols-1">
+                            <div class="col-span-1 relative overflow-hidden rounded-2xl ml-0 aspect-square shadow-lg">                                
+                                <!-- Image (absolute in background) -->
+                                <img src="asset/img/game-developer.png" class="absolute inset-0 w-full h-full object-contain" loading="lazy" alt="game-development-background-image" />
+                                <!-- Content (normal flow, z-index above image) -->
+                                <div class="relative z-10 p-4">
+                                    <h6 class="text-xl lg:text-3xl font-semibold font-exo text-gray-900/80 mb-4 text-shadow-neon">
+                                        Build Engaging <span class="text-[#471396] text-shadow-neon">Games & Simulations</span>  with Experts
+                                    </h6>
+                                    <div class="flex gap-3 max-w-sm pt-4 lg:pt-8">
+                                        <a href="contact.html" target="_blank">
+                                            <button 
+                                                class="flex gap-4 py-2.5 px-5 rounded-full text-sm font-medium text-white bg-black/20 shadow-lg border border-gray-200
+                                                    transition-all duration-300 ease-in-out
+                                                    hover:bg-white hover:text-teal-600 hover:shadow-lg hover:border hover:border-teal-600">
+                                                <p>Let's Talk</p>
+                                                <svg class="w-4 ml-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                viewBox="0 0 24 24">
+                                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-[#a2a8d3] items-center h-full rounded-2xl border shadow-2xl overflow-hidden grid grid-cols-1">
+                            <div class="col-span-1 relative overflow-hidden rounded-2xl ml-0 aspect-square shadow-lg">                                
+                                <!-- Image (absolute in background) -->
+                                <img src="asset/img/coding.png" class="absolute inset-0 w-full h-full object-contain blur-sm w-[180%]" />
+                                <!-- Content (normal flow, z-index above image) -->
+                                <div class="relative z-10 p-4">
+                                    <h6 class="text-xl lg:text-3xl font-semibold font-exo text-white mb-4 text-shadow-xl text-shadow-blue">
+                                        Build Powerful <span class="text-[#471396] text-shadow-neon">Mobile & Web Apps</span> with Expert Developers
+                                    </h6>
+
+                                    <div class="flex gap-3 max-w-sm pt-4 lg:pt-8">
+                                        <a href="contact.html" target="_blank">
+                                            <button 
+                                                class="flex gap-4 py-2.5 px-5 rounded-full text-sm font-medium text-white bg-black/20 shadow-lg border border-gray-200
+                                                    transition-all duration-300 ease-in-out
+                                                    hover:bg-white hover:text-teal-600 hover:shadow-lg hover:border hover:border-teal-600">
+                                                <p>Let's Talk</p>
+                                                <svg class="w-4 ml-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                viewBox="0 0 24 24">
+                                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-[#a2a8d3] items-center h-full rounded-2xl border shadow-2xl overflow-hidden grid grid-cols-1">
+                            <div class="col-span-1 relative overflow-hidden rounded-2xl ml-0 aspect-square shadow-lg">                                
+                                <!-- Image (absolute in background) -->
+                                <img src="asset/img/iot-image.png" class="absolute inset-0 w-full h-full object-contain blur-xs inner-shadow inner-glow" />
+                                <!-- Content (normal flow, z-index above image) -->
+                                <div class="relative z-10 p-4">
+                                    <h6 class="text-xl lg:text-3xl font-semibold font-exo text-gray-900/80 mb-4 text-shadow-neon">
+                                        Build Powerful <span class="text-[#471396] text-shadow-neon">IoT Projects & Automation</span>  with Experts
+                                    </h6>
+                                    <div class="flex gap-3 max-w-sm pt-4 lg:pt-8">
+                                        <a href="contact.html" target="_blank">
+                                            <button 
+                                                class="flex gap-4 py-2.5 px-5 rounded-full text-sm font-medium text-white bg-black/20 shadow-lg border border-gray-200
+                                                    transition-all duration-300 ease-in-out
+                                                    hover:bg-white hover:text-teal-600 hover:shadow-lg hover:border hover:border-teal-600">
+                                                <p>Let's Talk</p>
+                                                <svg class="w-4 ml-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                viewBox="0 0 24 24">
+                                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="bg-[#a2a8d3] items-center h-full rounded-2xl border shadow-2xl overflow-hidden grid grid-cols-1">
+                            <div class="col-span-1 relative overflow-hidden rounded-2xl ml-0 aspect-square shadow-lg">                                
+                                <!-- Image (absolute in background) -->
+                                <img src="asset/img/circuit.png" class="absolute inset-0 w-full h-full object-contain blur-sm" />
+                                <!-- Content (normal flow, z-index above image) -->
+                                <div class="relative z-10 p-4">
+                                    <h6 class="text-xl lg:text-3xl font-semibold font-exo text-gray-900/80 mb-4 text-shadow-neon">
+                                        Design Professional <span class="text-[#471396] text-shadow-neon">Pcb Design</span>  with Experts
+                                    </h6>
+                                    <div class="flex gap-3 max-w-sm pt-4 lg:pt-8">
+                                        <a href="contact.html" target="_blank">
+                                            <button 
+                                                class="flex gap-4 py-2.5 px-5 rounded-full text-sm font-medium text-white bg-black/20 shadow-lg border border-gray-200
+                                                    transition-all duration-300 ease-in-out
+                                                    hover:bg-white hover:text-teal-600 hover:shadow-lg hover:border hover:border-teal-600">
+                                                <p>Let's Talk</p>
+                                                <svg class="w-4 ml-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                viewBox="0 0 24 24">
+                                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
                     </div>
                 </div>
-            </div>
+            </div>    
+
         </div>
-        <!-- Navbar & Hero End -->
 
-        <!-- Service Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                    <h1 class="text-center mb-0">What <span style="color: rgb(14, 14, 164);">Solutions</span> We Provide</h1>
-                    <p class="section-title text-secondary justify-content-center mb-5 mt-3" style="opacity: 0.3;"><span></span>Our Services<span></span></p>
-
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="service.html" class="text-decoration-none text-reset">
-                            <div class="service-item d-flex flex-column text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fa fa-vr-cardboard fa-2x"></i>
-                                </div>
-                                <h4 class="mb-3 h5">VR and Game Development</h4>
-                                <p class="m-0">We deliver end-to-end VR and game development, creating immersive, interactive experiences from concept to cross-platform deployment</p>
-                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
+        <!-- Footer Section -->
+        <footer>
+            <!-- Top Footer -->
+            <div class="bg-gray-700 border-gray-400">
+                <!-- bottom -->
+                <div class="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 py-3 border-t border-gray-300">
+    
+                    <!-- Logo + Brand -->
+                    <div class="flex items-center gap-3">
+                        <a href="/" class="flex items-center gap-2">
+                            <!-- Logo -->
+                            <div class="w-6 h-6 rounded-full overflow-hidden shadow-neon ring-2 ring-gray-500">
+                                <img 
+                                    src="asset/img/logo.png" 
+                                    loading="lazy" 
+                                    class="w-full h-full object-cover"
+                                    alt="Robo Orion Logo">
                             </div>
+                            <!-- Brand Name -->
+                            <span class="text-lg font-bold tracking-wide whitespace-nowrap">
+                            <span class="text-gray-800 font-exo drop-shadow-sm text-shadow-white">Robo</span>
+                            <span class="text-blue-600 font-ubuntu drop-shadow-sm text-shadow-white">Orion</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Optional Right Section -->
+                    <div class="mt-3 sm:mt-0 flex items-center gap-4">
+                        
+                        <a href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank" class="text-gray-300 hover:text-blue-600 transition">
+                            <i class="fa-brands fa-square-facebook text-2xl"></i>
+                        </a>
+                        <a  target="_blank" class="text-gray-300 hover:text-sky-500 transition">
+                            <i class="fa-brands fa-x-twitter text-2xl"></i>
+                        </a>
+                        <a  target="_blank" class="text-gray-300 hover:text-blue-700 transition">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank" class="text-gray-300 hover:text-red-700 transition">
+                            <i class="fa-brands fa-youtube text-2xl"></i>
                         </a>
                         
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a href="service.html" class="text-decoration-none text-reset">
-                            <div class="service-item d-flex flex-column text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fa fa-microchip fa-2x"></i>
-                                </div>
-                                <h4 class="mb-3 h5">PCB Design</h4>
-                                <p class="m-0">We provide end-to-end PCB design services—from schematic capture and PCB layout to manufacturing-ready Gerber files—ensuring high performance, quality, and manufacturability.</p>
-                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </a>
-                        
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="service.html" class="text-decoration-none text-reset">
-                            <div class="service-item d-flex flex-column text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fa fa-terminal fa-2x"></i>
-                                </div>
-                                <h4 class="mb-3 h5">IOT</h4>
-                                <p class="m-0">We provide end-to-end IoT solutions—connecting and securing devices, collecting and analyzing real-time data, and delivering actionable insights—ensuring scalable, reliable deployments.</p>
-                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </a>
-                        
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="service.html" class="text-decoration-none text-reset">
-                            <div class="service-item d-flex flex-column text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fa fa-search fa-2x"></i>
-                                </div>
-                                <h4 class="mb-3 h5">SEO Optimization</h4>
-                                <p class="m-0">We deliver comprehensive SEO services—conducting in-depth keyword research, on-page and technical optimization, strategic link building, and performance analytics—to boost organic traffic and elevate search rankings. </p>
-                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </a>
-                        
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a href="service.html" class="text-decoration-none text-reset">
-                            <div class="service-item d-flex flex-column text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fa fa-laptop-code fa-2x"></i>
-                                </div>
-                                <h4 class="mb-3 h5">Web Design</h4>
-                                <p class="m-0">We provide end-to-end web design services—crafting responsive, SEO-friendly websites with intuitive UX, custom branding, and seamless cross-device performance to drive engagement and conversions.</p>
-                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </a>
-                        
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="service.html" class="text-decoration-none text-reset">
-                            <div class="service-item d-flex flex-column text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fab fa-android fa-2x"></i>
-                                </div>
-                                <h4 class="mb-3 h5">App Development</h4>
-                                <p class="m-0">We provide end-to-end app development services—crafting intuitive UI/UX, writing robust and secure code, executing rigorous testing and deployment—to deliver scalable, user-centric mobile and web applications.</p>
-                                <a class="btn btn-square" href="service.html"><i class="fa fa-arrow-right"></i></a>
-                                
-                            </div>
-                        </a>
-                        
-                    </div>
-                    
+
                 </div>
             </div>
-        </div>
-        <!-- Service End -->
+            
+            <!-- Bottom Footer -->
+            <div class="bg-gray-800 text-gray-300 text-xs font-sans">
+                <div class=" max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 py-3">
+    
+                    <!-- Left Side: Links -->
+                    <div class="flex flex-wrap gap-4">
+                        <a class="hover:text-white transition">Privacy Policy</a>
+                        <span class="text-gray-500">|</span>
+                        <a class="hover:text-white transition">Terms of Use</a>
+                        <span class="text-gray-500">|</span>
+                        <a class="hover:text-white transition">Cookie Preferences</a>
+                    </div>
 
-
-        <!-- Our Products -->
-        <div class="container-fluid py-5">
-            <div class="container py-2 px-lg-5">
-                <div class="row g-4">
-                    <div class="wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="text-center mb-2">Our Products</h1>
-                    </div>
-                    <div class="row mt-n3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="col-12 text-center text-sm-end text-md-end text-lg-end">
-                            <ul class="list-inline mb-3">
-                                <a href="product.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mt-3 mb-0 ">View All</a>                               
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="product-item bg-light mb-4 our-product most-popular top-rated ">
-                            <div class="product-img position-relative overflow-hidden rounded-top-custom">
-                                <a href="#"><img class="img-fluid w-100 " src="img/products/cc12dspsqh424v1.png" alt=""></a>
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark " href="#">View Details</a>
-                                </div>                                                                 
-                            </div>
-                            <div class="text-center pt-4">
-                                <h4><a class="h6 text-decoration-none text-wrap p-1" href="#">12V Charge Controller V1</a></h4>
-                                <div class="d-flex flex-wrap align-items-center justify-content-center mt-2 gap-2 mb-0">
-                                    <p class="h5">৳220</p><p class="h6 text-muted ml-2"><del>৳320</del></p>    
-                                </div>
-                                <div>
-                                    <span class="rating">
-                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                                      <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                                    </span>
-                                    <span>(27)</span>
-                                </div>
-                                <div class="button-area p-2 pt-0 mt-0">
-                                    <div class="row g-2 mt-2 justify-content-center">
-                                                                                
-                                        <div class="col-12 col-lg-12 col-md-12 col-sm-12 ">
-                                            <a href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank" class="btn btn-primary rounded-1 p-1 fs-7 btn-cart">
-                                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="product-item bg-light mb-4 our-product most-popular top-rated">
-                            <div class="product-img position-relative overflow-hidden">
-                                <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark " href="#">Quick view</a>
-                                </div>                                                                 
-                            </div>
-                            <div class="text-center pt-4">
-                                <a class="h6 text-decoration-none text-wrap p-1" href="#">Product</a>
-                                <div class="d-flex flex-wrap align-items-center justify-content-center mt-2 gap-2 mb-0">
-                                    <p class="mb-1">Coming Soon...!</p>
-                                    
-                                </div>
-                                <div class="button-area p-2 pt-0 mt-0">
-                                    <div class="row g-2 mt-2 justify-content-center">
-                                                                                
-                                        <div class="col-12 col-lg-12 col-md-12 col-sm-12 ">
-                                            <a href="#" class="btn btn-primary rounded-1 p-1 fs-7 btn-cart">
-                                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="product-item bg-light mb-4 our-product most-popular top-rated">
-                            <div class="product-img position-relative overflow-hidden">
-                                <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark " href="#">Quick view</a>
-                                </div>                                                                 
-                            </div>
-                            <div class="text-center pt-4">
-                                <a class="h6 text-decoration-none text-wrap p-1" href="#">Product</a>
-                                <div class="d-flex flex-wrap align-items-center justify-content-center mt-2 gap-2 mb-0">
-                                    <p class="mb-1">Coming Soon...!</p>
-                                    
-                                </div>
-                                <div class="button-area p-2 pt-0 mt-0">
-                                    <div class="row g-2 mt-2 justify-content-center">
-                                                                                
-                                        <div class="col-12 col-lg-12 col-md-12 col-sm-12 ">
-                                            <a href="#" class="btn btn-primary rounded-1 p-1 fs-7 btn-cart">
-                                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="product-item bg-light mb-4 our-product most-popular top-rated">
-                            <div class="product-img position-relative overflow-hidden">
-                                <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark " href="#">Quick view</a>
-                                </div>                                                                 
-                            </div>
-                            <div class="text-center pt-4">
-                                <a class="h6 text-decoration-none text-wrap p-1" href="#">Product</a>
-                                <div class="d-flex flex-wrap align-items-center justify-content-center mt-2 gap-2 mb-0">
-                                    <p class="mb-1">Coming Soon...!</p>
-                                    
-                                </div>
-                                <div class="button-area p-2 pt-0 mt-0">
-                                    <div class="row g-2 mt-2 justify-content-center">
-                                                                                
-                                        <div class="col-12 col-lg-12 col-md-12 col-sm-12 ">
-                                            <a href="#" class="btn btn-primary rounded-1 p-1 fs-7 btn-cart">
-                                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="product-item bg-light mb-4 our-product most-popular top-rated">
-                            <div class="product-img position-relative overflow-hidden">
-                                <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark " href="#">Quick view</a>
-                                </div>                                                                 
-                            </div>
-                            <div class="text-center pt-4">
-                                <a class="h6 text-decoration-none text-wrap p-1" href="#">Product</a>
-                                <div class="d-flex flex-wrap align-items-center justify-content-center mt-2 gap-2 mb-0">
-                                    <p class="mb-1">Coming Soon...!</p>
-                                    
-                                </div>
-                                <div class="button-area p-2 pt-0 mt-0">
-                                    <div class="row g-2 mt-2 justify-content-center">
-                                                                                
-                                        <div class="col-12 col-lg-12 col-md-12 col-sm-12 ">
-                                            <a href="#" class="btn btn-primary rounded-1 p-1 fs-7 btn-cart">
-                                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="product-item bg-light mb-4 our-product most-popular top-rated">
-                            <div class="product-img position-relative overflow-hidden">
-                                <a href="#"><img class="img-fluid w-100 rounded-top-custom" src="img/comingsoon2.png" alt=""></a>
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark " href="#">Quick view</a>
-                                </div>                                                                 
-                            </div>
-                            <div class="text-center pt-4">
-                                <a class="h6 text-decoration-none text-wrap p-1" href="#">Product</a>
-                                <div class="d-flex flex-wrap align-items-center justify-content-center mt-2 gap-2 mb-0">
-                                    <p class="mb-1">Coming Soon...!</p>
-                                    
-                                </div>
-                                <div class="button-area p-2 pt-0 mt-0">
-                                    <div class="row g-2 mt-2 justify-content-center">
-                                                                                
-                                        <div class="col-12 col-lg-12 col-md-12 col-sm-12 ">
-                                            <a href="#" class="btn btn-primary rounded-1 p-1 fs-7 btn-cart">
-                                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Products End -->
-
-        <!-- Tutorials -->
-        <div class="container-fluid py-5">
-            <div class="container py-2 px-lg-5">
-                <div class="row g-4">
-                    <div class="wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="text-center mb-2">Tutorials</h1>
-                    </div>
-                    <div class="row mt-n3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="col-12 text-center text-sm-end text-md-end text-lg-end">
-                            <ul class="list-inline mb-3">
-                                <a href="tutorial.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mt-3 mb-0 ">View All</a>                               
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="tutorial/diy-12v-pwm-motor-controller.html" target="_blank">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/tutorial/img1.png" alt="">
-                                <h4 class="h6 mb-3 mt-3">12V PWM Motor Speed Controller</h4>
-                                <p class="m-0 text-black">DIY 12V PWM Motor Speed Controller | Step-by-Step Guide & Circuit Diagram</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="tutorial/How-to-Build-a-Simple-High-Voltage-Generator-at-Home.html" target="_blank">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/tutorial/High-voltage-arc-demonstration.png" alt="">
-                                <h4 class="h6 mb-3 mt-3">Simple High Voltage Generator</h4>
-                                <p class="m-0 text-black">How to Build a Simple High Voltage Generator at Home</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-0">
-                            <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                            <h5 class="mb-2 mt-3">Tutorials</h5>
-                            <p class="m-0">Coming Soon...!</p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-0">
-                            <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                            <h5 class="mb-2 mt-3">Tutorials</h5>
-                            <p class="m-0">Coming Soon...!</p>
-                        </div>
-                    </div><!--
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-0">
-                            <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                            <h5 class="mb-2 mt-3">Tutorials</h5>
-                            <p class="m-0">Coming Soon...!</p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-0">
-                            <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                            <h5 class="mb-2 mt-3">Tutorials</h5>
-                            <p class="m-0">Coming Soon...!</p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-0">
-                            <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                            <h5 class="mb-2 mt-3">Tutorials</h5>
-                            <p class="m-0">Coming Soon...!</p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-0">
-                            <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                            <h5 class="mb-2 mt-3">Tutorials</h5>
-                            <p class="m-0">Coming Soon...!</p>
-                        </div>
-                    </div>-->
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Tutorials End -->
-
-        <!-- Article -->
-        <div class="container-fluid py-5">
-            <div class="container py-2 px-lg-5">
-                <div class="row g-4">
-                    <div class="wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="text-center mb-2">Article</h1>
-                    </div>
-                    <div class="row mt-n3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="col-12 text-center text-sm-end text-md-end text-lg-end">
-                            <ul class="list-inline mb-3">
-                                <a href="article.html" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mt-3 mb-0 ">View All</a>                               
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="article/industrial-robotics-2-0-ai-rugged-electronics-in-manufacturing.html" target="_blank">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/article/Rugged-LiDAR-sensor.png" alt="">
-                                <h4 class="h6 mb-3 mt-3">Industrial Robotics-2.0</h4>
-                                <p class="m-0 text-black">Detailed technical analysis of AI-driven industrial robotics systems</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-3 mt-3">Article</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-3 mt-3">Article</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-3 mt-3">Article</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a> 
-                    </div><!--
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-3 mt-3">Article</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-3 mt-3">Article</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-3 mt-3">Article</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-3 mt-3">Article</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a> 
-                    </div>-->
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Article End -->
-
-        <!-- Projects Start -->
-        <div class="container-fluid py-4 ">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Projects<span></span></p>
-                    <h1 class="text-center mb-3">Recently Completed Projects</h1>
-                </div>
-                <div class="row mt-n3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-12 text-center text-sm-end text-md-end text-lg-end">
-                        <ul class="list-inline mb-5">
-                            <a href="#" class="btn btn-secondary btn-rounded-custom px-sm-4 rounded fs-15 mt-3 mb-0 ">View All</a>                               
-                        </ul>
-                    </div>
-                </div>
-                <div class="row g-4 owl-carousel testimonial-carousel">
-                    <div class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/project/1.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/project/1.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">PCB Design</p>
-                                <h5 class="lh-base mb-0">PCB design of 12v charge controller</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/project/digital-vr-shop.png" alt="digital-vr-shop">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/project/digital-vr-shop.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="project/digital-vr-coffee-shop.html"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Digital Vr Shop Development</p>
-                                <h5 class="lh-base mb-0">Luffy's Coffee Shop</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/project/vr-practical-tutorial.png" alt="vr-practical-tutorial-simulation">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/project/vr-practical-tutorial.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="project/fire-boiler-unity-vr-project.html"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">VR Development</p>
-                                <h5 class="lh-base mb-0">VR Practical Tutorial Simulation</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/project/4.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/project/4.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Development</p>
-                                <h5 class="lh-base mb-0">Complete Comercial Web Design </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/project/3.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/project/3.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">IoT</p>
-                                <h5 class="lh-base mb-0">Programme Development for Home Automation</a>
-                            </div>
-                        </div>
-                    </div> 
-                    
-                   
-                </div>
-            </div>
-        </div>
-        <!-- Projects End -->
-
-        
-        <!-- Footer Start -->
-        <div class="container-fluid text-light footer wow fadeIn"style="background-color: #788590;" data-wow-delay="0.1s">
-            <div class="container py-4  px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Location</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>Phone</p>
-                        <p><i class="fa fa-envelope me-3"></i>roboorion.services@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank"><i class="fab fa-facebook-f"></i></a> <!--
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
-                            <a class="btn btn-outline-light btn-social" href="https://kwork.com/user/alaminshuvo71" target="_blank"><i class="fa-brands fa-korvue large-icon"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="about.html" target="_blank">About Us</a>
-                        <a class="btn btn-link" href="contact.html" target="_blank">Contact Us</a> <!--
-                        <a class="btn btn-link" href="#" target="_blank">Privacy Policy</a>
-                        <a class="btn btn-link" href="#" target="_blank">Terms & Condition</a>
-                        <a class="btn btn-link" href="#" target="_blank">Career</a>-->
-                        
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Online Workplace<span></span></p>
-                        <div class="d-flex flex-column gap-2">
-                            <!-- Fiverr -->
-                            <div class="d-flex align-items-center">
-                                <a href="https://www.fiverr.com/s/XLkr852" target="_blank"></a><img src="img/fiverr.png" alt="Fiverr Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
-                                <a href="https://www.fiverr.com/s/XLkr852" class="text-white text-decoration-none" target="_blank">Fiverr</a>
-                            </div>
-                            <!-- Kwork -->
-                            <div class="d-flex align-items-center">
-                                <a href="https://kwork.com/user/alaminshuvo71" target="_blank"><img src="img/k-work.png" alt="Kwork Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
-                                <a href="https://kwork.com/user/alaminshuvo71" class="text-white text-decoration-none" target="_blank">Kwork</a>
-                            </div>
-                            
-                            
-                            <!-- Freelancer 
-                            <div class="d-flex align-items-center">
-                                <a href="https://www.freelancer.com/u/alamins71?sb=t" target="_blank"></a><img src="img/freelancer.png" alt="Freelancer Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
-                                <a href="https://www.freelancer.com/u/alamins71?sb=t" class="text-white text-decoration-none" target="_blank">Freelancer</a>
-                            </div>-->
-                            <!-- Upwork 
-                            <div class="d-flex align-items-center">
-                                <a href="https://upwork.com" target="_blank"></a><img src="img/upwork.png" alt="Upwork Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
-                                <a href="https://upwork.com" class="text-white text-decoration-none" target="_blank">Upwork</a>
-                            </div>-->
-                            <!-- PeoplePerHour 
-                            <div class="d-flex align-items-center">
-                                <img src="img/people-per-hour-logo.png" alt="PeoplePerHour Logo" style="height: 24px; width: auto; margin-right: 8px;">
-                                <a href="https://peopleperhour.com" class="text-white text-decoration-none" target="_blank">PeoplePerHour</a>
-                            </div>-->
-                            <!-- Guru 
-                            <div class="d-flex align-items-center">
-                                <img src="img/guru-logo.png" alt="Guru Logo" style="height: 24px; width: auto; margin-right: 8px;">
-                                <a href="https://guru.com" class="text-white text-decoration-none" target="_blank">Guru</a>
-                            </div>-->
-                            <!-- WellFound 
-                            <div class="d-flex align-items-center">
-                                <img src="img/wellfound-logo.png" alt="well-found Logo" style="height: 24px; width: auto; margin-right: 8px;">
-                                <a href="https://wellfound.com" class="text-white text-decoration-none" target="_blank">WellFound</a>
-                            </div>-->
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Robo Orion<span></span></p>
-                        <p>Get our latest news and ideas to your inbox.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
+                    <!-- Right Side: Copyright -->
+                    <div class="mt-2 sm:mt-0">
+                        <p class="text-gray-400">&copy; 2025 Robo Orion. All rights reserved.</p>
                     </div>
                 </div>
             </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="https://roboorion.com">Robo Orion</a>, All Right Reserved. 							
-							Designed By <a class="border-bottom" href="https://roboorion.com/alamin" target="_blank">Md.Al-Amin</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="https://youtube.com/@oriontv-xyz?si=y5LDXB11WmK3QiaP" target="_blank">News</a><!--
-                                <a href="#">Cookies</a>-->
-                                <a href="contact.html">Help</a><!--
-                                <a href="#">FQAs</a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        </footer>
     </div>
 
+
+    <script src="asset/js/main.js"></script>
+
+
     
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-
-    <!-- Social & Structured Data -->
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Robo Orion",
-          "url": "https://robo-orion.com",
-          "description": "Robo Orion hub for robotics, IoT projects, electronics tutorials, and DIY home automation kits.",
-          "founder": "MD. Al-Amin",
-        }
-    </script>
 </body>
-
-</html>
