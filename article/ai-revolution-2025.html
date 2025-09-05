@@ -20,6 +20,7 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://roboorion.com/article/ai-revolution-2025" />
+  <link rel="icon" type="image/png" href="../asset/img/logo.png">
 
   <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTD9WXLSE6"></script>
@@ -70,13 +71,11 @@
   }
   </script>
   
-  <!-- Tailwind CSS (CDN) -->
+
+<!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link href="../asset/css/main.css" rel="stylesheet">
-  <link href="../asset/css/article.css" rel="stylesheet">
 
 </head>
 
@@ -477,42 +476,13 @@
     </div>
 
     <script>
-        // Simple interactivity for the page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-            
-            // Image zoom functionality
-            const images = document.querySelectorAll('.ai-image');
-            images.forEach(img => {
-                img.addEventListener('click', function() {
-                    this.classList.toggle('scale-125');
-                    this.classList.toggle('transition-transform');
-                    this.classList.toggle('duration-300');
-                });
-            });
-            
-            // Rating system interaction
-            const stars = document.querySelectorAll('.fas.fa-star, .fas.fa-star-half-alt');
-            stars.forEach(star => {
-                star.addEventListener('mouseenter', function() {
-                    this.classList.add('text-yellow-500');
-                });
-                star.addEventListener('mouseleave', function() {
-                    this.classList.remove('text-yellow-500');
-                });
-            });
-        });
-    </script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-    <script src="../asset/js/main.js"></script>
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });;
+    </script>
 
 
     
