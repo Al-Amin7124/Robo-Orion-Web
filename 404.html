@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found | Robo Orion</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="asset/img/logo.png">
+    
+    <!-- Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+</head>
+
+<body class="bg-gradient-to-br from-[#6EACDA] to-[#EBD3F8]">
+
+    <header class="sticky inset-0 z-50 border-b border-slate-100 bg-white/30 backdrop-blur-lg shadow-lg">
+                <nav  class="mx-auto flex max-w-8xl items-center gap-8 justify-between px-6 py-4 lg:px-12 transition-all duration-200 ease-in-out z-50">
+                    
+                    <!-- Left logo -->
+                    <div class="flex items-center">
+                        <a href="/" class="flex items-center gap-2">
+                            <div class="w-9 h-9 rounded-full overflow-hidden">
+                                <img 
+                                    src="asset/img/logo.png" 
+                                    loading="lazy" 
+                                    class="w-full h-full object-cover scale-140"
+                                    alt="Robo Orion Logo">
+                            </div>
+                            <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-black">
+                                <span class="text-black-500 font-exo text-shadow">Robo</span>
+                                <span class="text-blue-500 font-ubuntu text-shadow">Orion</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Spacer -->
+                    <div class="flex-grow hidden md:block"></div>
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex items-center gap-6">
+                        <li><a href="index.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Home</a></li>
+                        <li><a href="service.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Service</a></li>
+                        <li><a href="project.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Project</a></li>
+                        <li><a href="product.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Product</a></li>
+                        <li><a href="tutorial.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Tutorial</a></li>
+                        <li><a href="article.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Article</a></li>
+                        <li><a href="about.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">About</a></li>
+                        <li><a href="contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>      
+                    </ul>
+
+
+                    <!-- Mobile Menu Button -->
+                    <div class="relative md:hidden">
+                        <button id="menu-btn" class="flex items-center text-slate-900 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                fill="none" viewBox="0 0 24 24" 
+                                stroke-width="1.5" stroke="currentColor" 
+                                class="h-7 w-7">
+                            <path stroke-linecap="round" stroke-linejoin="round" 
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                            </svg>
+                        </button>
+
+                        <!-- Mobile Dropdown Menu (Right aligned) -->
+                        <div id="mobile-menu" class="absolute right-0 mt-2 hidden w-48 flex-col rounded-lg bg-white/80 backdrop-blur-lg shadow-lg p-2">
+                            <a href="index.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Home</a>
+                            <a href="service.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Service</a>
+                            <a href="project.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Project</a>
+                            <a href="product.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Product</a>
+                            <a href="tutorial.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Tutorial</a>
+                            <a href="article.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Article</a>
+                            <a href="about.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">About</a>
+                            <a href="contact.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+    </header>
+
+    <!-- 404 Section -->
+    <main class="flex flex-col items-center justify-center min-h-screen text-center px-4">
+        <!-- Image -->
+        <img src="asset/img/404.png" alt="404 Error" class="w-1/2 max-w-xs sm:max-w-sm mb-6 mx-auto object-contain">
+
+        <!-- Message -->
+        <h1 class="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">Oops! The page you were looking for doesn’t exist</h1>
+        <p class="text-gray-600 mb-6 max-w-lg">It seems the link you followed is broken or the page has been removed. Don’t worry, you can navigate back to safety.</p>
+
+        <!-- Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+                Go Back
+            </a>
+            <a href="contact.html" class="bg-gray-300 hover:bg-gray-400 text-gray-900 font-semibold px-6 py-3 rounded-lg transition">
+                Contact Us
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Top Footer -->
+        <div class="bg-gray-700 border-gray-400">
+            <!-- top start -->
+            <div class="max-w-7xl mx-auto px-4 py-8 flex  grid grid-cols-2 sm:grid-cols-4 gap-6 text-gray-200 text-sm ">
+
+                <!-- Platform -->
+                <div class="">
+                    <h4 class="font-semibold text-white mb-3">Platform</h4>
+                    <ul class="space-y-2">
+                        <li><a href="service.html" target="_blank" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="product.html" target="_blank" class="hover:text-blue-400">orion Shop</a></li>
+                        <li><a href="project.html" target="_blank" class="hover:text-blue-400">Orion Projects</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="">
+                    <h4 class="font-semibold text-white mb-3">Solutions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="smart-home" target="_blank" class="hover:text-blue-400">Smart Home</a></li>
+                        <li><a href="smart-office" target="_blank" class="hover:text-blue-400">Smart Office</a></li>
+                        <li><a href="iot-project" target="_blank" class="hover:text-blue-400">Smart IoT Projects</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="">
+                    <h4 class="font-semibold text-white mb-3">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Help Center</a></li>
+                        <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Online Support</a></li>
+                        <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Technical Support</a></li>
+                        <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="">
+                    <h4 class=" font-semibold text-white mb-3">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" target="_blank" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="news.html" target="_blank" class="hover:text-blue-400">News</a></li>
+                        <li><a href="tutorial.html" target="_blank" class="hover:text-blue-400">Tutorial</a></li>
+                        <li><a href="article.html" target="_blank" class="hover:text-blue-400">Article</a></li>
+                        <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Partner with Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Middle Section (Contact + Cooperation) -->
+            <div class="border-t border-gray-600 py-6 px-4 max-w-7xl mx-auto text-center sm:text-left">
+                <div class="flex flex-col sm:flex-row justify-between gap-6 text-gray-200 text-sm grid grid-cols-2">
+
+                    <!-- Hotline -->
+                    <div class="text-start">
+                        <a href="contact.html" class="text-xl font-semibold hover:text-blue-400">Contact</a>
+                    </div>
+
+                    <!-- Cooperation Contacts -->
+                    <div class="text-gray-300 text-end">
+                        <div>
+                            <h5 class="font-semibold">Customer Service</h5>
+                            <p class="hover:text-blue-400">roboorion.services@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bottom -->
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-center justify-between items-center px-4 py-3 border-t border-gray-500">
+
+                <!-- Logo + Brand -->
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <!-- Logo -->
+                        <div class="w-6 h-6 rounded-full overflow-hidden shadow-neon ring-2 ring-gray-500">
+                            <img 
+                                src="asset/img/logo.png" 
+                                loading="lazy" 
+                                class="w-full h-full object-cover"
+                                alt="Robo Orion Logo">
+                        </div>
+                        <!-- Brand Name -->
+                        <span class="text-lg font-bold tracking-wide whitespace-nowrap">
+                            <span class="text-gray-800 font-exo drop-shadow-sm text-shadow-white">Robo</span>
+                            <span class="text-blue-600 font-ubuntu drop-shadow-sm text-shadow-white">Orion</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Optional Right Section -->
+                <div class="mt-3 sm:mt-0 flex items-center gap-4">
+                    <a href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank" class="text-gray-300 hover:text-blue-600 transition">
+                        <i class="fa-brands fa-square-facebook text-2xl"></i>
+                    </a>
+                    <a target="_blank" class="text-gray-300 hover:text-sky-500 transition">
+                        <i class="fa-brands fa-x-twitter text-2xl"></i>
+                    </a>
+                    <a target="_blank" class="text-gray-300 hover:text-blue-700 transition">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank" class="text-gray-300 hover:text-red-700 transition">
+                        <i class="fa-brands fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="bg-gray-800 text-gray-300 text-xs font-sans">
+            <div class=" max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 py-3">
+
+                <!-- Left Side: Links -->
+                <div class="flex flex-wrap gap-4">
+                    <a class="hover:text-white transition">Privacy Policy</a>
+                    <span class="text-gray-500">|</span>
+                    <a class="hover:text-white transition">Terms of Use</a>
+                    <span class="text-gray-500">|</span>
+                    <a class="hover:text-white transition">Cookie Preferences</a>
+                </div>
+
+                <!-- Right Side: Copyright -->
+                <div class="mt-2 sm:mt-0">
+                    <p class="text-gray-400">&copy; 2025 Robo Orion. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+    
+
+</body>
+</html>
