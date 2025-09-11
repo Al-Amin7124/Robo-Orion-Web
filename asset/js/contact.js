@@ -5,9 +5,12 @@ const menuBtn = document.getElementById("menu-btn");
       mobileMenu.classList.toggle("hidden");
     });
 
+
     document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
-      emailjs.sendForm("service_my9uedr", "template_2tesibu", this)
+      const statusEl = document.getElementById("form-status");
+      statusEl.innerText = "⏳ Sending...";
+      emailjs.sendForm("service_ju38v7u", "template_xptd0xm", this, "0pPC6AV7WTn72bXWt")
         .then(() => {
           document.getElementById("form-status").innerText = "✅ Message sent successfully!";
           this.reset();
@@ -16,3 +19,22 @@ const menuBtn = document.getElementById("menu-btn");
           console.error(error);
         });
     });
+
+    document.getElementById("newsletter-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const statusEl = document.getElementById("newsletter-message");
+  statusEl.innerText = "⏳ Sending...";
+
+  emailjs.sendForm("service_ju38v7u", "template_fwmkrnd", this, "0pPC6AV7WTn72bXWt") // 👈 different template
+    .then(() => {
+      statusEl.innerText = "✅ Subscribed successfully!";
+      this.reset();
+    }, (error) => {
+      statusEl.innerText = "❌ Failed. Check console.";
+      console.error("Newsletter error:", error);
+    });
+});
+
+
+
