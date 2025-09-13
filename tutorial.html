@@ -3,326 +3,345 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tutorials | Robo Orion</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Master robotics and electronics with Robo Orion's expert tutorials. Learn IoT programming, PCB design, microcontroller setup, and DIY electronics projects through detailed guides.">
-    <meta name="keywords" content="electronics tutorials, robotics guides, IoT programming, Arduino tutorials, Raspberry Pi projects, PCB design guide, DIY electronics, home automation tutorials, VR development, microcontroller programming">
-    
-    <!-- Social & Structured Data -->
-    <meta property="og:title" content="Robo Orion Tutorials | Learn Robotics & Electronics Step-by-Step">
-    <meta property="og:description" content="Free expert tutorials on robotics kits, IoT programming, PCB design, and electronics projects. Perfect for makers and developers.">
-    <meta property="og:image" content="https://roboorion.com/shop-banner-2">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="https://roboorion.com/tutorial.html">
-    <meta name="author" content="Robo Orion Team">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Structured Data -->
+    <!-- Primary Meta Tags -->
+    <title>Tutorials | Robo Orion</title>
+    <meta name="description" content="Explore Robo Orion’s innovative tutorials of robotics, IoT, electronics, PCB design, and smart automation.">
+    <meta name="keywords" content="Robo Orion projects, robotics projects, IoT projects, PCB design projects, automation solutions, electronics engineering, embedded systems, smart home projects, AI robotics">
+    <meta name="author" content="Robo Orion">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://roboorion.com/tutorial.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Robo Orion Tutorials | Robotics, IoT & Automation Solutions">
+    <meta property="og:description" content="Explore Robo Orion’s projects in robotics, IoT, PCB design, and automation technologies. Innovative solutions for industry and hobbyists.">
+    <meta property="og:image" content="https://roboorion.com/img/tutorial/How to MAke Simple High Voltage Generator Circuit at Home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://roboorion.com/tutorial.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Robo Orion">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Robo Orion Projects | Robotics, IoT & Automation Solutions">
+    <meta name="twitter:description" content="Check out our innovative projects in robotics, IoT, PCB design, and smart automation. Stay updated with Robo Orion’s latest solutions.">
+    <meta name="twitter:image" content="https://roboorion.com/img/tutorial/How to MAke Simple High Voltage Generator Circuit at Home.jpg">
+    <meta name="twitter:site" content="@RoboOrion">
+    <meta name="twitter:creator" content="@RoboOrion">
+
+    <!-- Structured Data (JSON-LD for Project Collection) -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            "name": "Robo Orion Tutorials",
-            "url": "https://roboorion.com/tutorial.html",
-            "description": "Professional resource for robotics engineering, IoT development, and electronics tutorials",
-            "publisher": {
-                "@type": "Organization",
-                "name": "Robo Orion",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://roboorion.com/img/logo-full.png"
-                }
-            }
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Robo Orion Tutorials Hub",
+      "description": "A curated collection of Robo Orion projects in robotics, IoT, electronics, and automation technologies.",
+      "url": "https://roboorion.com/tutorial.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robo Orion",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://roboorion.com/img/tutorial/How to MAke Simple High Voltage Generator Circuit at Home.jpg"
         }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://roboorion.com/tutorial.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
     </script>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/logo-2.png">
-    
-    <!-- Google Web Fonts -->
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" href="asset/img/logo.png">
+
+    <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Keep this for any custom Bootstrap styles -->
-    
-    <!-- Icon Font Stylesheets -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    
-    <!-- Additional Libraries -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Ubuntu:wght@400;700&display=swap">
 
+    <!-- CSS Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="asset/css/main.css" rel="stylesheet">
+    <link href="asset/css/project.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTD9WXLSE6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XTD9WXLSE6');
+    </script>
 </head>
 
-<body>
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+<body class="bg-gray-100">
+    <div class="">
+        <!-- nav bar -->
+        <header class="sticky inset-0 z-50 border-b border-slate-100 bg-white/30 backdrop-blur-lg shadow-lg">
+            <nav  class="mx-auto flex max-w-8xl items-center gap-8 justify-between px-6 py-4 lg:px-12 transition-all duration-200 ease-in-out z-50">
+                
+                <!-- Left logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-full overflow-hidden shadow-xl ring-1 ring-gray-400">
+                            <img 
+                                src="asset/img/logo.png" 
+                                loading="lazy" 
+                                class="w-full h-full object-cover scale-140"
+                                alt="Robo Orion Logo">
+                        </div>
+                        <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-black">
+                            <span class="text-black-500 font-exo text-shadow">Robo</span>
+                            <span class="text-blue-500 font-ubuntu text-shadow">Orion</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Spacer -->
+                <div class="flex-grow hidden md:block"></div>
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex items-center gap-6">
+                    <li><a href="index.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Home</a></li>
+                    <li><a href="service.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Service</a></li>
+                    <li><a href="project.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Project</a></li>
+                    <li><a href="product.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Product</a></li>
+                    <li><a href="tutorial.html" class="pt-1.5 font-dm text-md font-bold text-blue-600">Tutorial</a></li>
+                    <li><a href="article.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Article</a></li>
+                    <li><a href="about.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">About</a></li>
+                    <li><a href="contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>      
+                </ul>
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="m-0">RoboOrion</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="product.html" class="nav-item nav-link">Product</a>
-                        <a href="tutorial.html" class="nav-item nav-link active">Tutorial</a>
-                        <a href="article.html" class="nav-item nav-link">Article</a>
-                        <a href="#" class="nav-item nav-link">About</a>
-                        <a href="contact.html" class="nav-item nav-link nav-link">Contact</a>
+                <!-- Mobile Menu Button -->
+                <div class="relative md:hidden">
+                    <button id="menu-btn" class="flex items-center text-slate-900 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" viewBox="0 0 24 24" 
+                            stroke-width="1.5" stroke="currentColor" 
+                            class="h-7 w-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" 
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Dropdown Menu (Right aligned) -->
+                    <div id="mobile-menu" class="absolute right-0 mt-2 hidden w-48 flex-col rounded-lg bg-white/90 backdrop-blur-xs shadow-lg p-2">
+                        <a href="index.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Home</a>
+                        <a href="service.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Service</a>
+                        <a href="project.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Project</a>
+                        <a href="product.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Product</a>
+                        <a href="tutorial.html" class="block px-4 py-2 text-sm font-bold text-blue-600 hover:bg-slate-200 rounded-md">Tutorial</a>
+                        <a href="article.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Article</a>
+                        <a href="about.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">About</a>
+                        <a href="contact.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Contact</a>
                     </div>
-                    <a href="#" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
                 </div>
             </nav>
+        </header>
+        <!-- Nav End -->
 
-            <div class="container-fluid hero-header">
-                <div class="container my-5 py-4 px-lg-5">
-                </div>
+        <!-- Project Section -->
+        <!-- Project Section -->
+        <div class="mx-auto max-w-8xl py-8 bg-[#e7eaf6] -mt-20">
+            <div class="text-center mb-8 mt-20">
+                <h1 class="text-4xl font-ubuntu font-bold text-gray-800 text-shadow">
+                    Tutorials
+                </h1>
             </div>
-        </div> 
-        <!-- Navbar & Hero End -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 max-w-7xl mx-auto">
 
+                <!-- Card 1 -->
+                <a href="tutorial/diy-high-voltage-generator-circuit.html" target="_blank" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="w-full aspect-w-16 aspect-h-9">
+                        <img src="img/tutorial/How to MAke Simple High Voltage Generator Circuit at Home.jpg" loading="lazy" alt="How to Build a Simple High Voltage Generator at Home" class="w-full h-full object-cover rounded-t-xl">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h2 class="text-lg font-semibold text-gray-800 hover:text-blue-900">How to Build a Simple High Voltage Generator at Home : DIY</h2>
+                    </div>
+                </a>
 
-        <!-- Tutorials -->
-        <div class="container-fluid py-2">
-            <div class="container py-2 px-lg-5">
-                <div class="row g-4">
-                    <div class="wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="text-center mb-5">Tutorials</h1>
+                <!-- Card 2 -->
+                <a href="tutorial/diy-12v-pwm-motor-speed-controller.html" target="_blank" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="w-full aspect-w-16 aspect-h-9">
+                        <img src="img/tutorial/12V PWM Motor Speed Controller.jpg" loading="lazy" alt="How to Build a 12V PWM Motor Speed Controller" class="w-full h-full object-cover rounded-t-xl">
                     </div>
-                    <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="col-12 text-center">
-                            <ul class="list-inline mb-5" id="portfolio-flters">
-                                <li class="mx-2 active" data-filter="*">All</li>
-                                <li class="mx-2" data-filter=".electronics">Electronics</li>
-                                <li class="mx-2" data-filter=".iot">IoT</li>
-                            </ul>
-                        </div>
+                    <div class="p-4 text-center">
+                        <h2 class="text-lg font-semibold text-gray-800 hover:text-blue-900">How to Build a 12V PWM Motor Speed Controller : DIY</h2>
                     </div>
-                </div>  
-                
-                <div class="row g-4 tutorial-container" >
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 tutorial-item electronics  wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="tutorial/diy-12v-pwm-motor-controller.html">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/tutorial/img1.png" alt="12V PWM Motor Speed Controller">
-                                <h4 class="h6 mb-2 mt-3">12V PWM Motor Speed Controller</h4>
-                                <p class="m-0 text-black">DIY 12V PWM Motor Speed Controller | Step-by-Step Guide & Circuit Diagram</p>
-                            </div>
-                        </a>                           
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 tutorial-item electronics  wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="tutorial/How-to-Build-a-Simple-High-Voltage-Generator-at-Home.html">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/tutorial/High-voltage-arc-demonstration.png" alt="High voltage arc demonstration">
-                                <h4 class="h6 mb-2 mt-3">Simple High Voltage Generator</h4>
-                                <p class="m-0 text-black">How to Build a Simple High Voltage Generator at Home</p>
-                            </div>
-                        </a>                           
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 tutorial-item electronics  wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-2 mt-3">Tutorials</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a>                           
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 tutorial-item iot  wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-2 mt-3">Tutorials</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a>                           
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 tutorial-item electronics  wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-2 mt-3">Tutorials</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a>                           
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 tutorial-item electronics  wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="#">
-                            <div class="feature-item bg-light rounded text-center p-0">
-                                <img class="img-fluid w-100 rounded" src="img/comingsoon.png" alt="">
-                                <h5 class="mb-2 mt-3">Tutorials</h5>
-                                <p class="m-0 text-black">Coming Soon...!</p>
-                            </div>
-                        </a>                           
-                    </div>
-  
-                </div>
+                </a>
+
             </div>
         </div>
-        <!-- Tutorials End -->
-        
 
-        <!-- Footer Start -->
-        <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-4  px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Location</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>Phone</p>
-                        <p><i class="fa fa-envelope me-3"></i>roboorion.services@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank"><i class="fab fa-facebook-f"></i></a> <!--
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
-                            <a class="btn btn-outline-light btn-social" href="https://kwork.com/user/alaminshuvo71" target="_blank"><i class="fa-brands fa-korvue large-icon"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://github.com/Al-Amin7124" target="_blank"><i class="fa-brands fa-github large-icon"></i></a>
+
+            
+        <!-- Footer Section -->
+        <footer>
+            <!-- Top Footer -->
+            <div class="bg-gray-700 border-gray-400">
+                <!-- top start -->
+                <div class="max-w-7xl mx-auto px-4 py-8 flex  grid grid-cols-2 sm:grid-cols-4 gap-6 text-gray-200 text-sm ">
+
+                    <!-- Platform -->
+                    <div class="">
+                        <h4 class="font-semibold text-white mb-3">Platform</h4>
+                        <ul class="space-y-2">
+                            <li><a href="service.html" target="_blank" class="hover:text-blue-400">Services</a></li>
+                            <li><a href="product.html" target="_blank" class="hover:text-blue-400">orion Shop</a></li>
+                            <li><a href="project.html" target="_blank" class="hover:text-blue-400">Orion Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Solutions -->
+                    <div class="">
+                        <h4 class="font-semibold text-white mb-3">Solutions</h4>
+                        <ul class="space-y-2">
+                            <li><a href="smart-home" target="_blank" class="hover:text-blue-400">Smart Home</a></li>
+                            <li><a href="smart-office" target="_blank" class="hover:text-blue-400">Smart Office</a></li>
+                            <li><a href="iot-project" target="_blank" class="hover:text-blue-400">Smart IoT Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="">
+                        <h4 class="font-semibold text-white mb-3">Support</h4>
+                        <ul class="space-y-2">
+                            <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Help Center</a></li>
+                            <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Online Support</a></li>
+                            <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Technical Support</a></li>
+                            <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div class="">
+                        <h4 class=" font-semibold text-white mb-3">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="about.html" target="_blank" class="hover:text-blue-400">About Us</a></li>
+                            <li><a href="news.html" target="_blank" class="hover:text-blue-400">News</a></li>
+                            <li><a href="tutorial.html" target="_blank" class="hover:text-blue-400">Tutorial</a></li>
+                            <li><a href="article.html" target="_blank" class="hover:text-blue-400">Article</a></li>
+                            <li><a href="contact.html" target="_blank" class="hover:text-blue-400">Partner with Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Middle Section (Contact + Cooperation) -->
+                <div class="border-t border-gray-600 py-6 px-4 max-w-7xl mx-auto text-center sm:text-left">
+                    <div class="flex flex-col sm:flex-row justify-between gap-6 text-gray-200 text-sm grid grid-cols-2">
+
+                        <!-- Hotline -->
+                        <div class="text-start">
+                            <a href="contact.html" class="text-xl font-semibold hover:text-blue-400">Contact</a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="#" target="_blank">About Us</a>
-                        <a class="btn btn-link" href="contact.html" target="_blank">Contact Us</a> <!--
-                        <a class="btn btn-link" href="#" target="_blank">Privacy Policy</a>
-                        <a class="btn btn-link" href="#" target="_blank">Terms & Condition</a>
-                        <a class="btn btn-link" href="#" target="_blank">Career</a>-->
-                        <a class="btn btn-link" href="https://youtube.com/@oriontv-xyz?si=y5LDXB11WmK3QiaP" target="_blank">Orion TV</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Online Workplace<span></span></p>
-                        <div class="d-flex flex-column gap-2">
-                            <!-- Kwork -->
-                            <div class="d-flex align-items-center">
-                                <a href="https://kwork.com/user/alaminshuvo71" target="_blank"><img src="img/k-work.png" alt="Kwork Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
-                                <a href="https://kwork.com/user/alaminshuvo71" class="text-white text-decoration-none" target="_blank">Kwork</a>
+
+                        <!-- Cooperation Contacts -->
+                        <div class="text-gray-300 text-end">
+                            <div class="flex items-center justify-end space-x-2 hover:text-blue-400">
+                                <i class="fa-regular fa-envelope text-xl"></i>
+                                <h5 class="font-normal text-lg">Newsletter</h5>
+                                <form id="newsletter-form" class="w-full sm:w-auto flex flex-col sm:flex-row items-center gap-2">
+                                    <div class="relative w-full sm:w-72">
+                                        <input 
+                                        type="email" 
+                                        name="user_email"  
+                                        placeholder="Enter your email" 
+                                        class="w-full pr-10 px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                        >
+                                        <button 
+                                        type="submit" 
+                                        class="absolute inset-y-0 right-0 flex items-center pr-3 text-blue-600 hover:text-blue-800"
+                                        >
+                                        <i class="fa-solid fa-paper-plane text-lg"></i>
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <p id="newsletter-message" class="mt-2 text-sm text-center"></p>
+
                             </div>
-                            <!-- Fiverr -->
-                            <div class="d-flex align-items-center">
-                                <a href="https://www.fiverr.com/s/XLkr852" target="_blank"></a><img src="img/fiverr.png" alt="Fiverr Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
-                                <a href="https://www.fiverr.com/s/XLkr852" class="text-white text-decoration-none" target="_blank">Fiverr</a>
-                            </div>
-                            <!-- Freelancer 
-                            <div class="d-flex align-items-center">
-                                <a href="https://www.freelancer.com/u/alamins71?sb=t" target="_blank"></a><img src="img/freelancer.png" alt="Freelancer Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
-                                <a href="https://www.freelancer.com/u/alamins71?sb=t" class="text-white text-decoration-none" target="_blank">Freelancer</a>
-                            </div>-->
-                            <!-- Upwork 
-                            <div class="d-flex align-items-center">
-                                <a href="https://upwork.com" target="_blank"></a><img src="img/upwork.png" alt="Upwork Logo" style="height: 24px; width: auto; margin-right: 8px;"></a>
-                                <a href="https://upwork.com" class="text-white text-decoration-none" target="_blank">Upwork</a>
-                            </div>-->
-                            <!-- PeoplePerHour 
-                            <div class="d-flex align-items-center">
-                                <img src="img/people-per-hour-logo.png" alt="PeoplePerHour Logo" style="height: 24px; width: auto; margin-right: 8px;">
-                                <a href="https://peopleperhour.com" class="text-white text-decoration-none" target="_blank">PeoplePerHour</a>
-                            </div>-->
-                            <!-- Guru 
-                            <div class="d-flex align-items-center">
-                                <img src="img/guru-logo.png" alt="Guru Logo" style="height: 24px; width: auto; margin-right: 8px;">
-                                <a href="https://guru.com" class="text-white text-decoration-none" target="_blank">Guru</a>
-                            </div>-->
-                            <!-- WellFound 
-                            <div class="d-flex align-items-center">
-                                <img src="img/wellfound-logo.png" alt="well-found Logo" style="height: 24px; width: auto; margin-right: 8px;">
-                                <a href="https://wellfound.com" class="text-white text-decoration-none" target="_blank">WellFound</a>
-                            </div>-->
                         </div>
+
                     </div>
-                    
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Robo Orion<span></span></p>
-                        <p>Get our latest news and ideas to your inbox.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
+                </div>
+
+                <!-- bottom -->
+                <div class="max-w-7xl mx-auto flex flex-wrap justify-center justify-between items-center px-4 py-3 border-t border-gray-500">
+
+                    <!-- Logo + Brand -->
+                    <div class="flex items-center gap-3">
+                        <a href="index.html" class="flex items-center gap-2">
+                            <!-- Logo -->
+                            <div class="w-6 h-6 rounded-full overflow-hidden shadow-neon ring-2 ring-gray-500">
+                                <img 
+                                    src="asset/img/logo.png" 
+                                    loading="lazy" 
+                                    class="w-full h-full object-cover"
+                                    alt="Robo Orion Logo">
+                            </div>
+                            <!-- Brand Name -->
+                            <span class="text-lg font-bold tracking-wide whitespace-nowrap">
+                                <span class="text-gray-800 font-exo drop-shadow-sm text-shadow-white">Robo</span>
+                                <span class="text-blue-600 font-ubuntu drop-shadow-sm text-shadow-white">Orion</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Optional Right Section -->
+                    <div class="mt-3 sm:mt-0 flex items-center gap-4">
+                        <a href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank" class="text-gray-300 hover:text-blue-600 transition">
+                            <i class="fa-brands fa-square-facebook text-2xl"></i>
+                        </a>
+                        <a target="_blank" class="text-gray-300 hover:text-sky-500 transition">
+                            <i class="fa-brands fa-x-twitter text-2xl"></i>
+                        </a>
+                        <a target="_blank" class="text-gray-300 hover:text-blue-700 transition">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank" class="text-gray-300 hover:text-red-700 transition">
+                            <i class="fa-brands fa-youtube text-2xl"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="https://roboorion.com">Robo Orion</a>, All Right Reserved. 							
-							Designed By <a class="border-bottom" href="https://roboorion.com">Robo Orion</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="https://youtube.com/@oriontv-xyz?si=y5LDXB11WmK3QiaP" target="_blank">News</a><!--
-                                <a href="#">Cookies</a>-->
-                                <a href="contact.html">Help</a><!--
-                                <a href="#">FQAs</a>-->
-                            </div>
-                        </div>
+
+            <!-- Bottom Footer -->
+            <div class="bg-gray-800 text-gray-300 text-xs font-sans">
+                <div class=" max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 py-3">
+
+                    <!-- Left Side: Links -->
+                    <div class="flex flex-wrap gap-4">
+                        <a class="hover:text-white transition">Privacy Policy</a>
+                        <span class="text-gray-500">|</span>
+                        <a class="hover:text-white transition">Terms of Use</a>
+                        <span class="text-gray-500">|</span>
+                        <a class="hover:text-white transition">Cookie Preferences</a>
+                    </div>
+
+                    <!-- Right Side: Copyright -->
+                    <div class="mt-2 sm:mt-0">
+                        <p class="text-gray-400">&copy; 2025 Robo Orion. All rights reserved.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Footer End -->
+        </footer>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
     </div>
 
-    
-    
-    
-
-    <!-- jQuery (Needed before Bootstrap JS) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Other JavaScript Libraries -->
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Boxicons JS -->
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="asset/js/newsletter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="asset/js/service.js"></script>
+<script src="asset/js/tailwind.config.js"></script>
 
     
-    
-
-    <!-- Template JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/index.js"></script> <!-- Add this -->
-
-
-   
 </body>
-
-</html>
