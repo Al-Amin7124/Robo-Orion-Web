@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Build a Simple High Voltage Generator at Home : DIY</title>
+    <meta name="description" content="High voltage generator DIY projects are fascinating for electronics hobbyists and students alike. They are often used in Tesla coil beginner circuits, science experiments, and electrical testing. This guide will show you how to build a high voltage generator at home — a safe 9V-to-300V DC supply using common components. Unlike complex Marx generators, this design focuses on simple high voltage circuits that remain both accessible and safe."/>
+    <meta name="keywords" content="high voltage generator diy" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="How to Build a Simple High Voltage Generator at Home : DIY" />
+    <meta property="og:description" content="Wants to control the speed of a 12V DC motor efficiently? A Pulse Width Modulation (PWM) motor speed controller is the best solution! Unlike traditional methods that reduce voltage (wasting power as heat), PWM optimizes energy usage while providing smooth speed control.
+    In this Tutorial, i am going to show you how to make a high power pwm speed controller circuit which can even control 12v high watt 775 motor speed easily." />
+    <meta property="og:type" content="tutorial" />
+    <meta property="og:image" content="https://roboorion.com/img/tutorial/How to MAke Simple High Voltage Generator Circuit at Home.jpg" />
+    <meta property="og:url" content="https://roboorion.com/tutorial/diy-high-voltage-generator-circuit.html" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@roboorion" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://roboorion.com/tutorial/diy-high-voltage-generator-circuit.html" />
+    <link rel="icon" type="image/png" href="../asset/img/logo.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTD9WXLSE6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XTD9WXLSE6');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Tutorial",
+  "headline": "How to Build a Simple High Voltage Generator at Home : DIY",
+  "author": {
+    "@type": "Person",
+    "name": "Md. Al-Amin"
+  },
+  "datePublished": "2025-09-05",
+  "description": "Want to control the speed of a 12V DC motor efficiently? A Pulse Width Modulation (PWM) motor speed controller is the best solution! Unlike traditional methods that reduce voltage (wasting power as heat), PWM optimizes energy usage while providing smooth speed control.\nIn this Tutorial, i am going to show you how to make a high power pwm speed controller circuit which can even control 12v high watt 775 motor speed easily.",
+  "url": "https://roboorion.com/tutorial/diy-high-voltage-generator-circuit.html"
+}
+</script>
+
+</head>
+
+<body class="bg-gray-100">
+  <div>
+    <!-- Header section -->
+    <header class="sticky inset-0 z-50 border-b border-slate-100 bg-white/30 backdrop-blur-lg shadow-lg">
+            <nav  class="mx-auto flex max-w-8xl items-center gap-8 justify-between px-6 py-4 lg:px-12 transition-all duration-200 ease-in-out z-50">
+                
+                <!-- Left logo -->
+                <div class="flex items-center">
+                    <a href="https://roboorion.com/" class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                            <img 
+                                src="../asset/img/logo.png" 
+                                loading="lazy" 
+                                class="w-full h-full object-cover scale-140"
+                                alt="Robo Orion Logo">
+                        </div>
+                        <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-black">
+                            <span class="text-black-500 font-exo text-shadow">Robo</span>
+                            <span class="text-blue-500 font-ubuntu text-shadow">Orion</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Spacer -->
+                <div class="flex-grow hidden md:block"></div>
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex items-center gap-6">
+                    <li><a href="../index.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Home</a></li>
+                    <li><a href="../service.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Service</a></li>
+                    <li><a href="../project.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Project</a></li>
+                    <li><a href="../product.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Product</a></li>
+                    <li><a href="../tutorial.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Tutorial</a></li>
+                    <li><a href="../article.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Article</a></li>
+                    <li><a href="../about.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">About</a></li>
+                    <li><a href="../contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>      
+                </ul>
+
+
+                <!-- Mobile Menu Button -->
+                <div class="relative md:hidden">
+                    <button id="menu-btn" class="flex items-center text-slate-900 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" viewBox="0 0 24 24" 
+                            stroke-width="1.5" stroke="currentColor" 
+                            class="h-7 w-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" 
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Dropdown Menu (Right aligned) -->
+                    <div id="mobile-menu" class="absolute right-0 mt-2 hidden w-48 flex-col rounded-lg bg-white/80 backdrop-blur-lg shadow-lg p-2">
+                        <a href="../index.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Home</a>
+                        <a href="../service.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Service</a>
+                        <a href="../project.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Project</a>
+                        <a href="../product.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Product</a>
+                        <a href="../tutorial.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Tutorial</a>
+                        <a href="../article.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Article</a>
+                        <a href="../about.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">About</a>
+                        <a href="../contact.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <!-- Banner -->
+        <div class="-mt-20">
+            <div class="text-white py-12 pt-8">
+                
+            </div>
+        </div>
+    
+    <!-- Content Section -->
+        <div class="w-full bg-gradient-to-br from-blue-400 to-purple-400">
+
+                <!--  Section -->
+                <div class="mx-auto max-w-8xl py-0 sm:py-8 bg-[#e7eaf6]">
+
+                    <main class="container mx-auto px-0 sm:px-4 py-0 max-w-6xl">
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-8 max-w-5xl mx-auto">
+                            <div class="flex flex-wrap items-center justify-between mb-4">
+                                <div class="container mx-auto px-4 text-center">
+                                    <h1 class="text-4xl md:text-5xl font-bold mb-4">How to Build a Simple High Voltage Generator at Home : DIY</h1>
+                    
+                                </div>
+                                <div>
+                                    <span class="text-gray-600"><i class="far fa-calendar-alt mr-2"></i>Published: September 6, 2025</span>
+                                    <span class="text-gray-600 ml-4"><i class="fa-solid fa-user mr-2"></i>Md. Al-Amin</span>
+                                </div>
+                                
+                            </div>
+
+                            <hr class="mb-6">
+
+                            <article class="prose prose-lg max-w-none text-gray-800">
+                                <section class="mb-8">
+                                    <h2 class="font-semibold text-3xl pb-4">Introduction</h2>
+                                    <p class="text-lg">
+                                        High voltage generator DIY projects are fascinating for electronics hobbyists and students alike. They are often used in Tesla coil beginner circuits, science experiments, and electrical testing. This guide will show you how to build a high voltage generator at home — a safe 9V-to-300V DC supply using common components. Unlike complex Marx generators, this design focuses on simple high voltage circuits that remain both accessible and safe.
+                                    </p>
+                                    <img src="../img/tutorial/How to MAke Simple High Voltage Generator Circuit at Home.jpg" alt="High voltage arc demonstration" title="High voltage arc demonstration" class="max-w-3xl w-full text-center mx-auto my-4">
+                                </section>
+
+                                <section class="mb-8">
+                                    <h2 class="font-semibold text-3xl pb-4">Required Components</h2>
+                                    <h3 class="font-semibold text-2xl ml-5 pb-2">Core Components</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-5">
+                                        <li>IRF540 MOSFET – MOSFET high voltage driver</li>
+                                        <li>Step-down Transformer (12V-0-12V) – reverse-wired for step-up transformer circuit</li>
+                                        <li>High Voltage Diode (1N4007) – high voltage rectifier diode for output</li>
+                                        
+                                    </ul>
+                                    <h3 class="font-semibold text-2xl pb-2 pt-2 ml-5">Additional Materials</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-5">
+                                        <li>9V Battery & Connector</li>
+                                        <li>Breadboard/PCB</li>
+                                        <li>22kΩ Potentiometer</li>
+                                        <li>1kΩ Resistor</li>
+                                        
+                                    </ul>
+                                </section>
+
+                                <section class="mb-8">
+                                    <h2 class="font-semibold text-3xl pb-4">Circuit Diagram</h2>
+                                    <p class="text-lg">Below is the simple high voltage generator with IRF540 MOSFET circuit diagram schematic.</p>
+                                    <img src="../img/tutorial/simple high voltage generator circuit with IRF540 Mosfet.jpg" loading="lazy" alt="simple high voltage generator circuit diagram with IRF540 Mosfet" title="simple high voltage generator circuit diagram with IRF540 Mosfet" class="max-w-3xl w-full text-center mx-auto my-4">
+                                </section>
+
+                                <section class="mb-8">
+                                    <h2 class="font-semibold text-3xl pb-4">Assembly Guide</h2>
+                                    <div class="ml-5">
+                                        <h3 class="font-semibold text-2xl pb-2">Step 1: Prepare the Transformer</h3>
+                                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                            <p>Using a standard 12V-0-12V transformer in reverse configuration:</p>
+                                            <li>Connect primary winding (formerly secondary) to MOSFET</li>
+                                            <li>Secondary winding (formerly primary) becomes HV output — making this a low voltage to high voltage converter</li>
+                                        </ul>
+                                        <h3 class="font-semibold text-2xl pb-2">Step 2: MOSFET Driver Setup</h3>
+                                        <ul class="list-disc list-inside space-y-2 text-gray-700"> 
+                                            <li>Attach transformer primary to MOSFET drain</li>
+                                            <li>Add flyback diode (1N4007) across transformer primary for protection</li>
+                                            <p>This DIY high voltage power supply setup boosts 9V input into a 9V to 300V DC generator.</p>
+                                        </ul>
+                                        
+                                    </div>
+                                    <img src="../img/tutorial/high voltage spark.jpg" loading="lazy" alt="high voltage spark" title="High Voltage Spark" class="max-w-3xl w-full text-center mx-auto my-4">  
+                                </section>
+
+                                <section class="mb-8">
+                                    <h2 class="font-semibold text-3xl pb-4">Safety Measures</h2>
+                                    <p>Warning: Output can exceed 300V DC. Always:</p>
+                                    <div class="ml-5">
+                                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                            <li>Use insulated tools</li>
+                                            <li>Discharge capacitors before handling</li>
+                                            <li>Work on non-conductive surfaces</li>
+                                            <p>Remember: even a DIY high voltage arc generator can be dangerous if handled carelessly.</p>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                <section class="mb-8">
+                                    <h3 class="font-semibold text-3xl pb-4">Conclusion</h3>
+                                    <p>If you’re wondering how to make a 9V to 300V converter that actually works, MOSFET gate drive is the key.
+                                        <br>If you found this guide helpful, feel free to share your feedback. Happy building and keep innovating!
+                                    </p>
+                                    <a href="../tutorial.html">
+                                        <div class="text-blue-500 font-semibold hover:text-blue-700 pt-4">
+                                            Click here to explore more tutorials.
+                                        </div>
+                                        
+                                    </a>
+                                </section>
+
+                                <hr class="my-8">
+
+                                <!-- Footer Metadata -->
+                                <div class="text-sm text-gray-600 space-y-1">
+                                    <p><strong>Published by:</strong> Robo Orion</p>
+                                    <p><strong>Author:</strong> Md. Al-AMIN</p>
+                                    <p><strong>Date:</strong> September 5, 2024</p>
+                                    <p><strong>Category:</strong> Tutorials, Electronics</p>
+                                </div>
+                            </article>
+                        </div>
+                    </main>
+                    
+
+                </div>    
+
+        </div>
+
+    <!-- Footer Section -->
+        <footer>
+            <!-- Top Footer -->
+            <div class="bg-gray-700 border-gray-400">
+                <!-- top start -->
+                <div class="max-w-7xl mx-auto px-4 py-8 flex  grid grid-cols-2 sm:grid-cols-4 gap-6 text-gray-200 text-sm ">
+
+                    <!-- Platform -->
+                    <div class="">
+                        <h4 class="font-semibold text-white mb-3">Platform</h4>
+                        <ul class="space-y-2">
+                            <li><a href="../service.html" target="_blank" class="hover:text-blue-400">Services</a></li>
+                            <li><a href="../product.html" target="_blank" class="hover:text-blue-400">orion Shop</a></li>
+                            <li><a href="../project.html" target="_blank" class="hover:text-blue-400">Orion Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Solutions -->
+                    <div class="">
+                        <h4 class="font-semibold text-white mb-3">Solutions</h4>
+                        <ul class="space-y-2">
+                            <li><a href="../smart-home" target="_blank" target="_blank">Smart Home</a></li>
+                            <li><a href="../smart-office" target="_blank" target="_blank">Smart Office</a></li>
+                            <li><a href="../iot-project" target="_blank" class="hover:text-blue-400">Smart IoT Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="">
+                        <h4 class="font-semibold text-white mb-3">Support</h4>
+                        <ul class="space-y-2">
+                            <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Help Center</a></li>
+                            <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Online Support</a></li>
+                            <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Technical Support</a></li>
+                            <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div class="">
+                        <h4 class=" font-semibold text-white mb-3">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="../about.html" target="_blank" class="hover:text-blue-400">About Us</a></li>
+                            <li><a href="../news.html" target="_blank" class="hover:text-blue-400">News</a></li>
+                            <li><a href="../tutorial.html" target="_blank" class="hover:text-blue-400">Tutorial</a></li>
+                            <li><a href="../article.html" target="_blank" class="hover:text-blue-400">Article</a></li>
+                            <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Partner with Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Middle Section (Contact + Cooperation) -->
+                <div class="border-t border-gray-600 py-6 px-4 max-w-7xl mx-auto text-center sm:text-left">
+                    <div class="flex flex-col sm:flex-row justify-between gap-6 text-gray-200 text-sm grid grid-cols-2">
+
+                        <!-- Hotline -->
+                        <div class="text-start">
+                            <a href="../contact.html" class="text-xl font-semibold hover:text-blue-400">Contact</a>
+                        </div>
+
+                        <!-- Cooperation Contacts -->
+                        <div class="text-gray-300 text-end">
+                            <div class="flex items-center justify-end space-x-2 hover:text-blue-400">
+                                <i class="fa-regular fa-envelope text-xl"></i>
+                                <h5 class="font-normal text-lg">Newsletter</h5>
+                                <form id="newsletter-form" class="w-full sm:w-auto flex flex-col sm:flex-row items-center gap-2">
+                                    <div class="relative w-full sm:w-72">
+                                        <input 
+                                        type="email" 
+                                        name="user_email"  
+                                        placeholder="Enter your email" 
+                                        class="w-full pr-10 px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                        >
+                                        <button 
+                                        type="submit" 
+                                        class="absolute inset-y-0 right-0 flex items-center pr-3 text-blue-600 hover:text-blue-800"
+                                        >
+                                        <i class="fa-solid fa-paper-plane text-lg"></i>
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <p id="newsletter-message" class="mt-2 text-sm text-center"></p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- bottom -->
+                <div class="max-w-7xl mx-auto flex flex-wrap justify-center justify-between items-center px-4 py-3 border-t border-gray-500">
+
+                    <!-- Logo + Brand -->
+                    <div class="flex items-center gap-3">
+                        <a href="../index.html" class="flex items-center gap-2">
+                            <!-- Logo -->
+                            <div class="w-6 h-6 rounded-full overflow-hidden shadow-neon ring-2 ring-gray-500">
+                                <img 
+                                    src="../asset/img/logo.png" 
+                                    loading="lazy" 
+                                    class="w-full h-full object-cover"
+                                    alt="Robo Orion Logo">
+                            </div>
+                            <!-- Brand Name -->
+                            <span class="text-lg font-bold tracking-wide whitespace-nowrap">
+                                <span class="text-gray-800 font-exo drop-shadow-sm text-shadow-white">Robo</span>
+                                <span class="text-blue-600 font-ubuntu drop-shadow-sm text-shadow-white">Orion</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Optional Right Section -->
+                    <div class="mt-3 sm:mt-0 flex items-center gap-4">
+                        <a href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank" class="text-gray-300 hover:text-blue-600 transition">
+                            <i class="fa-brands fa-square-facebook text-2xl"></i>
+                            <span class="sr-only">Follow us on Facebook</span>
+                        </a>
+                        <a target="_blank" class="text-gray-300 hover:text-sky-500 transition">
+                            <i class="fa-brands fa-x-twitter text-2xl"></i>
+                            <span class="sr-only">Follow us on Twitter</span>
+                        </a>
+                        <a target="_blank" class="text-gray-300 hover:text-blue-700 transition">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                            <span class="sr-only">Follow us on Linkedin</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC25jK0O9bc_rGTjgvf_9zUg" target="_blank" class="text-gray-300 hover:text-red-700 transition">
+                            <i class="fa-brands fa-youtube text-2xl"></i>
+                            <span class="sr-only">Follow us on Youtube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="bg-gray-800 text-gray-300 text-xs font-sans">
+                <div class=" max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 py-3">
+
+                    <!-- Left Side: Links -->
+                    <div class="flex flex-wrap gap-4">
+                        <a class="hover:text-white transition">Privacy Policy</a>
+                        <span class="text-gray-500">|</span>
+                        <a class="hover:text-white transition">Terms of Use</a>
+                        <span class="text-gray-500">|</span>
+                        <a class="hover:text-white transition">Cookie Preferences</a>
+                    </div>
+
+                    <!-- Right Side: Copyright -->
+                    <div class="mt-2 sm:mt-0">
+                        <p class="text-gray-400">&copy; 2025 Robo Orion. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+  </div>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+  <script src="../asset/js/newsletter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+</body>
+</html>
