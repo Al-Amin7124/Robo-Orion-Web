@@ -1172,50 +1172,6 @@
     </main>
     
 
-    <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    const navItems = document.querySelectorAll('.nav-item');
-
-    // Toggle menu
-    menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('-translate-x-full');
-        overlay.classList.toggle('hidden');
-        
-        // Change icon
-        const icon = menuToggle.querySelector('i');
-        if (sidebar.classList.contains('-translate-x-full')) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        } else {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        }
-    });
-
-    // Close menu when clicking overlay
-    overlay.addEventListener('click', () => {
-        sidebar.classList.add('-translate-x-full');
-        overlay.classList.add('hidden');
-        const icon = menuToggle.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    });
-
-    // Close menu when clicking nav item (mobile)
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (window.innerWidth < 1024) {
-                sidebar.classList.add('-translate-x-full');
-                overlay.classList.add('hidden');
-                const icon = menuToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
-</script>
 
 <script src="asset/js/alamin.js"></script>
     
