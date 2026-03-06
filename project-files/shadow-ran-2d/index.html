@@ -86,8 +86,12 @@
     meta.name = 'viewport';
     meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
     document.getElementsByTagName('head')[0].appendChild(meta);
-    canvas.style.width = "960px";
-    canvas.style.height = "600px";
+    canvas.style.width = "1280px";
+    canvas.style.height = "720px";
+    canvas.style.position = "absolute";
+canvas.style.top = "0";
+canvas.style.left = "50%";
+canvas.style.transform = "translateX(-50%)";
 } else {
     canvas.style.width = "1280px";
 canvas.style.height = "720px";
