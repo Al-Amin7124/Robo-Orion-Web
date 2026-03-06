@@ -189,19 +189,20 @@
                             <h2 class="font-semibold text-xl sm:text-3xl pb-4 text-blue-900 pt-2">Play Shadow Ran 2D Online</h2>
 
                             <div class="w-full rounded-lg border border-gray-300 overflow-hidden" style="background:#000;">
-    <div style="width:960px; height:660px; transform-origin: top left;" id="game-scaler">
-        <iframe 
-            src="../project-files/shadow-ran-2d/index.html" 
-            style="border:none; width:960px; height:660px; display:block;"
-            scrolling="no"
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
-<p class="text-sm text-gray-500 mt-1">📱 On smaller screens, scroll right inside the game frame to find the fullscreen button.</p>
-
+                                <div style="width:1280px; height:775px; transform-origin: top left;" id="game-scaler">
+                                    <iframe 
+                                        src="../project-files/shadow-ran-2d/index.html" 
+                                        style="border:none; width:1280px; height:775px; display:block;"
+                                        scrolling="no"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
                             <p class="text-sm sm:text-md text-gray-600 font-medium pt-2">
                                 Click the full-screen icon for the best gameplay experience. Challenge yourself and beat your highest score!
+                            </p>
+                            <p class="text-sm sm:text-md text-gray-600 font-medium pt-2">
+                                Note: Click on full screen button and play!
                             </p>
                         </section>
                         <section class="mb-8 mt-8">
@@ -441,9 +442,9 @@ function scaleGame() {
     const wrapper = document.getElementById('game-scaler').parentElement;
     const scaler = document.getElementById('game-scaler');
     const availableWidth = wrapper.clientWidth;
-    const scale = availableWidth / 960;
+    const scale = availableWidth / 1280;
     scaler.style.transform = 'scale(' + scale + ')';
-    scaler.parentElement.style.height = Math.floor(660 * scale) + 'px';
+    scaler.parentElement.style.height = Math.floor(775 * scale) + 'px';
 }
 scaleGame();
 window.addEventListener('resize', scaleGame);
