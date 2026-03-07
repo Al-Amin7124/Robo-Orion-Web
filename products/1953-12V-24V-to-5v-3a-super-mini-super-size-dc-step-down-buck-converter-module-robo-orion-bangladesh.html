@@ -109,6 +109,7 @@
     <link href="../asset/css/main.css" rel="stylesheet">
     <link href="../asset/css/project.css" rel="stylesheet">
     <link href="../asset/css/product.css" rel="stylesheet">
+    <link href="../asset/css/cart.css" rel="stylesheet">
 
     
 </head>
@@ -147,7 +148,15 @@
                     <li><a href="../tutorial.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Tutorial</a></li>
                     <li><a href="../article.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Article</a></li>
                     <li><a href="../about.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">About</a></li>
-                    <li><a href="../contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>      
+                    <li><a href="../contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>   
+                    <!-- Cart Icon -->
+                    <li>
+                        <button onclick="ROCart.openDrawer()" class="relative flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 shadow-sm">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Cart</span>
+                            <span id="nav-cart-count" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-1">0</span>
+                        </button>
+                    </li>   
                 </ul>
 
 
@@ -173,6 +182,11 @@
                         <a href="../article.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Article</a>
                         <a href="../about.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">About</a>
                         <a href="../contact.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Contact</a>
+                        <button onclick="ROCart.openDrawer()" class="relative w-full flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Cart
+                            <span id="nav-cart-count-mobile" class="ml-auto bg-red-500 text-white text-xs font-bold rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-1 hidden">0</span>
+                        </button>
                     </div>
                 </div>
             </nav>
@@ -244,8 +258,8 @@
                                 <div class="lg:col-span-4 mx-5">
                                     <!-- Title -->
                                     <div class="mb-3 border-b border-gray-300 pb-3">
-                                        <h1 class="text-3xl font-bold text-gray-700 mb-2">12V-24V to 5V 3A Super Mini Super Size DC Step-Down Buck Converter Module</h2>
-                                        <p class="text-gray-800 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Model </span>RBO-1953</p>
+                                        <h1 class="productName text-3xl font-bold text-gray-700 mb-2">12V-24V to 5V 3A Super Mini Super Size DC Step-Down Buck Converter Module</h2>
+                                        <p class="text-gray-800 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Model </span><span class="productCode">RBO-1953</span></p>
                                         <p class="text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Chinese</p>
                                     </div>
                                     
@@ -263,7 +277,7 @@
 
                                     <!-- Price -->
                                     <div class="flex items-center gap-3 mb-4">
-                                        <span class="text-red-500 font-bold text-2xl">BDT 100</span>
+                                        <span class="productPrice text-red-500 font-bold text-2xl">BDT 100</span>
                                         <span class="text-gray-500 line-through">BDT 120</span>
                                         <!-- Rating -->
                                         <div class="flex justify-center items-center mb-2 text-yellow-400">
@@ -278,22 +292,14 @@
 
                                     <!-- Quantity + Add to Cart -->
                                     <div class="flex items-center gap-3">
-                                        <input type="number" value="1" min="1" 
+                                        <input type="number" id="main-product-qty" value="1" min="1" 
                                             class="w-20 border rounded-lg px-2 py-2 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
 
-                                        <a href="https://m.me/257133751874465" target="_blank">
-                                            <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-2 py-2 rounded-lg font-medium transition duration-300 ease-in-out flex items-center gap-1">
-                                                <i class="fab fa-facebook-messenger text-2xl"></i>
-                                                Order With Messenger
-                                            </button>
-                                        </a>
-
-                                        <a href="https://wa.me/8801999506021" target="_blank">
-                                            <button class="bg-green-600 hover:bg-green-700 text-white text-sm px-2 py-2 rounded-lg font-medium transition duration-300 ease-in-out flex items-center gap-1">
-                                                <i class="fa-brands fa-whatsapp text-3xl"></i>
-                                                Order With Whatsapp
-                                            </button>
-                                        </a>
+                                        <button id="main-add-to-cart" class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-6 py-2 rounded-lg font-medium border border-gray-600 
+                                            transition-all duration-300 ease-in-out hover:shadow-lg flex items-center gap-2">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                            Add to Cart
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -367,73 +373,15 @@
                                         <h3 class="font-semibold text-2xl text-gray-600">Related Product</h4>
                                 </div>
                                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                                    <!-- Product Card 1 -->
-                                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                    
+                                    <!-- Product 150W DC-DC Boost Converter -->
+                                    <div class="product-card bg-white rounded-xl shadow-md overflow-hidden mb-2 hover:shadow-lg transition">
                                         <!-- Image -->
-                                        <a href="../products/12v-charge-controller-circuit-v1-rbo-12vccv1125.html">
-                                            <div class="w-full aspect-[4/3]">
-                                                <img src="../img/product/12v-charge-controller-circuit-v1-rbo-12vccv1125.png" 
-                                                    loading="lazy" 
-                                                    alt="12V Charge Controller Circuit V1 showing auto cut-off feature and LED indicators for battery charging status"
-                                                    class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
-                                            </div>
-                                        </a>
-                                        
-
-                                        <!-- Content -->
-                                        <div class="p-4 text-center">
-                                            
-                                            <!-- Title -->
-                                            <a href="../products/12v-charge-controller-circuit-v1-rbo-12vccv1125.html">
-                                                <h4 class="text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
-                                                12V Charge Controller Circuit V1
-                                                </h4>
-                                            </a>
-                                            
-                                            <!-- Rating -->
-                                            <div class="flex justify-center items-center mb-2 text-yellow-400">
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <span class="ml-2 text-md text-gray-600">(24)</span>
-                                            </div>
-                                            <!-- Brand -->
-                                            <div class="mb-2">
-                                                <p class="text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Robo Orion</p>
-                                            </div>
-                                            <!-- Price -->
-                                            <div class="flex justify-center items-center gap-2 mb-2">
-                                                <span class="text-red-500 font-bold text-lg">BDT 220</span> <!-- Offer price -->
-                                                <span class="text-gray-500 line-through">BDT 320</span> <!-- Original price -->
-                                            </div>
-                                            <!-- Quantity + Add to Cart -->
-                                            <div class="flex justify-center items-center gap-3">
-                                                <!-- Quantity Box 
-                                                <input type="number" value="1" min="1" 
-                                                    class="w-16 border rounded-lg px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
-                                                    -->
-
-                                                <!-- Add to Cart -->
-                                                <a href="https://m.me/564787986722584" target="_blank">
-                                                    <button class="bg-blue-600 hover:bg-blue-700 text-white hover:text-white px-2 md:px-4 sm:px-8 py-2 rounded-lg font-medium text-sm border border-gray-600 
-                                                        transition-all duration-300 ease-in-out hover:shadow-lg">
-                                                    <i class="fa-solid fa-cart-shopping mr-2"></i>
-                                                    Add to Cart
-                                                    </button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Product Card 2 -->
-                                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                                        <!-- Image -->
-                                        <a href="../products/2767-150w-dc-dc-boost-converter-10-32v-to-12-35v-6a-step-up-adjustable-power-supply-robo-orion-bangladesh.html">
+                                        <a href="../products/2767-150w-dc-dc-boost-converter-10-32v-to-12-35v-6a-step-up-adjustable-power-supply-robo-orion-bangladesh.html" target="_blank">
                                             <div class="w-full aspect-[4/3]">
                                                 <img src="../img/product/2767-150w-dc-dc-boost-converter-10-32v-to-12-35v-6a-step-up-adjustable-power-supply-robo-orion-bangladesh.jpg" 
                                                     loading="lazy" 
-                                                    alt="12V Charge Controller Circuit V1 showing auto cut-off feature and LED indicators for battery charging status"
+                                                    alt="150W DC-DC Boost Converter 10-32V to 12-35V 6A Step-Up Adjustable Power Supply" 
                                                     class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
                                             </div>
                                         </a>
@@ -443,12 +391,13 @@
                                         <div class="p-4 text-center">
                                             
                                             <!-- Title -->
-                                            <a href="../products/2767-150w-dc-dc-boost-converter-10-32v-to-12-35v-6a-step-up-adjustable-power-supply-robo-orion-bangladesh.html">
-                                                <h4 class="text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
+                                            <a href="../products/2767-150w-dc-dc-boost-converter-10-32v-to-12-35v-6a-step-up-adjustable-power-supply-robo-orion-bangladesh.html" target="_blank">
+                                                <h2 class="productName text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
                                                 150W DC-DC Boost Converter 10-32V to 12-35V 6A Step-Up Adjustable Power Supply
-                                                </h4>
+                                                </h2>
                                             </a>
-                                            
+                                            <!-- Product Code -->
+                                            <p class="productCode text-xs text-gray-500 mb-2">RBO-2767</p>
                                             <!-- Rating -->
                                             <div class="flex justify-center items-center mb-2 text-yellow-400">
                                                 <i class="fa-solid fa-star text-sm"></i>
@@ -460,10 +409,10 @@
                                             </div>
                                             <!-- Brand -->
                                             <div class="mb-2">
-                                                <p class="text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Robo Orion</p>
+                                                <p class="productBrand text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Chinese</p>
                                             </div>
                                             <!-- Price -->
-                                            <div class="flex justify-center items-center gap-2 mb-2">
+                                            <div class="productPrice flex justify-center items-center gap-2 mb-2">
                                                 <span class="text-red-500 font-bold text-lg">BDT 270</span> <!-- Offer price -->
                                                 <span class="text-gray-500 line-through">BDT 320</span> <!-- Original price -->
                                             </div>
@@ -475,8 +424,8 @@
                                                     -->
 
                                                 <!-- Add to Cart -->
-                                                <a href="https://m.me/564787986722584" target="_blank">
-                                                    <button class="bg-blue-600 hover:bg-blue-700 text-white hover:text-white px-2 md:px-4 sm:px-8 py-2 rounded-lg font-medium text-sm border border-gray-600 
+                                                <a href="https://m.me/257133751874465" target="_blank">
+                                                    <button class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-4 sm:px-8 py-2 rounded-lg font-medium border border-gray-600 
                                                         transition-all duration-300 ease-in-out hover:shadow-lg">
                                                     <i class="fa-solid fa-cart-shopping mr-2"></i>
                                                     Add to Cart
@@ -485,14 +434,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Product Card 3 -->
-                                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                    <!-- Product Mini MP1584EN DC-DC BUCK Adjustable Step Down Module -->
+                                    <div class="product-card bg-white rounded-xl shadow-md overflow-hidden mb-2 hover:shadow-lg transition">
                                         <!-- Image -->
-                                        <a href="../products/1433-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-robo-orion-bangladesh.html" target="_blank">
+                                        <a href="../products/3953-mini-mp1584en-dc-dc-buck-adjustable-step-down-module-robo-orion-bangladesh.html" target="_blank">
                                             <div class="w-full aspect-[4/3]">
-                                                <img src="../img/product/1433-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-robo-orion-bangladesh.jpg" 
+                                                <img src="../img/product/3953-mini-mp1584en-dc-dc-buck-adjustable-step-down-module-robo-orion-bangladesh.webp" 
                                                     loading="lazy" 
-                                                    alt="TDA2030A 18W Original Hi-Fi Class AB Audio Amplifier IC"
+                                                    alt="Mini MP1584EN DC-DC BUCK Adjustable Step Down Module" 
                                                     class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
                                             </div>
                                         </a>
@@ -502,11 +451,253 @@
                                         <div class="p-4 text-center">
                                             
                                             <!-- Title -->
-                                            <a href="../products/1433-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-robo-orion-bangladesh.html" target="_blank">
-                                                <h4 class="text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
-                                                TDA2030A 18W Original Hi-Fi Class AB Audio Amplifier IC
-                                                </h4>
+                                            <a href="../products/3953-mini-mp1584en-dc-dc-buck-adjustable-step-down-module-robo-orion-bangladesh.html" target="_blank">
+                                                <h2 class="productName text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
+                                                Mini MP1584EN DC-DC BUCK Adjustable Step Down Module
+                                                </h2>
                                             </a>
+                                            <!-- Product Code -->
+                                            <p class="productCode text-xs text-gray-500 mb-2">RBO-3953</p>
+                                            <!-- Rating -->
+                                            <div class="flex justify-center items-center mb-2 text-yellow-400">
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <span class="ml-2 text-md text-gray-600">(12)</span>
+                                            </div>
+                                            <!-- Brand -->
+                                            <div class=" mb-2">
+                                                <p class="productBrand text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Undefined</p>
+                                            </div>
+                                            <!-- Price -->
+                                            <div class="productPrice flex justify-center items-center gap-2 mb-2">
+                                                <span class="text-red-500 font-bold text-lg">BDT 80</span> <!-- Offer price -->
+                                                <span class="text-gray-500 line-through">BDT 95</span> <!-- Original price -->
+                                            </div>
+                                            <!-- Quantity + Add to Cart -->
+                                            <div class="flex justify-center items-center gap-3">
+                                                <!-- Quantity Box 
+                                                <input type="number" value="1" min="1" 
+                                                    class="w-16 border rounded-lg px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                                    -->
+
+                                                <!-- Add to Cart -->
+                                                <a href="https://m.me/257133751874465" target="_blank">
+                                                    <button class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-4 sm:px-8 py-2 rounded-lg font-medium border border-gray-600 
+                                                        transition-all duration-300 ease-in-out hover:shadow-lg">
+                                                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                                                    Add to Cart
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product HW-411A LM2596 DC To Dc Buck Converter Step Down Module Power Supply -->
+                                    <div class="product-card bg-white rounded-xl shadow-md overflow-hidden mb-2 hover:shadow-lg transition">
+                                        <!-- Image -->
+                                        <a href="../products/1855-hw-411a-lm2596-dc-to-dc-buck-converter-step-down-module-power-supply-robo-orion-bangladesh.html" target="_blank">
+                                            <div class="w-full aspect-[4/3]">
+                                                <img src="../img/product/1855-hw-411a-lm2596-dc-to-dc-buck-converter-step-down-module-power-supply-robo-orion-bangladesh.webp" 
+                                                    loading="lazy" 
+                                                    alt="HW-411A LM2596 DC To Dc Buck Converter Step Down Module Power Supply" 
+                                                    class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
+                                            </div>
+                                        </a>
+                                        
+
+                                        <!-- Content -->
+                                        <div class="p-4 text-center">
+                                            
+                                            <!-- Title -->
+                                            <a href="../products/1855-hw-411a-lm2596-dc-to-dc-buck-converter-step-down-module-power-supply-robo-orion-bangladesh.html" target="_blank">
+                                                <h2 class="productName text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
+                                                HW-411A LM2596 DC To Dc Buck Converter Step Down Module Power Supply
+                                                </h2>
+                                            </a>
+                                            <!-- Product Code -->
+                                            <p class="productCode text-xs text-gray-500 mb-2">RBO-1855</p>
+                                            <!-- Rating -->
+                                            <div class="flex justify-center items-center mb-2 text-yellow-400">
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <span class="ml-2 text-md text-gray-600">(14)</span>
+                                            </div>
+                                            <!-- Brand -->
+                                            <div class=" mb-2">
+                                                <p class="productBrand text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Undefined</p>
+                                            </div>
+                                            <!-- Price -->
+                                            <div class="productPrice flex justify-center items-center gap-2 mb-2">
+                                                <span class="text-red-500 font-bold text-lg">BDT 75</span> <!-- Offer price -->
+                                                <span class="text-gray-500 line-through">BDT 100</span> <!-- Original price -->
+                                            </div>
+                                            <!-- Quantity + Add to Cart -->
+                                            <div class="flex justify-center items-center gap-3">
+                                                <!-- Quantity Box 
+                                                <input type="number" value="1" min="1" 
+                                                    class="w-16 border rounded-lg px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                                    -->
+
+                                                <!-- Add to Cart -->
+                                                <a href="https://m.me/257133751874465" target="_blank">
+                                                    <button class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-4 sm:px-8 py-2 rounded-lg font-medium border border-gray-600 
+                                                        transition-all duration-300 ease-in-out hover:shadow-lg">
+                                                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                                                    Add to Cart
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product DC-DC Boost Module XL6009 -->
+                                    <div class="product-card bg-white rounded-xl shadow-md overflow-hidden mb-2 hover:shadow-lg transition">
+                                        <!-- Image -->
+                                        <a href="../products/730-dc-dc-boost-module-xl6009-robo-orion-bangladesh.html" target="_blank">
+                                            <div class="w-full aspect-[4/3]">
+                                                <img src="../img/product/730-dc-dc-boost-module-xl6009-robo-orion-bangladesh.webp" 
+                                                    loading="lazy" 
+                                                    alt="DC-DC Boost Module XL6009" 
+                                                    class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
+                                            </div>
+                                        </a>
+                                        
+
+                                        <!-- Content -->
+                                        <div class="p-4 text-center">
+                                            
+                                            <!-- Title -->
+                                            <a href="../products/730-dc-dc-boost-module-xl6009-robo-orion-bangladesh.html" target="_blank">
+                                                <h2 class="productName text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
+                                                DC-DC Boost Module XL6009
+                                                </h2>
+                                            </a>
+                                            <!-- Product Code -->
+                                            <p class="productCode text-xs text-gray-500 mb-2">RBO-0730</p>
+                                            <!-- Rating -->
+                                            <div class="flex justify-center items-center mb-2 text-yellow-400">
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <span class="ml-2 text-md text-gray-600">(17)</span>
+                                            </div>
+                                            <!-- Brand -->
+                                            <div class=" mb-2">
+                                                <p class="productBrand text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Undefined</p>
+                                            </div>
+                                            <!-- Price -->
+                                            <div class="productPrice flex justify-center items-center gap-2 mb-2">
+                                                <span class="text-red-500 font-bold text-lg">BDT 80</span> <!-- Offer price -->
+                                                <span class="text-gray-500 line-through">BDT 120</span> <!-- Original price -->
+                                            </div>
+                                            <!-- Quantity + Add to Cart -->
+                                            <div class="flex justify-center items-center gap-3">
+                                                <!-- Quantity Box 
+                                                <input type="number" value="1" min="1" 
+                                                    class="w-16 border rounded-lg px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                                    -->
+
+                                                <!-- Add to Cart -->
+                                                <a href="https://m.me/257133751874465" target="_blank">
+                                                    <button class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-4 sm:px-8 py-2 rounded-lg font-medium border border-gray-600 
+                                                        transition-all duration-300 ease-in-out hover:shadow-lg">
+                                                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                                                    Add to Cart
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product BigMax 3.7V 10000mAh Li-Po Rechargeable Battery – High Capacity Lithium Polymer Battery Pack -->
+                                    <div class="product-card bg-white rounded-xl shadow-md overflow-hidden mb-2 hover:shadow-lg transition">
+                                        <!-- Image -->
+                                        <a href="../products/bigmax-3.7v-10000mah-li-po-rechargeable-battery-high-capacity-lithium-polymer-battery-pack-robo-orion-bangladesh.html" target="_blank">
+                                            <div class="w-full aspect-[4/3]">
+                                                <img src="../img/product/BigMax 3.7V 10000mAh Li-Po Rechargeable Battery – High Capacity Lithium Polymer Battery Pack.jpg" 
+                                                    loading="lazy" 
+                                                    alt="BigMax 3.7V 10000mAh Li-Po Rechargeable Battery – High Capacity Lithium Polymer Battery Pack" 
+                                                    class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
+                                            </div>
+                                        </a>
+                                        
+
+                                        <!-- Content -->
+                                        <div class="p-4 text-center">
+                                            
+                                            <!-- Title -->
+                                            <a href="../products/bigmax-3.7v-10000mah-li-po-rechargeable-battery-high-capacity-lithium-polymer-battery-pack-robo-orion-bangladesh.html" target="_blank">
+                                                <h2 class="productName text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
+                                                BigMax 3.7V 10000mAh Li-Po Rechargeable Battery – High Capacity Lithium Polymer Battery Pack
+                                                </h2>
+                                            </a>
+                                            <!-- Product Code -->
+                                            <p class="productCode text-xs text-gray-500 mb-2">RBO-1787</p>
+                                            <!-- Rating -->
+                                            <div class="flex justify-center items-center mb-2 text-yellow-400">
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <span class="ml-2 text-md text-gray-600">(21)</span>
+                                            </div>
+                                            <!-- Brand -->
+                                            <div class=" mb-2">
+                                                <p class="productBrand text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> BigMax</p>
+                                            </div>
+                                            <!-- Price -->
+                                            <div class="productPrice flex justify-center items-center gap-2 mb-2">
+                                                <span class="text-red-500 font-bold text-lg">BDT 450</span> <!-- Offer price -->
+                                                <span class="text-gray-500 line-through">BDT 480</span> <!-- Original price -->
+                                            </div>
+                                            <!-- Quantity + Add to Cart -->
+                                            <div class="flex justify-center items-center gap-3">
+                                                <!-- Quantity Box 
+                                                <input type="number" value="1" min="1" 
+                                                    class="w-16 border rounded-lg px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                                    -->
+
+                                                <!-- Add to Cart -->
+                                                <a href="https://m.me/257133751874465" target="_blank">
+                                                    <button class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-4 sm:px-8 py-2 rounded-lg font-medium border border-gray-600 
+                                                        transition-all duration-300 ease-in-out hover:shadow-lg">
+                                                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                                                    Add to Cart
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product 3A Charger -->
+                                    <div class="product-card bg-white rounded-xl shadow-md overflow-hidden mb-2 hover:shadow-lg transition">
+                                        <!-- Image -->
+                                        <a href="../products/12603-12.6v-3a-dc-charger-power-supply-adapter-for-3-cell-lithium-ion-battery-packs-robo-orion-bangladesh.html" target="_blank">
+                                            <div class="w-full aspect-[4/3]">
+                                                <img src="../img/product/12603-12.6v-3a-dc-charger-power-supply-adapter-for-3-cell-lithium-ion-battery-packs-robo-orion-bangladesh.jpg" 
+                                                    loading="lazy" 
+                                                    alt="12.6V 3A DC Charger - Power Supply Adapter for 3-Cell Lithium-Ion Battery Packs" 
+                                                    class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
+                                            </div>
+                                        </a>
+                                        
+
+                                        <!-- Content -->
+                                        <div class="p-4 text-center">
+                                            
+                                            <!-- Title -->
+                                            <a href="../products/12603-12.6v-3a-dc-charger-power-supply-adapter-for-3-cell-lithium-ion-battery-packs-robo-orion-bangladesh.html" target="_blank">
+                                                <h2 class="productName text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
+                                                12.6V 3A DC Charger - Power Supply Adapter for 3-Cell Lithium-Ion Battery Packs
+                                                </h2>
+                                            </a>
+                                            <!-- Product Code -->
+                                            <p class="productCode text-xs text-gray-500 mb-2">RBO-12603</p>
                                             
                                             <!-- Rating -->
                                             <div class="flex justify-center items-center mb-2 text-yellow-400">
@@ -519,11 +710,132 @@
                                             </div>
                                             <!-- Brand -->
                                             <div class="mb-2">
-                                                <p class="text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Chinese</p>
+                                                <p class="productBrand text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> RC Product BD</p>
                                             </div>
                                             <!-- Price -->
-                                            <div class="flex justify-center items-center gap-2 mb-2">
-                                                <span class="text-red-500 font-bold text-lg">BDT 120</span> <!-- Offer price -->
+                                            <div class="productPrice flex justify-center items-center gap-2 mb-2">
+                                                <span class="text-red-500 font-bold text-lg">BDT 290</span> <!-- Offer price -->
+                                                <span class="text-gray-500 line-through">BDT 350</span> <!-- Original price -->
+                                            </div>
+                                            <!-- Quantity + Add to Cart -->
+                                            <div class="flex justify-center items-center gap-3">
+                                                <!-- Quantity Box 
+                                                <input type="number" value="1" min="1" 
+                                                    class="w-16 border rounded-lg px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                                    -->
+
+                                                <!-- Add to Cart -->
+                                                <a href="https://m.me/257133751874465" target="_blank">
+                                                    <button class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-4 sm:px-8 py-2 rounded-lg font-medium border border-gray-600 
+                                                        transition-all duration-300 ease-in-out hover:shadow-lg">
+                                                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                                                    Add to Cart
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product battery original 3000mah -->
+                                    <div class="product-card bg-white rounded-xl shadow-md overflow-hidden mb-2 hover:shadow-lg transition">
+                                        <!-- Image -->
+                                        <a href="../products/3200mah-original-panasonic-ncr18650bd-18650-lithium-ion-battery-10a-high-drain-made-in-japan-robo-orion-bangladesh.html" target="_blank">
+                                            <div class="w-full aspect-[4/3]">
+                                                <img src="../img/product/3200mah-original-panasonic-ncr18650bd-18650-lithium-ion-battery-10a-high-drain-made-in-japan-robo-orion-bangladesh.jpg" 
+                                                    loading="lazy" 
+                                                    alt="3200mAh Original Panasonic NCR18650BD 18650 Lithium-Ion Battery - 10A High-Drain (Made in Japan)" 
+                                                    class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
+                                            </div>
+                                        </a>
+                                        
+
+                                        <!-- Content -->
+                                        <div class="p-4 text-center">
+                                            
+                                            <!-- Title -->
+                                            <a href="../products/3200mah-original-panasonic-ncr18650bd-18650-lithium-ion-battery-10a-high-drain-made-in-japan-robo-orion-bangladesh.html" target="_blank">
+                                                <h2 class="productName text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
+                                                3200mAh Original Panasonic NCR18650BD 18650 Lithium-Ion Battery - 10A High-Drain (Made in Japan)
+                                                </h2>
+                                            </a>
+                                            <!-- Product Code -->
+                                            <p class="productCode text-xs text-gray-500 mb-2">RBO-1832</p>
+                                            
+                                            <!-- Rating -->
+                                            <div class="flex justify-center items-center mb-2 text-yellow-400">
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <span class="ml-2 text-md text-gray-600">(16)</span>
+                                            </div>
+                                            <!-- Brand -->
+                                            <div class="mb-2">
+                                                <p class="productBrand text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Japanese</p>
+                                            </div>
+                                            <!-- Price -->
+                                            <div class="productPrice flex justify-center items-center gap-2 mb-2">
+                                                <span class="text-red-500 font-bold text-lg">BDT 380</span> <!-- Offer price -->
+                                                <span class="text-gray-500 line-through">BDT 480</span> <!-- Original price -->
+                                            </div>
+                                            <!-- Quantity + Add to Cart -->
+                                            <div class="flex justify-center items-center gap-3">
+                                                <!-- Quantity Box 
+                                                <input type="number" value="1" min="1" 
+                                                    class="w-16 border rounded-lg px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                                    -->
+
+                                                <!-- Add to Cart -->
+                                                <a href="https://m.me/257133751874465" target="_blank">
+                                                    <button class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-4 sm:px-8 py-2 rounded-lg font-medium border border-gray-600 
+                                                        transition-all duration-300 ease-in-out hover:shadow-lg">
+                                                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+                                                    Add to Cart
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product TDA2030A -->
+                                    <div class="product-card bg-white rounded-xl shadow-md overflow-hidden mb-2 hover:shadow-lg transition">
+                                        <!-- Image -->
+                                        <a href="../products/1433-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-robo-orion-bangladesh.html" target="_blank">
+                                            <div class="w-full aspect-[4/3]">
+                                                <img src="../img/product/1433-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-robo-orion-bangladesh.jpg" 
+                                                    loading="lazy" 
+                                                    alt="TDA2030A 18W Original Hi-Fi Class AB Audio Amplifier IC" 
+                                                    class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
+                                            </div>
+                                        </a>
+                                        
+
+                                        <!-- Content -->
+                                        <div class="p-4 text-center">
+                                            
+                                            <!-- Title -->
+                                            <a href="../products/1433-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-robo-orion-bangladesh.html" target="_blank">
+                                                <h2 class="productName text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
+                                                TDA2030A 18W Original Hi-Fi Class AB Audio Amplifier IC
+                                                </h2>
+                                            </a>
+                                            <!-- Product Code -->
+                                            <p class="productCode text-xs text-gray-500 mb-2">RBO-1433</p>
+                                            <!-- Rating -->
+                                            <div class="flex justify-center items-center mb-2 text-yellow-400">
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <i class="fa-solid fa-star text-sm"></i>
+                                                <span class="ml-2 text-md text-gray-600">(17)</span>
+                                            </div>
+                                            <!-- Brand -->
+                                            <div class="mb-2">
+                                                <p class="productBrand text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Undefined</p>
+                                            </div>
+                                            <!-- Price -->
+                                            <div class="productPrice flex justify-center items-center gap-2 mb-2">
+                                                <span class="text-red-500 font-bold text-lg">BDT 110</span> <!-- Offer price -->
                                                 <span class="text-gray-500 line-through">BDT 150</span> <!-- Original price -->
                                             </div>
                                             <!-- Quantity + Add to Cart -->
@@ -534,67 +846,8 @@
                                                     -->
 
                                                 <!-- Add to Cart -->
-                                                <a href="https://m.me/564787986722584" target="_blank">
-                                                    <button class="bg-blue-600 hover:bg-blue-700 text-white hover:text-white px-2 md:px-4 sm:px-8 py-2 rounded-lg font-medium text-sm border border-gray-600 
-                                                        transition-all duration-300 ease-in-out hover:shadow-lg">
-                                                    <i class="fa-solid fa-cart-shopping mr-2"></i>
-                                                    Add to Cart
-                                                    </button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Product Card 4 -->
-                                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                                        <!-- Image -->
-                                        <a href="../products/1434-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-pack-of-4-robo-orion-bangladesh.html" target="_blank">
-                                            <div class="w-full aspect-[4/3]">
-                                                <img src="../img/product/1434-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-pack-of-4-robo-orion-bangladesh.jpg" 
-                                                    loading="lazy" 
-                                                    alt="TDA2030A 18W Original Hi-Fi Class AB Audio Amplifier IC - Pack of 4"
-                                                    class="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 ease-in-out hover:scale-110">
-                                            </div>
-                                        </a>
-                                        
-
-                                        <!-- Content -->
-                                        <div class="p-4 text-center">
-                                            
-                                            <!-- Title -->
-                                            <a href="../products/1434-tda2030a-18w-original-hi-fi-class-ab-audio-amplifier-ic-pack-of-4-robo-orion-bangladesh.html" target="_blank">
-                                                <h4 class="text-sm font-semibold text-gray-800 hover:text-blue-900 mb-2">
-                                                TDA2030A 18W Original Hi-Fi Class AB Audio Amplifier IC - Pack of 4
-                                                </h4>
-                                            </a>
-                                            
-                                            <!-- Rating -->
-                                            <div class="flex justify-center items-center mb-2 text-yellow-400">
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <i class="fa-solid fa-star text-sm"></i>
-                                                <span class="ml-2 text-md text-gray-600">(11)</span>
-                                            </div>
-                                            <!-- Brand -->
-                                            <div class="mb-2">
-                                                <p class="text-pink-600 font-ubuntu font-normal text-sm"><span class="font-bold text-gray-600">Brand </span> Chinese</p>
-                                            </div>
-                                            <!-- Price -->
-                                            <div class="flex justify-center items-center gap-2 mb-2">
-                                                <span class="text-red-500 font-bold text-lg">BDT 420</span> <!-- Offer price -->
-                                                <span class="text-gray-500 line-through">BDT 600</span> <!-- Original price -->
-                                            </div>
-                                            <!-- Quantity + Add to Cart -->
-                                            <div class="flex justify-center items-center gap-3">
-                                                <!-- Quantity Box 
-                                                <input type="number" value="1" min="1" 
-                                                    class="w-16 border rounded-lg px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-blue-400">
-                                                    -->
-
-                                                <!-- Add to Cart -->
-                                                <a href="https://m.me/564787986722584" target="_blank">
-                                                    <button class="bg-blue-600 hover:bg-blue-700 text-white hover:text-white px-2 md:px-4 sm:px-8 py-2 rounded-lg font-medium text-sm border border-gray-600 
+                                                <a href="https://m.me/257133751874465" target="_blank">
+                                                    <button class="bg-white hover:bg-blue-600 text-gray-800 hover:text-white px-4 sm:px-8 py-2 rounded-lg font-medium border border-gray-600 
                                                         transition-all duration-300 ease-in-out hover:shadow-lg">
                                                     <i class="fa-solid fa-cart-shopping mr-2"></i>
                                                     Add to Cart
@@ -612,21 +865,6 @@
 
                         <!-- Right Section -->
                         <div class="lg:col-span-2">
-                            <!-- Category Section 
-                            <div class="border border-gray-200/45 rounded-xl shadow-md mb-10">
-                                <div class="px-5 py-5">
-                                    <h5 class="mb-4 text-pink-700 font-medium font-ubuntu text-2xl underline decoration-2 decoration-blue-500 underline-offset-8">Category</h4>
-                                    <ul>
-                                        <li class="px-4 py-2 border border-gray-200 rounded-md text-sm text-gray-700 mb-3">Digital Product</li>
-                                        <li class="px-4 py-2 border border-gray-200 rounded-md text-sm text-gray-700 mb-3">Electronics</li>
-                                        <li class="px-4 py-2 border border-gray-200 rounded-md text-sm text-gray-700 mb-3">Robotics</li>
-                                        <li class="px-4 py-2 border border-gray-200 rounded-md text-sm text-gray-700 mb-3">Home Automation</li>
-                                        <li class="px-4 py-2 border border-gray-200 rounded-md text-sm text-gray-700 mb-3">Electronics Projects</li> 
-                                        <li class="px-4 py-2 border border-gray-200 rounded-md text-sm text-gray-700 mb-3">Tools</li>
-                                    </ul>    
-                                </div>
-                            </div>-->
-
                             <!-- New Product Section -->
                             <div class="border border-gray-200/45 rounded-xl shadow-md mb-10">
                                 <div class="px-5 py-5">
@@ -834,6 +1072,7 @@
 <script src="../asset/js/product.js"></script>
 <script src="../asset/js/service.js"></script>
 <script src="../asset/js/tailwind.config.js"></script>
+<script src="../asset/js/cart.js"></script>
 
     
 </body>
