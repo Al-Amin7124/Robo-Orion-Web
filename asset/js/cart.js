@@ -75,44 +75,50 @@
 
     /* ── PRODUCT DATA (scraped from page cards) ──────────── */
     function scrapeProducts() {
-        const cards = document.querySelectorAll('.product-card');
-        const products = [];
-        cards.forEach((card, idx) => {
-            const nameEl   = card.querySelector('.productName');
-            const codeEl   = card.querySelector('.productCode');
-            const priceEl  = card.querySelector('.productPrice .text-red-500');
-            const imgEl    = card.querySelector('img');
-            const linkEl   = card.querySelector('a[href]');
+    const saved = JSON.parse(localStorage.getItem('robo_orion_products') || '{}');
+    const cards = document.querySelectorAll('.product-card');
+    const products = [];
 
-            if (!nameEl) return;
+    cards.forEach((card, idx) => {
+        const nameEl  = card.querySelector('.productName');
+        const codeEl  = card.querySelector('.productCode');
+        const priceEl = card.querySelector('.productPrice .text-red-500');
+        const imgEl   = card.querySelector('img');
 
-            // Parse BDT price
-            const priceText = priceEl ? priceEl.textContent.replace(/[^0-9]/g, '') : '0';
+        if (!nameEl) return;
 
-            products.push({
-                id   : codeEl ? codeEl.textContent.trim() : `product-${idx}`,
-                name : nameEl.textContent.trim(),
-                code : codeEl ? codeEl.textContent.trim() : '',
-                price: parseInt(priceText, 10) || 0,
-                img  : imgEl  ? imgEl.getAttribute('src') : '',
-                href : linkEl ? linkEl.getAttribute('href') : '#',
+        const priceText = priceEl ? priceEl.textContent.replace(/[^0-9]/g, '') : '0';
+        const product = {
+            id:    codeEl ? codeEl.textContent.trim() : `product-${idx}`,
+            name:  nameEl.textContent.trim(),
+            code:  codeEl ? codeEl.textContent.trim() : '',
+            price: parseInt(priceText, 10) || 0,
+            img:   imgEl ? imgEl.getAttribute('src') : '',
+        };
+
+        products.push(product);
+        saved[product.id] = product; // save/update in master list
+
+        const anchor = card.querySelector('a[href*="m.me"]');
+        if (anchor) {
+            const productId = product.id;
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                ROCart.addItem(productId);
             });
+        }
+    });
 
-            // Attach click handler to "Add to Cart" button inside this card
-const addBtn = card.querySelector('button');
-if (addBtn) {
-    const anchor = addBtn.closest('a[href*="m.me"]');
-    if (anchor) {
-        const productId = products[products.length - 1].id; // capture current id immediately
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            ROCart.addItem(productId);
-        });
-    }
+    // Persist master product list
+    localStorage.setItem('robo_orion_products', JSON.stringify(saved));
+
+    // Merge saved products so all pages know about all products
+    Object.values(saved).forEach(p => {
+        if (!products.find(x => x.id === p.id)) products.push(p);
+    });
+
+    return products;
 }
-        });
-        return products;
-    }
 
     /* ── CART STORAGE ────────────────────────────────────── */
     function getCart() {
@@ -126,9 +132,31 @@ if (addBtn) {
     /* ── PRODUCT LOOKUP ──────────────────────────────────── */
     let PRODUCTS = [];
 
-    function findProduct(id) {
-        return PRODUCTS.find(p => p.id === id);
+    function fixImagePath(img) {
+    if (!img) return '';
+    const isProductPage = window.location.pathname.includes('/products/');
+    if (isProductPage && !img.startsWith('../') && !img.startsWith('http')) {
+        return '../' + img;
     }
+    if (!isProductPage && img.startsWith('../')) {
+        return img.replace('../', '');
+    }
+    return img;
+}
+
+function findProduct(id) {
+    const inMemory = PRODUCTS.find(p => p.id === id);
+    if (inMemory) {
+        return { ...inMemory, img: fixImagePath(inMemory.img) };
+    }
+    const saved = JSON.parse(localStorage.getItem('robo_orion_products') || '{}');
+    if (saved[id]) {
+        const product = { ...saved[id], img: fixImagePath(saved[id].img) };
+        PRODUCTS.push(product);
+        return product;
+    }
+    return null;
+}
 
     /* ── CART ACTIONS ────────────────────────────────────── */
     function addItem(id) {
@@ -351,9 +379,16 @@ if (totalQty > 0) {
 
     /* ── INIT ────────────────────────────────────────────── */
     function init() {
-        PRODUCTS = scrapeProducts();
-        updateUI();
-    }
+    PRODUCTS = scrapeProducts();
+    updateUI();
+
+    // Auto-sync cart across all open tabs/pages
+    window.addEventListener('storage', function(e) {
+        if (e.key === CART_KEY) {
+            updateUI();
+        }
+    });
+}
 
     // Wait for DOM
     if (document.readyState === 'loading') {
@@ -363,6 +398,18 @@ if (totalQty > 0) {
     }
 
     /* ── PUBLIC API ──────────────────────────────────────── */
-    window.ROCart = { addItem, changeQty, removeItem, clearCart, openDrawer, closeDrawer, orderWhatsApp };
+    function registerProduct(product) {
+    if (!PRODUCTS.find(p => p.id === product.id)) {
+        PRODUCTS.push(product);
+    }
+    // Save to master product list so other pages can find it
+    const saved = JSON.parse(localStorage.getItem('robo_orion_products') || '{}');
+    saved[product.id] = product;
+    localStorage.setItem('robo_orion_products', JSON.stringify(saved));
+}
+
+
+    /* ── PUBLIC API ──────────────────────────────────────── */
+    window.ROCart = { addItem, changeQty, removeItem, clearCart, openDrawer, closeDrawer, orderWhatsApp, registerProduct };
 
 })();
