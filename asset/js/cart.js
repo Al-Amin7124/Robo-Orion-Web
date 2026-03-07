@@ -55,6 +55,32 @@
                     <span id="ro-item-count-label"></span>
                     <span>Subtotal</span>
                 </div>
+
+                <!-- Delivery Options -->
+                <div class="ro-delivery-section">
+                    <div class="ro-delivery-label">🚚 Delivery Area</div>
+                    <div class="ro-delivery-options">
+                        <label class="ro-delivery-option active" id="ro-delivery-inside-label">
+                            <input type="radio" name="ro-delivery" id="ro-delivery-inside" value="70" checked>
+                            <span class="ro-delivery-name">Inside Dhaka</span>
+                            <span class="ro-delivery-price">BDT 70</span>
+                        </label>
+                        <label class="ro-delivery-option" id="ro-delivery-outside-label">
+                            <input type="radio" name="ro-delivery" id="ro-delivery-outside" value="120">
+                            <span class="ro-delivery-name">Outside Dhaka</span>
+                            <span class="ro-delivery-price">BDT 120</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="ro-summary-row">
+                    <span>Products</span>
+                    <span id="ro-products-subtotal"></span>
+                </div>
+                <div class="ro-summary-row">
+                    <span>Delivery</span>
+                    <span id="ro-delivery-charge">BDT 70</span>
+                </div>
                 <div class="ro-total-row">
                     <span>Total</span>
                     <span id="ro-total-price"></span>
@@ -216,14 +242,15 @@
         });
 
         const message =
-`🛒 *New Order from ${STORE_NAME}*
+        `🛒 *New Order from ${STORE_NAME}*
 
-${lines.join('\n\n')}
+        ${lines.join('\n\n')}
 
-─────────────────
-💰 *Total: BDT ${total}*
-─────────────────
-Please confirm my order. Thank you! 🙏`;
+       ─────────────────
+        🛵 *Delivery: ${getDeliveryCharge() === 70 ? 'Inside Dhaka' : 'Outside Dhaka'} — BDT ${getDeliveryCharge()}*
+        💰 *Total: BDT ${total + getDeliveryCharge()}*
+        ─────────────────
+        Please confirm my order. Thank you! 🙏`;
 
         const encoded = encodeURIComponent(message);
         window.open(`https://wa.me/${WA_NUMBER}?text=${encoded}`, '_blank');
@@ -306,7 +333,12 @@ Please confirm my order. Thank you! 🙏`;
         }).join('');
 
         document.getElementById('ro-item-count-label').textContent = `${totalQty} item${totalQty !== 1 ? 's' : ''}`;
-        document.getElementById('ro-total-price').textContent = `BDT ${total}`;
+        document.getElementById('ro-products-subtotal').textContent = `BDT ${total}`;
+
+        // Delivery charge
+        const deliveryCharge = getDeliveryCharge();
+        document.getElementById('ro-delivery-charge').textContent = `BDT ${deliveryCharge}`;
+        document.getElementById('ro-total-price').textContent = `BDT ${total + deliveryCharge}`;
     }
 
     /* ── DRAWER ──────────────────────────────────────────── */
@@ -406,18 +438,44 @@ Please confirm my order. Thank you! 🙏`;
     }
 
     /* ── INIT ────────────────────────────────────────────── */
-    function init() {
-        PRODUCTS = scrapeProducts();
-        updateUI();
-        setTimeout(scrapeJsonLd, 0);
+    function getDeliveryCharge() {
+    const outside = document.getElementById('ro-delivery-outside');
+    return outside && outside.checked ? 120 : 70;
+}
 
-        // Auto-sync cart across all open tabs/pages
-        window.addEventListener('storage', function(e) {
-            if (e.key === CART_KEY) {
-                updateUI();
-            }
-        });
-    }
+function initDeliveryListeners() {
+    const inside  = document.getElementById('ro-delivery-inside');
+    const outside = document.getElementById('ro-delivery-outside');
+    const insideLabel  = document.getElementById('ro-delivery-inside-label');
+    const outsideLabel = document.getElementById('ro-delivery-outside-label');
+
+    if (!inside || !outside) return;
+
+    inside.addEventListener('change', function() {
+        insideLabel.classList.add('active');
+        outsideLabel.classList.remove('active');
+        updateUI();
+    });
+
+    outside.addEventListener('change', function() {
+        outsideLabel.classList.add('active');
+        insideLabel.classList.remove('active');
+        updateUI();
+    });
+}
+
+function init() {
+    PRODUCTS = scrapeProducts();
+    updateUI();
+    setTimeout(scrapeJsonLd, 0);
+    setTimeout(initDeliveryListeners, 0);
+
+    window.addEventListener('storage', function(e) {
+        if (e.key === CART_KEY) {
+            updateUI();
+        }
+    });
+}
 
     // Wait for DOM
     if (document.readyState === 'loading') {
