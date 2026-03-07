@@ -81,6 +81,7 @@
     <link href="asset/css/main.css" rel="stylesheet">
     <link href="asset/css/project.css" rel="stylesheet">
     <link href="asset/css/product.css" rel="stylesheet">
+    <link href="asset/css/cart.css" rel="stylesheet">
 
     
 </head>
@@ -140,7 +141,15 @@
                     <li><a href="tutorial.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Tutorial</a></li>
                     <li><a href="article.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Article</a></li>
                     <li><a href="about.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">About</a></li>
-                    <li><a href="contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>      
+                    <li><a href="contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>  
+                    <!-- Cart Icon -->
+<li>
+    <button onclick="ROCart.openDrawer()" class="relative flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 shadow-sm">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Cart</span>
+        <span id="nav-cart-count" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-1">0</span>
+    </button>
+</li>    
                 </ul>
 
 
@@ -166,6 +175,11 @@
                         <a href="article.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Article</a>
                         <a href="about.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">About</a>
                         <a href="contact.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md hover:text-blue-600 transition-colors duration-200">Contact</a>
+                        <button onclick="ROCart.openDrawer()" class="relative w-full flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Cart
+    <span id="nav-cart-count-mobile" class="ml-auto bg-red-500 text-white text-xs font-bold rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-1 hidden">0</span>
+</button>
                     </div>
                 </div>
                 
@@ -1313,6 +1327,7 @@
 <script src="asset/js/service.js"></script>
 <script src="asset/js/tailwind.config.js"></script>
 <script src="asset/js/product.js"></script>
+<script src="asset/js/cart.js"></script>
 
 <script>
 // Real-time search functionality
