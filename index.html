@@ -489,6 +489,321 @@
                 </div>
             </div> 
 
+            <!-- Project Section -->
+            <section class="mx-auto max-w-8xl md:pt-10 pb-8 px-2 sm:pb-12 bg-[#142d4c]">
+                <div class="max-w-7xl mx-auto px-4">
+
+                    <!-- Section Header -->
+                    <div class="flex items-center justify-between mb-8 sm:mb-10">
+                    <div>
+                        <p class="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-blue-400 mb-1">
+                        What We've Built
+                        </p>
+                        <h2 class="text-2xl sm:text-4xl font-bold text-white leading-tight">
+                        Our <span style="background: linear-gradient(90deg, #7c3aed, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Projects</span>
+                        </h2>
+                    </div>
+
+                    <!-- See All Button -->
+                    <a href="project.html" target="_blank"
+                        class="flex items-center gap-2 border border-purple-500 py-2 px-4 rounded-full
+                            text-purple-400 text-sm font-medium transition-all duration-300
+                            hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500
+                            whitespace-nowrap">
+                        <span>See All</span>
+                        <svg class="w-4 h-4 transition-all duration-300" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                    </div>
+
+                    <!-- Thin divider line -->
+                    <div class="w-full h-px mb-8 sm:mb-10"
+                        style="background: linear-gradient(90deg, #7c3aed33, #3b82f633, transparent);"></div>
+
+                    <!-- Project Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+
+                    <!-- Card 1 -->
+                    <div class="project-card group relative border border-gray-700 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1"
+                        style="background: linear-gradient(145deg, rgba(0,0,0,0.25), rgba(255,255,255,0.04));
+                                box-shadow: -8px -4px 20px rgba(234,226,255,0.04), 4px 8px 20px rgba(0,0,0,0.25);">
+
+                        <!-- Project Thumbnail (clickable) -->
+                        <a href="project/shadou-ran-2d.html" target="_blank"
+                            class="relative overflow-hidden block" style="aspect-ratio: 16/9; background: linear-gradient(135deg, #1e3a5f, #0f1e33);">
+                            <img src="img/project/shadou-ran-2d.png"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                alt="Project 1"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Fallback placeholder -->
+                            <div class="absolute inset-0 items-center justify-center" style="display:none;">
+                                <div class="text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center"
+                                        style="background: linear-gradient(135deg, #7c3aed33, #3b82f633);">
+                                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-500 text-xs">Project Preview</p>
+                                </div>
+                            </div>
+                            <!-- Hover overlay -->
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, rgba(124,58,237,0.5), rgba(59,130,246,0.5));">
+                                <span class="text-white text-sm font-semibold tracking-wide flex items-center gap-2">
+                                    View Project
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="p-4 sm:p-5">
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="text-xs px-2 py-0.5 rounded-full font-medium"
+                                    style="background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3);">
+                                    Game Development
+                                </span>
+                                <span class="text-xs px-2 py-0.5 rounded-full font-medium"
+                                    style="background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3);">
+                                    Unity
+                                </span>
+                            </div>
+
+                            <!-- Title (clickable) -->
+                            <a href="project/shadou-ran-2d.html" target="_blank">
+                                <h3 class="text-white font-bold text-base sm:text-lg mb-1 group-hover:text-blue-300 transition-colors duration-200">
+                                    Shadow Ran 2D – Endless Ninja Runner Game
+                                </h3>
+                            </a>
+
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                                Shadow Ran 2D is a fast-paced 2D endless runner game where a skilled ninja runs continuously through a minimalistic environment filled with dangerous obstacles.
+                            </p>
+
+                            <!-- Footer -->
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-700/60">
+                                <a href="project/shadou-ran-2d.html" target="_blank"
+                                    class="flex items-center gap-1.5 text-purple-400 text-xs font-medium hover:text-white transition-colors duration-200">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/Al-Amin7124/Shadow-Ran-2D" target="_blank"
+                                    class="flex items-center gap-1.5 text-gray-400 text-xs font-medium hover:text-white transition-colors duration-200">
+                                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57
+                                                0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695
+                                                -.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99
+                                                .105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225
+                                                -.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405
+                                                c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225
+                                                0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3
+                                                0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="project-card group relative border border-gray-700 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1"
+                        style="background: linear-gradient(145deg, rgba(0,0,0,0.25), rgba(255,255,255,0.04));
+                                box-shadow: -8px -4px 20px rgba(234,226,255,0.04), 4px 8px 20px rgba(0,0,0,0.25);">
+
+                        <!-- Project Thumbnail (clickable) -->
+                        <a href="project/digital-vr-coffee-shop.html" target="_blank"
+                            class="relative overflow-hidden block" style="aspect-ratio: 16/9; background: linear-gradient(135deg, #1e3a5f, #0f1e33);">
+                            <img src="img/project/digital-vr-shop.jpg"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                alt="Project 1"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Fallback placeholder -->
+                            <div class="absolute inset-0 items-center justify-center" style="display:none;">
+                                <div class="text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center"
+                                        style="background: linear-gradient(135deg, #7c3aed33, #3b82f633);">
+                                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-500 text-xs">Project Preview</p>
+                                </div>
+                            </div>
+                            <!-- Hover overlay -->
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, rgba(124,58,237,0.5), rgba(59,130,246,0.5));">
+                                <span class="text-white text-sm font-semibold tracking-wide flex items-center gap-2">
+                                    View Project
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="p-4 sm:p-5">
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="text-xs px-2 py-0.5 rounded-full font-medium"
+                                    style="background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3);">
+                                    Simulation
+                                </span>
+                                <span class="text-xs px-2 py-0.5 rounded-full font-medium"
+                                    style="background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3);">
+                                    Unity
+                                </span>
+                            </div>
+
+                            <!-- Title (clickable) -->
+                            <a href="project/digital-vr-coffee-shop.html" target="_blank">
+                                <h3 class="text-white font-bold text-base sm:text-lg mb-1 group-hover:text-blue-300 transition-colors duration-200">
+                                    Luffy's Coffee Shop - Digital VR Shop
+                                </h3>
+                            </a>
+
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                                Luffy's Coffee Shop is an immersive Digital VR simulation experience built using Unity, designed to showcase a fully interactive virtual coffee shop environment.
+                            </p>
+
+                            <!-- Footer -->
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-700/60">
+                                <a href="project/digital-vr-coffee-shop.html" target="_blank"
+                                    class="flex items-center gap-1.5 text-purple-400 text-xs font-medium hover:text-white transition-colors duration-200">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/Al-Amin7124/Digital-VR-Coffee-Shop" target="_blank"
+                                    class="flex items-center gap-1.5 text-gray-400 text-xs font-medium hover:text-white transition-colors duration-200">
+                                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57
+                                                0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695
+                                                -.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99
+                                                .105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225
+                                                -.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405
+                                                c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225
+                                                0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3
+                                                0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="project-card group relative border border-gray-700 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1"
+                        style="background: linear-gradient(145deg, rgba(0,0,0,0.25), rgba(255,255,255,0.04));
+                                box-shadow: -8px -4px 20px rgba(234,226,255,0.04), 4px 8px 20px rgba(0,0,0,0.25);">
+
+                        <!-- Project Thumbnail (clickable) -->
+                        <a href="project/fire-boiler-unity-vr-project.html" target="_blank"
+                            class="relative overflow-hidden block" style="aspect-ratio: 16/9; background: linear-gradient(135deg, #1e3a5f, #0f1e33);">
+                            <img src="img/project/vr-practical-tutorial.jpg"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                alt="Project 1"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Fallback placeholder -->
+                            <div class="absolute inset-0 items-center justify-center" style="display:none;">
+                                <div class="text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center"
+                                        style="background: linear-gradient(135deg, #7c3aed33, #3b82f633);">
+                                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-500 text-xs">Project Preview</p>
+                                </div>
+                            </div>
+                            <!-- Hover overlay -->
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, rgba(124,58,237,0.5), rgba(59,130,246,0.5));">
+                                <span class="text-white text-sm font-semibold tracking-wide flex items-center gap-2">
+                                    View Project
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="p-4 sm:p-5">
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="text-xs px-2 py-0.5 rounded-full font-medium"
+                                    style="background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3);">
+                                    Simulation
+                                </span>
+                                <span class="text-xs px-2 py-0.5 rounded-full font-medium"
+                                    style="background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3);">
+                                    Unity
+                                </span>
+                            </div>
+
+                            <!-- Title (clickable) -->
+                            <a href="project/fire-boiler-unity-vr-project.html" target="_blank">
+                                <h3 class="text-white font-bold text-base sm:text-lg mb-1 group-hover:text-blue-300 transition-colors duration-200">
+                                    Fire Boiler - Industrial Training Simulation
+                                </h3>
+                            </a>
+
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                                Fire Boiler is an interactive VR training simulation built using Unity. It replicates a real-world fire boiler system for safe and immersive learning in technical education and industrial training scenarios
+                            </p>
+
+                            <!-- Footer -->
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-700/60">
+                                <a href="project/fire-boiler-unity-vr-project.html" target="_blank"
+                                    class="flex items-center gap-1.5 text-purple-400 text-xs font-medium hover:text-white transition-colors duration-200">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/Al-Amin7124/VR-Training-Simulator---Fire-Boiler" target="_blank"
+                                    class="flex items-center gap-1.5 text-gray-400 text-xs font-medium hover:text-white transition-colors duration-200">
+                                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57
+                                                0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695
+                                                -.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99
+                                                .105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225
+                                                -.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405
+                                                c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225
+                                                0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3
+                                                0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    </div><!-- /grid -->
+                </div>
+                </section>
+                
             <!-- Shop Banner Section -->
             <div class="mx-auto max-w-8xl md:pt-8 pb-4 px-2 sm:pb-8 bg-[#142d4c]">
                 <div class="max-w-7xl mb-0 sm:mb-10 mx-auto pb-5 relative">
@@ -532,6 +847,8 @@
                     </div>
                 </div>
             </div>
+
+            
    
 
         </div>
