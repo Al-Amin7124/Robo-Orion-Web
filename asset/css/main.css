@@ -9,6 +9,19 @@
 body {
     font-family: 'Ubuntu', sans-serif;
 }
+
+.font-exo {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.font-ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.font-dm {
+    font-family: 'DM Sans', sans-serif;
+}
+
 /* Text shadow utilities */
 .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
