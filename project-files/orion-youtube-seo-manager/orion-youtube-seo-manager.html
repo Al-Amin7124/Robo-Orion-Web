@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube SEO Manager Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ... ALL YOUR EXISTING CSS ... */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --bg: #0a0a0b; --surface: #111113; --surface2: #18181c; --border: rgba(255,255,255,0.07); --border-hover: rgba(255,255,255,0.14); --red: #ff0033; --red-soft: rgba(255,0,51,0.12); --red-glow: rgba(255,0,51,0.25); --text: #f0f0f0; --muted: #6b6b7a; --muted2: #3f3f4a; --accent: #ff0033; --green: #22c55e; --yellow: #eab308; --mono: 'DM Mono', monospace; --sans: 'DM Sans', sans-serif; --display: 'Syne', sans-serif; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  .noise { position: fixed; inset: 0; pointer-events: none; z-index: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.5; }
+  .layout { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+  header { display: flex; align-items: center; gap: 16px; padding: 32px 0 40px; border-bottom: 0.5px solid var(--border); margin-bottom: 40px; }
+  .logo-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--red); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 24px var(--red-glow); }
+  .logo-icon svg { width: 22px; height: 22px; fill: white; }
+  .logo-text { flex: 1; }
+  .logo-text h1 { font-family: var(--display); font-size: 20px; font-weight: 800; letter-spacing: -0.3px; }
+  .logo-text p { font-size: 12px; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; margin-top: 2px; }
+  .badge { font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; padding: 5px 12px; border-radius: 20px; background: var(--red-soft); color: var(--red); border: 0.5px solid rgba(255,0,51,0.3); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  .panel { background: var(--surface); border: 0.5px solid var(--border); border-radius: 16px; padding: 24px; transition: border-color 0.2s; }
+  .panel:hover { border-color: var(--border-hover); }
+  .panel.full { grid-column: 1 / -1; }
+  .panel-label { font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .panel-label::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--muted2); display: inline-block; }
+  .panel-label.active::before { background: var(--red); box-shadow: 0 0 6px var(--red); }
+  input[type="text"], textarea { width: 100%; background: var(--surface2); border: 0.5px solid var(--border); border-radius: 10px; padding: 12px 14px; font-family: var(--sans); font-size: 14px; color: var(--text); outline: none; resize: none; transition: border-color 0.2s, box-shadow 0.2s; }
+  textarea { min-height: 100px; line-height: 1.6; }
+  .output-area { background: var(--surface2); border: 0.5px solid var(--border); border-radius: 10px; padding: 14px; min-height: 52px; font-size: 13.5px; line-height: 1.7; color: var(--text); white-space: pre-wrap; word-break: break-word; position: relative; }
+  .output-area.title-out { font-family: var(--display); font-size: 15px; font-weight: 600; }
+  .tags-area { display: flex; flex-wrap: wrap; gap: 8px; min-height: 52px; }
+  .tag-chip { font-family: var(--mono); font-size: 11.5px; padding: 4px 10px; border-radius: 6px; background: var(--surface); border: 0.5px solid var(--border); color: var(--text); white-space: nowrap; }
+  .hash-chip { font-family: var(--mono); font-size: 11.5px; padding: 4px 10px; border-radius: 6px; background: var(--red-soft); border: 0.5px solid rgba(255,0,51,0.2); color: var(--red); white-space: nowrap; }
+  .copy-btn { position: absolute; top: 8px; right: 8px; background: var(--surface); border: 0.5px solid var(--border); color: var(--muted); border-radius: 6px; padding: 4px 8px; font-size: 10px; font-family: var(--mono); cursor: pointer; }
+  .gen-btn { grid-column: 1 / -1; width: 100%; padding: 16px; background: var(--red); color: white; font-family: var(--display); font-size: 15px; font-weight: 700; border: none; border-radius: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 0 30px var(--red-glow); }
+  .gen-btn:disabled { background: var(--muted2); cursor: not-allowed; }
+  .spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .section-divider { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; margin: 8px 0; }
+  .section-divider span { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
+  .section-divider::before, .section-divider::after { content: ''; flex: 1; height: 0.5px; background: var(--border); }
+  
+  /* NEW RESEARCH PANEL STYLES */
+  .research-panel { font-family: var(--mono); font-size: 11px; color: var(--muted); background: #000; padding: 15px; border-radius: 10px; border: 1px dashed var(--border); margin-bottom: 20px; max-height: 200px; overflow-y: auto; }
+  .res-item { margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .res-title { color: var(--text); font-weight: 500; display: block; }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="layout">
+  <header>
+    <div class="logo-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+    <div class="logo-text"><h1>YouTube SEO Manager Pro</h1><p>Data-Driven Optimization Engine</p></div>
+    <div class="badge">REAL-TIME AI</div>
+  </header>
+  <div class="grid">
+    <div class="panel"><div class="panel-label">Video Title / Keyword</div><input type="text" id="inp-title" placeholder="e.g. How to grow tomatoes..."></div>
+    <div class="panel"><div class="panel-label">Video Topic Details</div><textarea id="inp-details" placeholder="Describe your video..."></textarea></div>
+    <button class="gen-btn" id="gen-btn" onclick="generateSEO()">Generate Data-Driven SEO</button>
+    
+    <div class="section-divider"><span>Competitor Research Log</span></div>
+    <div class="panel full">
+      <div id="research-log" class="research-panel">Waiting for keyword... (The AI uses this data to build your SEO)</div>
+    </div>
+
+    <div class="section-divider"><span>Optimized Output</span></div>
+    <div class="panel full">
+      <div class="panel-label">Optimized SEO Title</div>
+      <div style="position:relative">
+        <div class="output-area title-out" id="out-title"><span class="placeholder-txt">Title will appear here...</span></div>
+        <button class="copy-btn" onclick="copyField('out-title', this)">COPY</button>
+      </div>
+    </div>
+    <div class="panel full">
+      <div class="panel-label">SEO Description</div>
+      <div style="position:relative">
+        <div class="output-area" id="out-desc" style="min-height: 130px;"><span class="placeholder-txt">Description will appear here...</span></div>
+        <button class="copy-btn" onclick="copyField('out-desc', this)">COPY</button>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label">Hashtags</div>
+      <div style="position:relative">
+        <div class="output-area"><div class="tags-area" id="tags-hash"><span class="placeholder-txt">Hashtags...</span></div></div>
+        <button class="copy-btn" onclick="copyHashtags(this)">COPY</button>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-label">Video Tags</div>
+      <div style="position:relative">
+        <div class="output-area"><div class="tags-area" id="tags-vid"><span class="placeholder-txt">Tags...</span></div></div>
+        <button class="copy-btn" onclick="copyVideoTags(this)">COPY</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="yt-seo.js"></script>
+</body>
+</html>
