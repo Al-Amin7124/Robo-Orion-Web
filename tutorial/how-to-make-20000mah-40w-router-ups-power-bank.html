@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>How to Make 20000mAh 40W Router UPS & Power Bank | DIY Guide | Robo Orion</title>
+    <meta name="description" content="Step-by-step guide to building a 20000mAh 40W Router UPS and Power Bank. Keep your WiFi running during power cuts with this budget-friendly DIY project.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Robo Orion">
+    <meta name="keywords" content="DIY Router UPS, 20000mAh power bank, WiFi backup power, How to make UPS for router, Li-Po battery project, Robo Orion tutorial, 40W power bank DIY">
+    <meta name="theme-color" content="#0f172a">
+
+    <link rel="canonical" href="https://roboorion.com/tutorial/how-to-make-20000mah-40w-router-ups-power-bank.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_BD">
+    <meta property="og:site_name" content="Robo Orion">
+    <meta property="og:title" content="DIY 20000mAh 40W Router UPS & Power Bank Guide">
+    <meta property="og:description" content="Stop load shedding interruptions! Learn how to build a high-power backup system for your WiFi router and mobile devices.">
+    <meta property="og:image" content="../img/tutorial/router-ups-banner.jpg">
+    <meta property="og:url" content="https://roboorion.com/tutorial/how-to-make-20000mah-40w-router-ups-power-bank.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@RoboOrion">
+    <meta name="twitter:title" content="How to Make 20000mAh 40W Router UPS & Power Bank">
+    <meta name="twitter:description" content="A complete DIY guide to building a high-capacity backup power system for routers and electronics.">
+    <meta name="twitter:image" content="../img/tutorial/router-ups-banner.jpg">
+
+    <!-- Structured Data: HowTo Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Make 20000mAh 40W Router UPS & Power Bank",
+      "description": "Build a compact, efficient, and budget-friendly UPS system to keep your WiFi router running during power cuts.",
+      "image": "../img/tutorial/router-ups-banner.jpg",
+      "supply": [
+        { "@type": "HowToSupply", "name": "10,000 mAh Li-Po Battery (x2)" },
+        { "@type": "HowToSupply", "name": "Boost Module (Step-Up Module) x2" },
+        { "@type": "HowToSupply", "name": "BMS (Battery Management System)" },
+        { "@type": "HowToSupply", "name": "Buck Converter" },
+        { "@type": "HowToSupply", "name": "Power Switch & Connectors" }
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Robo Orion"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Robo Orion",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "../asset/img/logo.png"
+        }
+      },
+      "datePublished": "2024-06-10",
+      "dateModified": "2026-03-17"
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="../asset/img/logo.png">
+    <link rel="apple-touch-icon" href="../asset/img/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../asset/css/main.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-50">
+
+    <!-- Updated Header -->
+    <header class="sticky inset-0 z-50 border-b border-slate-100 bg-white/30 backdrop-blur-lg shadow-lg">
+        <nav class="mx-auto flex max-w-8xl items-center gap-8 justify-between px-6 py-4 lg:px-12 transition-all duration-200 ease-in-out z-50">
+            
+            <!-- Left logo -->
+            <div class="flex items-center">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-full overflow-hidden">
+                        <img 
+                            src="../asset/img/logo.png" 
+                            loading="lazy" 
+                            class="w-full h-full object-cover scale-140"
+                            alt="Robo Orion Logo">
+                    </div>
+                    <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-black">
+                        <span class="text-black-500 font-exo text-shadow">Robo</span>
+                        <span class="text-blue-500 font-ubuntu text-shadow">Orion</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Spacer -->
+            <div class="flex-grow hidden md:block"></div>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center gap-6">
+                <li><a href="/" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Home</a></li>
+                <li><a href="../service.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Service</a></li>
+                <li><a href="../project.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Project</a></li>
+                <li><a href="https://shop.roboorion.com/" target="_blank" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Shop</a></li>
+                <li><a href="../tutorial.html" class="pt-1.5 font-dm text-md font-bold text-blue-600">Tutorial</a></li> <!-- ACTIVE LINK UPDATED -->
+                <li><a href="../article.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Article</a></li>
+                <li><a href="../about.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">About</a></li>
+                <li><a href="../contact.html" class="pt-1.5 font-dm text-md font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>      
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <div class="relative md:hidden">
+                <button id="menu-btn" class="flex items-center text-slate-900 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" viewBox="0 0 24 24" 
+                        stroke-width="1.5" stroke="currentColor" 
+                        class="h-7 w-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                    </svg>
+                </button>
+
+                <!-- Mobile Dropdown Menu -->
+                <div id="mobile-menu" class="absolute right-0 mt-2 hidden w-48 flex-col rounded-lg bg-white/80 backdrop-blur-lg shadow-lg p-2">
+                    <a href="/" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md">Home</a>
+                    <a href="service.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md">Service</a>
+                    <a href="project.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md">Project</a>
+                    <a href="https://shop.roboorion.com/" target="_blank" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md">Shop</a>
+                    <a href="tutorial.html" class="block px-4 py-2 text-sm font-bold text-blue-600 bg-blue-50 rounded-md">Tutorial</a>
+                    <a href="article.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md">Article</a>
+                    <a href="about.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md">About</a>
+                    <a href="contact.html" class="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 rounded-md">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="mx-auto px-6 lg:px-20 py-4 max-w-6xl" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-2 text-sm text-gray-500" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" class="hover:text-blue-600 transition-colors" itemprop="item"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs text-gray-400"></i></li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="../tutorial.html" class="hover:text-blue-600 transition-colors" itemprop="item"><span itemprop="name">Tutorial</span></a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs text-gray-400"></i></li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span class="text-gray-700 font-medium" itemprop="name">Router UPS DIY</span>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mx-auto px-6 lg:px-20 py-8 max-w-6xl">
+        
+        <!-- Tutorial Header Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                How to Make <span class="text-blue-600">20000mAh 40W Router UPS</span> <br class="hidden md:block"> & High Power Bank
+            </h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Stop worrying about load shedding. Build a professional-grade backup system that keeps your WiFi router running and charges your devices on the go.
+            </p>
+        </section>
+
+        <!-- Banner Image -->
+        <div class="w-full mb-12 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-slate-200">
+            <img src="../img/tutorial/router-ups-banner.jpg" alt="DIY 20000mAh 40W Router UPS & Power Bank" class="w-full h-auto object-cover" loading="lazy">
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <!-- Left Column: Step-by-Step Tutorial -->
+            <div class="lg:col-span-2 space-y-10 text-slate-700 leading-relaxed">
+                
+                <!-- Introduction Section -->
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-info text-blue-600"></i>
+                        Project Overview
+                    </h2>
+                    <p class="mb-4">
+                        This DIY project allows you to create a compact, efficient, and budget-friendly UPS system. By combining high-capacity Li-Po batteries with a smart boost/buck system, you can ensure your internet never drops during power failures.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-green-50 border-l-4 border-green-600 rounded-r-lg">
+                            <strong class="text-green-800 block mb-1">Router Backup</strong>
+                            <span class="text-sm text-green-700">Stable voltage output ensures your router stays online without restarting.</span>
+                        </div>
+                        <div class="p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-lg">
+                            <strong class="text-blue-800 block mb-1">Portable Power Bank</strong>
+                            <span class="text-sm text-blue-700">Integrated USB outputs to charge smartphones and tablets.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Video Guide -->
+                <section class="my-10">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">Step-by-Step Video Tutorial</h2>
+                    <div class="relative aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <!-- YouTube Iframe -->
+                        <iframe class="absolute inset-0 w-full h-full" 
+                                src="https://www.youtube.com/embed/NLM8mUW_sao" 
+                                title="How to make Router UPS Video" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </section>
+
+                <!-- Components List -->
+                <section id="components">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">1</span>
+                        Required Components
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Component Item -->
+                        <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-battery-full text-blue-600"></i>
+                                <span class="font-medium text-slate-800">10,000mAh Li-Po (x2)</span>
+                            </div>
+                            <a href="https://shop.roboorion.com/" target="_blank" class="text-xs font-bold py-1 px-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Buy Now</a>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-microchip text-blue-600"></i>
+                                <span class="font-medium text-slate-800">Boost Module (x2)</span>
+                            </div>
+                            <a href="https://shop.roboorion.com/" target="_blank" class="text-xs font-bold py-1 px-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Buy Now</a>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-shield-halved text-blue-600"></i>
+                                <span class="font-medium text-slate-800">BMS Board</span>
+                            </div>
+                            <a href="https://shop.roboorion.com/" target="_blank" class="text-xs font-bold py-1 px-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Buy Now</a>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-voltage-meter text-blue-600"></i>
+                                <span class="font-medium text-slate-800">Buck Converter</span>
+                            </div>
+                            <a href="https://shop.roboorion.com/" target="_blank" class="text-xs font-bold py-1 px-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Buy Now</a>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-toggle-on text-blue-600"></i>
+                                <span class="font-medium text-slate-800">Power Switch</span>
+                            </div>
+                            <a href="https://shop.roboorion.com/" target="_blank" class="text-xs font-bold py-1 px-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Buy Now</a>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-plug text-blue-600"></i>
+                                <span class="font-medium text-slate-800">USB Output Module</span>
+                            </div>
+                            <a href="https://shop.roboorion.com/" target="_blank" class="text-xs font-bold py-1 px-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Buy Now</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Circuit Diagram -->
+                <section id="circuit">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">2</span>
+                        Circuit Diagram
+                    </h2>
+                    <div class="w-full overflow-hidden rounded-2xl border-4 border-white shadow-lg">
+                        <img src="../img/tutorial/router-ups-circuit.jpg" alt="Router UPS Circuit Diagram" class="w-full h-auto" loading="lazy">
+                    </div>
+                    <p class="mt-4 text-sm text-center text-gray-500 italic">Follow the diagram carefully to avoid short-circuiting the Li-Po batteries.</p>
+                </section>
+
+                <!-- Steps -->
+                <section id="steps">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">3</span>
+                        Assembly Guide
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="font-bold text-blue-600 text-xl">01.</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Battery & BMS Connection</h4>
+                                <p class="text-sm">Connect the two 10,000mAh Li-Po cells in parallel to achieve a total capacity of 20,000mAh. Connect these to the BMS (Battery Management System) to ensure safe charging and discharging.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="font-bold text-blue-600 text-xl">02.</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Voltage Boosting</h4>
+                                <p class="text-sm">Connect the battery output to the Boost Modules. Adjust the potentiometers on the modules to your required voltage (usually 9V or 12V depending on your router).</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="font-bold text-blue-600 text-xl">03.</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Adding the Power Bank Function</h4>
+                                <p class="text-sm">Connect the Buck Converter and USB output module in parallel with the main power line. This allows you to use the system as a portable charger for your mobile devices.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="font-bold text-blue-600 text-xl">04.</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Final Assembly</h4>
+                                <p class="text-sm">Install the power switch for easy control and house everything inside a compact enclosure for a professional finish.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Grid -->
+                <section id="features" class="bg-slate-100 p-8 rounded-2xl">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">Key Features & Use Cases</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex gap-4 p-4 bg-white rounded-lg shadow-sm border border-slate-200">
+                            <i class="fa-solid fa-bolt text-blue-600 text-xl"></i>
+                            <div>
+                                <strong class="block mb-1">40W High Power</strong>
+                                <span class="text-sm">Capable of handling high-load routers and multiple device charging.</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-white rounded-lg shadow-sm border border-slate-200">
+                            <i class="fa-solid fa-wifi text-blue-600 text-xl"></i>
+                            <div>
+                                <strong class="block mb-1">Router Backup</strong>
+                                <span class="text-sm">Perfect for keeping WiFi active during load shedding.</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-white rounded-lg shadow-sm border border-slate-200">
+                            <i class="fa-solid fa-video text-blue-600 text-xl"></i>
+                            <div>
+                                <strong class="block mb-1">CCTV Backup</strong>
+                                <span class="text-sm">Ensure your security cameras never go offline.</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-white rounded-lg shadow-sm border border-slate-200">
+                            <i class="fa-solid fa-battery-half text-blue-600 text-xl"></i>
+                            <div>
+                                <strong class="block mb-1">Emergency Power</strong>
+                                <span class="text-sm">Works as a high-capacity portable power bank for emergencies.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Quick Specs Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm sticky top-24">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Technical Specs</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-500">Battery Capacity</span>
+                            <span class="font-bold text-slate-800">20,000 mAh</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-500">Max Output</span>
+                            <span class="font-bold text-slate-800">40 Watts</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-500">Battery Type</span>
+                            <span class="font-bold text-slate-800">Li-Po (Lithium Polymer)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Control System</span>
+                            <span class="font-bold text-slate-800">BMS Integrated</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-blue-600 rounded-lg text-center text-white">
+                        <p class="text-xs mb-3 opacity-90">Get all the parts in one kit!</p>
+                        <a href="https://shop.roboorion.com/" target="_blank" class="block w-full py-2 bg-white text-blue-600 rounded-lg font-bold hover:bg-slate-100 transition">Order Parts Now</a>
+                    </div>
+                </div>
+
+                <!-- Related Tutorials -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">More DIY Projects</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="text-blue-600 hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs"></i> How to make a Solar Charger</a></li>
+                        <li><a href="#" class="text-blue-600 hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs"></i> DIY Smart Home Hub</a></li>
+                        <li><a href="#" class="text-blue-600 hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs"></i> Understanding BMS Modules</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg-gray-700 border-gray-400">
+            <div class="max-w-7xl mx-auto px-4 py-8 flex grid grid-cols-2 sm:grid-cols-4 gap-6 text-gray-200 text-sm ">
+                <div class="">
+                    <h4 class="font-semibold text-white mb-3">Platform</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../service.html" target="_blank" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="https://shop.roboorion.com/" target="_blank" class="hover:text-blue-400">orion Shop</a></li>
+                        <li><a href="../project.html" target="_blank" class="hover:text-blue-400">Orion Projects</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h4 class="font-semibold text-white mb-3">Solutions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" target="_blank" class="hover:text-blue-400">Smart Home</a></li>
+                        <li><a href="#" target="_blank" class="hover:text-blue-400">Smart Office</a></li>
+                        <li><a href="#" target="_blank" class="hover:text-blue-400">Smart IoT Projects</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h4 class="font-semibold text-white mb-3">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Help Center</a></li>
+                        <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Online Support</a></li>
+                        <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Technical Support</a></li>
+                        <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h4 class=" font-semibold text-white mb-3">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../about.html" target="_blank" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="#" target="_blank" class="hover:text-blue-400">News</a></li>
+                        <li><a href="../tutorial.html" target="_blank" class="hover:text-blue-400">Tutorial</a></li>
+                        <li><a href="../article.html" target="_blank" class="hover:text-blue-400">Article</a></li>
+                        <li><a href="../contact.html" target="_blank" class="hover:text-blue-400">Partner with Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-600 py-6 px-4 max-w-7xl mx-auto text-center sm:text-left">
+                <div class="flex flex-col sm:flex-row justify-between gap-6 text-gray-200 text-sm grid grid-cols-2">
+                    <div class="text-start">
+                        <a href="../contact.html" class="text-xl font-semibold hover:text-blue-400">Contact</a>
+                        <div class="">
+                            <p class="text-gray-300 text-md">Email: services@roboorion.com</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 text-end">
+                        <div class="flex items-center justify-end space-x-2 hover:text-blue-400">
+                            <i class="fa-regular fa-envelope text-xl"></i>
+                            <h5 class="font-normal text-lg">Newsletter</h5>
+                            <form id="newsletter-form" class="w-full sm:w-auto flex flex-col sm:flex-row items-center gap-2">
+                                <div class="relative w-full sm:w-72">
+                                    <input type="email" name="user_email" placeholder="Enter your email" class="w-full pr-10 px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                    <button type="submit" class="absolute inset-y-0 right-0 flex items-center pr-3 text-blue-600 hover:text-blue-800">
+                                        <i class="fa-solid fa-paper-plane text-lg"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-center justify-between items-center px-4 py-3 border-t border-gray-500">
+                <div class="flex items-center gap-3">
+                    <a href="../index.html" class="flex items-center gap-2">
+                        <div class="w-6 h-6 rounded-full overflow-hidden shadow-neon ring-2 ring-gray-500">
+                            <img src="../asset/img/logo.png" loading="lazy" class="w-full h-full object-cover" alt="Robo Orion Logo">
+                        </div>
+                        <span class="text-lg font-bold tracking-wide whitespace-nowrap">
+                            <span class="text-gray-800 font-exo drop-shadow-sm text-shadow-white">Robo</span>
+                            <span class="text-blue-600 font-ubuntu drop-shadow-sm text-shadow-white">Orion</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="mt-3 sm:mt-0 flex items-center gap-4">
+                    <a href="https://www.facebook.com/profile.php?id=61573909565062" target="_blank" class="text-gray-300 hover:text-blue-600 transition">
+                        <i class="fa-brands fa-square-facebook text-2xl"></i>
+                    </a>
+                    <a target="_blank" class="text-gray-300 hover:text-sky-500 transition">
+                        <i class="fa-brands fa-x-twitter text-2xl"></i>
+                    </a>
+                    <a target="_blank" class="text-gray-300 hover:text-blue-700 transition">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                    <a target="_blank" class="text-gray-300 hover:text-red-700 transition">
+                        <i class="fa-brands fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 text-gray-300 text-xs font-sans">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 py-3">
+                <div class="flex flex-wrap gap-4">
+                    <a class="hover:text-white transition">Privacy Policy</a>
+                    <span class="text-gray-500">|</span>
+                    <a class="hover:text-white transition">Terms of Use</a>
+                    <span class="text-gray-500">|</span>
+                    <a class="hover:text-white transition">Cookie Preferences</a>
+                </div>
+                <div class="mt-2 sm:mt-0">
+                    <p class="text-gray-400">&copy; 2025 Robo Orion. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
