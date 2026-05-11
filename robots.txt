@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+
+# Sitemaps for both hosts
 Sitemap: https://roboorion.com/sitemap.xml
+Sitemap: https://shop.roboorion.com/sitemap.xml
